@@ -1,0 +1,78 @@
+
+tokens per iteration will be: 32,768
+Map: 100%|███████████████████████████████████████████████████████| 4000/4000 [00:00<00:00, 5667.32 examples/s]
+Map: 100%|███████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 4900.79 examples/s]
+Initializing from OpenAI GPT-2 weights: gpt2-medium
+loading weights from pretrained gpt: gpt2-medium
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding lora_rank and lora_alpha to 16
+overriding lora_dropout to 0.05
+number of parameters: 356.13M
+num decayed parameter tensors: 96, with 2,359,296 parameters
+num non-decayed parameter tensors: 0, with 0 parameters
+using fused AdamW: True
+C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py:88: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  y = torch.nn.functional.scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=self.dropout if self.training else 0, is_causal=True)
+step 0: train loss 4.7054, val loss 4.7394
+iter 0: loss 4.3185, time 11894.68ms, mfu -100.00%
+iter 1: loss 4.1140, time 4200.03ms, mfu -100.00%
+iter 2: loss 3.9083, time 4251.06ms, mfu -100.00%
+iter 3: loss 3.0866, time 4160.90ms, mfu -100.00%
+iter 4: loss 3.0620, time 4175.11ms, mfu -100.00%
+step 5: train loss 2.7868, val loss 2.8876
+saving checkpoint to gpt-default-lora-16-64
+iter 5: loss 2.4024, time 11453.42ms, mfu 2.24%
+iter 6: loss 2.4791, time 4146.39ms, mfu 2.63%
+iter 7: loss 2.5866, time 4190.95ms, mfu 2.98%
+iter 8: loss 2.3671, time 4176.94ms, mfu 3.29%
+iter 9: loss 1.3559, time 4237.95ms, mfu 3.57%
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 288, in <module>
+    losses = estimate_loss()
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 254, in estimate_loss
+    _, loss = model(X, Y)
+              ^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 208, in forward
+    x = block(x)
+        ^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 127, in forward
+    x = x + self.attn(self.ln_1(x))
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 99, in forward
+    y = self.resid_dropout(self.c_proj(y))
+                           ^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\lora.py", line 58, in forward
+    lora_term = self.lora_dropout(input)@BA.transpose(0,1) # xBA
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1675, in __getattr__
+    def __getattr__(self, name: str) -> Any:
+KeyboardInterrupt

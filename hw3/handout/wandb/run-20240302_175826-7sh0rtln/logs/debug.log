@@ -1,0 +1,28 @@
+2024-03-02 17:58:26,912 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-03-02 17:58:26,913 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Configure stats pid to 14020
+2024-03-02 17:58:26,913 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\.config\wandb\settings
+2024-03-02 17:58:26,913 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\wandb\settings
+2024-03-02 17:58:26,913 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-03-02 17:58:26,913 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw3\\handout\\train.py', 'program': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw3\\handout\\train.py'}
+2024-03-02 17:58:26,913 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-03-02 17:58:26,914 INFO    MainThread:14020 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-03-02 17:58:26,914 INFO    MainThread:14020 [wandb_init.py:_log_setup():526] Logging user logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\wandb\run-20240302_175826-7sh0rtln\logs\debug.log
+2024-03-02 17:58:26,914 INFO    MainThread:14020 [wandb_init.py:_log_setup():527] Logging internal logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\wandb\run-20240302_175826-7sh0rtln\logs\debug-internal.log
+2024-03-02 17:58:26,914 INFO    MainThread:14020 [wandb_init.py:init():566] calling init triggers
+2024-03-02 17:58:26,914 INFO    MainThread:14020 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'out_dir': 'gpt-default-lora', 'eval_interval': 5, 'log_interval': 1, 'eval_iters': 40, 'eval_only': False, 'always_save_checkpoint': False, 'init_from': 'gpt2-medium', 'wandb_project': 'lora_finetune', 'dataset': 'openwebtext', 'gradient_accumulation_steps': 32, 'batch_size': 1, 'block_size': 1024, 'n_layer': 12, 'n_head': 12, 'n_embd': 768, 'dropout': 0.0, 'bias': False, 'learning_rate': 0.0005, 'max_iters': 50, 'weight_decay': 0.1, 'beta1': 0.9, 'beta2': 0.95, 'grad_clip': 1.0, 'decay_lr': False, 'warmup_iters': 2000, 'lr_decay_iters': 600000, 'min_lr': 5e-09, 'backend': 'nccl', 'device': 'cuda', 'dtype': 'float16', 'compile': False, 'lora_rank': 64, 'lora_alpha': 512}
+2024-03-02 17:58:26,915 INFO    MainThread:14020 [wandb_init.py:init():616] starting backend
+2024-03-02 17:58:26,915 INFO    MainThread:14020 [wandb_init.py:init():620] setting up manager
+2024-03-02 17:58:26,919 INFO    MainThread:14020 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-03-02 17:58:26,925 INFO    MainThread:14020 [wandb_init.py:init():628] backend started and connected
+2024-03-02 17:58:26,933 INFO    MainThread:14020 [wandb_init.py:init():720] updated telemetry
+2024-03-02 17:58:26,937 INFO    MainThread:14020 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-03-02 17:58:27,285 INFO    MainThread:14020 [wandb_run.py:_on_init():2262] communicating current version
+2024-03-02 17:58:27,437 INFO    MainThread:14020 [wandb_run.py:_on_init():2271] got version response 
+2024-03-02 17:58:27,437 INFO    MainThread:14020 [wandb_init.py:init():804] starting run threads in backend
+2024-03-02 17:58:27,582 INFO    MainThread:14020 [wandb_run.py:_console_start():2241] atexit reg
+2024-03-02 17:58:27,583 INFO    MainThread:14020 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-03-02 17:58:27,583 INFO    MainThread:14020 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-03-02 17:58:27,583 INFO    MainThread:14020 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-03-02 17:58:27,584 INFO    MainThread:14020 [wandb_init.py:init():847] run started, returning control to user process
+2024-03-02 18:03:40,323 WARNING MsgRouterThr:14020 [router.py:message_loop():77] message_loop has been closed

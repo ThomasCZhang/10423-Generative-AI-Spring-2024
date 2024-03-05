@@ -1,0 +1,33 @@
+
+tokens per iteration will be: 32,768
+Initializing from OpenAI GPT-2 weights: gpt2-medium
+Map: 100%|███████████████████████████████████████████████████████| 4000/4000 [00:00<00:00, 5860.14 examples/s]
+Map: 100%|███████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 4960.38 examples/s]
+loading weights from pretrained gpt: gpt2-medium
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding lora_rank and lora_alpha to 16
+overriding lora_dropout to 0.05
+16 64
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 189, in <module>
+    model = GPT.from_pretrained(init_from, override_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 269, in from_pretrained
+    model = GPT(config)
+            ^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 156, in __init__
+    h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 156, in <listcomp>
+    h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
+                       ^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 122, in __init__
+    self.attn = CausalSelfAttention(config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 46, in __init__
+    self.c_attn = LoRALinear(in_features = config.n_embd,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\lora.py", line 25, in __init__
+    raise Exception()
+Exception

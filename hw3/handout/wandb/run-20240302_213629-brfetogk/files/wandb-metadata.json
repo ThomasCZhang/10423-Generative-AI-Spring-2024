@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.3",
+    "heartbeatAt": "2024-03-03T02:36:30.099066",
+    "startedAt": "2024-03-03T02:36:29.430795",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "config/finetune_params_config.py",
+        "--init_from=gpt2-medium",
+        "--out_dir=gpt-default-lora-16-64",
+        "--lora_rank=16",
+        "--lora_alpha=64"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw3\\handout\\train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "host": "LAPTOP-O5HN4585",
+    "username": "tzhan",
+    "executable": "C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\venv\\Scripts\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1700.0,
+        "min": 0.0,
+        "max": 2900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.0,
+            "min": 0.0,
+            "max": 2900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 475.69237899780273,
+            "used": 280.2590103149414
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.372379302978516
+    }
+}

@@ -1,0 +1,32 @@
+
+tokens per iteration will be: 32,768
+Initializing from OpenAI GPT-2 weights: gpt2-medium
+Map: 100%|███████████████████████████████████████████████████████| 4000/4000 [00:00<00:00, 5779.05 examples/s]
+Map: 100%|███████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 4949.45 examples/s]
+loading weights from pretrained gpt: gpt2-medium
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding lora_rank and lora_alpha to 64
+overriding lora_dropout to 0.05
+number of parameters: 363.21M
+num decayed parameter tensors: 96, with 9,437,184 parameters
+num non-decayed parameter tensors: 0, with 0 parameters
+using fused AdamW: True
+C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py:88: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  y = torch.nn.functional.scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=self.dropout if self.training else 0, is_causal=True)
+step 0: train loss 4.6694, val loss 4.6745
+iter 0: loss 4.4707, time 10676.15ms, mfu -100.00%
+iter 1: loss 3.3661, time 4476.61ms, mfu -100.00%
+iter 2: loss 2.5194, time 4485.12ms, mfu -100.00%
+iter 3: loss 2.4389, time 4410.21ms, mfu -100.00%
+iter 4: loss 1.5758, time 4377.71ms, mfu -100.00%
+step 5: train loss 1.5847, val loss 1.5180
+saving checkpoint to gpt-default-lora-64-512
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 304, in <module>
+    torch.save(checkpoint, os.path.join(out_dir, 'ckpt.pt'))
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\serialization.py", line 629, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol, _disable_byteorder_record)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\serialization.py", line 863, in _save
+    zip_file.write_record(name, storage.data_ptr(), num_bytes)
+KeyboardInterrupt

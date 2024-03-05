@@ -1,0 +1,36 @@
+
+tokens per iteration will be: 32,768
+Map: 100%|██████████████████████████████████████████████████████| 4000/4000 [00:00<00:00, 14281.61 examples/s]
+Map: 100%|██████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 11623.40 examples/s]
+Initializing from OpenAI GPT-2 weights: gpt2-medium
+loading weights from pretrained gpt: gpt2-medium
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding lora_rank and lora_alpha to 64
+overriding lora_dropout to 0.05
+number of parameters: 363.21M
+num decayed parameter tensors: 96, with 9,437,184 parameters
+num non-decayed parameter tensors: 0, with 0 parameters
+using fused AdamW: True
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 288, in <module>
+    losses = estimate_loss()
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 239, in estimate_loss
+    model.eval()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 2413, in eval
+    return self.train(False)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 2394, in train
+    module.train(mode)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 2394, in train
+    module.train(mode)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 2394, in train
+    module.train(mode)
+  [Previous line repeated 2 more times]
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\lora.py", line 83, in train
+    self.weight += self.lora_B@self.lora_A*self.lora_scaling
+RuntimeError: The size of tensor a (1024) must match the size of tensor b (3072) at non-singleton dimension 1

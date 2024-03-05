@@ -1,0 +1,31 @@
+
+tokens per iteration will be: 32,768
+Map: 100%|██████████████████████████████████████████████████████| 4000/4000 [00:00<00:00, 14281.24 examples/s]
+Map: 100%|██████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 11361.90 examples/s]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 189, in <module>
+    model = GPT.from_pretrained(init_from, override_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 270, in from_pretrained
+    model = GPT(config)
+            ^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 157, in __init__
+    h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 157, in <listcomp>
+    h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
+                       ^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 123, in __init__
+    self.attn = CausalSelfAttention(config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 50, in __init__
+    device = config.device,
+             ^^^^^^^^^^^^^
+AttributeError: 'GPTConfig' object has no attribute 'device'
+Initializing from OpenAI GPT-2 weights: gpt2-medium
+loading weights from pretrained gpt: gpt2-medium
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding lora_rank and lora_alpha to 64
+overriding lora_dropout to 0.05
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)

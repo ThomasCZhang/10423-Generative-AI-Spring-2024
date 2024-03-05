@@ -1,0 +1,82 @@
+
+tokens per iteration will be: 32,768
+Map: 100%|██████████████████████████████████████████████████████| 4000/4000 [00:00<00:00, 14281.71 examples/s]
+Map: 100%|██████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 11626.91 examples/s]
+Initializing from OpenAI GPT-2 weights: gpt2-medium
+loading weights from pretrained gpt: gpt2-medium
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding lora_rank and lora_alpha to 64
+overriding lora_dropout to 0.05
+number of parameters: 363.21M
+C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py:88: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at ..\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  y = torch.nn.functional.scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=self.dropout if self.training else 0, is_causal=True)
+num decayed parameter tensors: 96, with 9,437,184 parameters
+num non-decayed parameter tensors: 0, with 0 parameters
+using fused AdamW: True
+step 0: train loss 5.5380, val loss 5.5620
+iter 0: loss 5.7441, time 4760.66ms, mfu -100.00%
+iter 1: loss 4.5348, time 1885.87ms, mfu -100.00%
+iter 2: loss 4.1925, time 1899.97ms, mfu -100.00%
+iter 3: loss 2.4123, time 1900.42ms, mfu -100.00%
+iter 4: loss 2.0057, time 1914.44ms, mfu -100.00%
+step 5: train loss 2.6236, val loss 2.6041
+saving checkpoint to gpt-default-lora
+iter 5: loss 3.6096, time 5766.24ms, mfu 4.52%
+iter 6: loss 2.9794, time 1915.44ms, mfu 5.43%
+iter 7: loss 2.7339, time 1902.43ms, mfu 6.25%
+iter 8: loss 3.3720, time 1906.43ms, mfu 7.00%
+iter 9: loss 2.8083, time 1929.43ms, mfu 7.65%
+step 10: train loss 2.2540, val loss 2.4129
+saving checkpoint to gpt-default-lora
+iter 10: loss 2.6416, time 5873.73ms, mfu 7.33%
+iter 11: loss 2.1646, time 1921.87ms, mfu 7.95%
+iter 12: loss 3.0004, time 1952.44ms, mfu 8.49%
+iter 13: loss 1.8851, time 2021.45ms, mfu 8.93%
+iter 14: loss 2.1868, time 1970.44ms, mfu 9.36%
+step 15: train loss 2.3714, val loss 2.2700
+saving checkpoint to gpt-default-lora
+iter 15: loss 2.8337, time 5806.93ms, mfu 8.87%
+iter 16: loss 1.2810, time 1933.42ms, mfu 9.33%
+iter 17: loss 2.4383, time 1932.45ms, mfu 9.75%
+iter 18: loss 1.9243, time 1955.43ms, mfu 10.11%
+iter 19: loss 3.1054, time 1934.44ms, mfu 10.44%
+step 20: train loss 2.2566, val loss 2.2837
+iter 20: loss 2.6068, time 4101.69ms, mfu 10.03%
+iter 21: loss 2.0177, time 1918.04ms, mfu 10.39%
+iter 22: loss 1.7953, time 2021.45ms, mfu 10.64%
+iter 23: loss 1.3267, time 2271.51ms, mfu 10.72%
+iter 24: loss 1.6460, time 2275.52ms, mfu 10.80%
+step 25: train loss 2.3688, val loss 2.4072
+iter 25: loss 2.4056, time 4119.16ms, mfu 10.35%
+iter 26: loss 2.8556, time 1986.49ms, mfu 10.63%
+iter 27: loss 2.9378, time 1950.42ms, mfu 10.90%
+iter 28: loss 2.2263, time 1946.45ms, mfu 11.15%
+iter 29: loss 2.5553, time 1956.45ms, mfu 11.37%
+step 30: train loss 2.3057, val loss 2.3232
+iter 30: loss 2.2978, time 4083.94ms, mfu 10.87%
+iter 31: loss 2.3308, time 1939.42ms, mfu 11.12%
+iter 32: loss 2.9970, time 2032.47ms, mfu 11.29%
+iter 33: loss 1.4575, time 2008.46ms, mfu 11.46%
+iter 34: loss 3.1740, time 2050.45ms, mfu 11.59%
+step 35: train loss 2.2298, val loss 2.4216
+iter 35: loss 1.3937, time 4072.04ms, mfu 11.07%
+iter 36: loss 2.4413, time 1979.48ms, mfu 11.28%
+iter 37: loss 2.8301, time 1938.45ms, mfu 11.49%
+iter 38: loss 2.6494, time 1982.98ms, mfu 11.66%
+iter 39: loss 1.7989, time 1955.43ms, mfu 11.83%
+step 40: train loss 2.2945, val loss 2.1194
+saving checkpoint to gpt-default-lora
+iter 40: loss 2.9350, time 5998.09ms, mfu 11.08%
+iter 41: loss 2.1933, time 1983.50ms, mfu 11.28%
+iter 42: loss 1.9620, time 2002.46ms, mfu 11.46%
+iter 43: loss 2.1650, time 1976.44ms, mfu 11.63%
+iter 44: loss 2.5637, time 1954.44ms, mfu 11.80%
+step 45: train loss 2.3301, val loss 2.2210
+iter 45: loss 2.0984, time 4105.97ms, mfu 11.25%
+iter 46: loss 2.8360, time 1943.44ms, mfu 11.47%
+iter 47: loss 1.8041, time 1988.48ms, mfu 11.63%
+iter 48: loss 1.9614, time 2003.10ms, mfu 11.77%
+iter 49: loss 1.8865, time 1941.09ms, mfu 11.94%
+step 50: train loss 2.1581, val loss 2.1740
+iter 50: loss 3.2564, time 4193.27ms, mfu 11.36%

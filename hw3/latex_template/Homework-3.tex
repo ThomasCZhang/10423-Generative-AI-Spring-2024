@@ -1,0 +1,968 @@
+\documentclass[11pt,addpoints,answers]{exam}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for customizing the assignment %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\courseNum}{10-423/10-623}
+\newcommand{\courseName}{Generative AI}
+\newcommand{\courseSem}{Spring 2024}
+\newcommand{\courseUrl}{\url{http://423.mlcourse.org}}
+\newcommand{\hwNum}{Homework 3}
+\newcommand{\hwTopic}{Applying and Adapting LLMs}
+\newcommand{\hwName}{\hwNum: \hwTopic}
+\newcommand{\outDate}{Feb. 20, 2024}
+\newcommand{\dueDate}{Feb. 29, 2024}
+\newcommand{\taNames}{Meghana, Samuel, Ritu}
+\newcommand{\homeworktype}{\string written+prog}
+\newcommand{\overleafUrl}{}
+
+%% To HIDE SOLUTIONS (to post at the website for students), set this value to 0: \def\issoln{0}
+\providecommand{\issoln}{0}
+%\providecommand{\issoln}{1}
+
+%-----------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-----------------------------------------------------------------------------
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{xfrac}
+\usepackage{natbib}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{paralist}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage{environ}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage{parskip} % For NIPS style paragraphs.
+\usepackage[compact]{titlesec} % Less whitespace around titles
+\usepackage[inline]{enumitem} % For inline enumerate* and itemize*
+\usepackage{datetime}
+\usepackage{comment}
+% \usepackage{minted}
+\usepackage{lastpage}
+\usepackage{color}
+% \usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[final]{listings}
+\usepackage{tikz}
+\usetikzlibrary{shapes,decorations}
+\usepackage{framed}
+\usepackage{booktabs}
+\usepackage{cprotect}
+\usepackage{verbatimbox}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{mathtools} % For drcases
+\usepackage{cancel}
+\usepackage[many]{tcolorbox}
+\usepackage{soul}
+\usepackage[bottom]{footmisc}
+\usepackage{bm}
+\usepackage{wasysym}
+\usepackage{lipsum}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning, arrows, automata, calc}
+\usepackage{transparent}
+\usepackage{tikz-cd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting for \CorrectChoice of "exam" %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\CorrectChoiceEmphasis{}
+\checkedchar{\blackcircle}
+
+\newenvironment{checkboxessquare}{
+    \begingroup
+    \checkboxchar{$\Box$} \checkedchar{$\blacksquare$} % change checkbox style locally
+    \begin{checkboxes}
+    }{
+    \end{checkboxes}
+    \endgroup
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Better numbering                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+% \numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+% \numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\blackcircle}{\tikz\draw[black,fill=black] (0,0) circle (1ex);}
+\renewcommand{\circle}{\tikz\draw[black] (0,0) circle (1ex);}
+
+\newcommand{\solo}{ \textcolor{orange}{[SOLO]} }
+\newcommand{\open}{ \textcolor{blue}{[OPEN]} }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands for Math               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\vc}[1]{\boldsymbol{#1}}
+\newcommand{\adj}[1]{\frac{\partial \ell}{\partial #1}}
+\newcommand{\chain}[2]{\adj{#2} = \adj{#1}\frac{\partial #1}{\partial #2}}
+\newcommand{\ntset}{test}
+\newcommand{\zerov}{\mathbf{0}}
+\DeclareMathOperator*{\argmin}{argmin}
+
+% mathcal
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Wc}{\mathcal{W}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}}
+\newcommand{\Zc}{\mathcal{Z}}
+
+% mathbb
+\newcommand{\Ab}{\mathbb{A}}
+\newcommand{\Bb}{\mathbb{B}}
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\Db}{\mathbb{D}}
+\newcommand{\Eb}{\mathbb{E}}
+\newcommand{\Fb}{\mathbb{F}}
+\newcommand{\Gb}{\mathbb{G}}
+\newcommand{\Hb}{\mathbb{H}}
+\newcommand{\Ib}{\mathbb{I}}
+\newcommand{\Jb}{\mathbb{J}}
+\newcommand{\Kb}{\mathbb{K}}
+\newcommand{\Lb}{\mathbb{L}}
+\newcommand{\Mb}{\mathbb{M}}
+\newcommand{\Nb}{\mathbb{N}}
+\newcommand{\Ob}{\mathbb{O}}
+\newcommand{\Pb}{\mathbb{P}}
+\newcommand{\Qb}{\mathbb{Q}}
+\newcommand{\Rb}{\mathbb{R}}
+\newcommand{\Sb}{\mathbb{S}}
+\newcommand{\Tb}{\mathbb{T}}
+\newcommand{\Ub}{\mathbb{U}}
+\newcommand{\Vb}{\mathbb{V}}
+\newcommand{\Wb}{\mathbb{W}}
+\newcommand{\Xb}{\mathbb{X}}
+\newcommand{\Yb}{\mathbb{Y}}
+\newcommand{\Zb}{\mathbb{Z}}
+
+% mathbf lowercase
+\newcommand{\av}{\mathbf{a}}
+\newcommand{\bv}{\mathbf{b}}
+\newcommand{\cv}{\mathbf{c}}
+\newcommand{\dv}{\mathbf{d}}
+\newcommand{\ev}{\mathbf{e}}
+\newcommand{\fv}{\mathbf{f}}
+\newcommand{\gv}{\mathbf{g}}
+\newcommand{\hv}{\mathbf{h}}
+\newcommand{\iv}{\mathbf{i}}
+\newcommand{\jv}{\mathbf{j}}
+\newcommand{\kv}{\mathbf{k}}
+\newcommand{\lv}{\mathbf{l}}
+\newcommand{\mv}{\mathbf{m}}
+\newcommand{\nv}{\mathbf{n}}
+\newcommand{\ov}{\mathbf{o}}
+\newcommand{\pv}{\mathbf{p}}
+\newcommand{\qv}{\mathbf{q}}
+\newcommand{\rv}{\mathbf{r}}
+\newcommand{\sv}{\mathbf{s}}
+\newcommand{\tv}{\mathbf{t}}
+\newcommand{\uv}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\wv}{\mathbf{w}}
+\newcommand{\xv}{\mathbf{x}}
+\newcommand{\yv}{\mathbf{y}}
+\newcommand{\zv}{\mathbf{z}}
+
+% mathbf uppercase
+\newcommand{\Av}{\mathbf{A}}
+\newcommand{\Bv}{\mathbf{B}}
+\newcommand{\Cv}{\mathbf{C}}
+\newcommand{\Dv}{\mathbf{D}}
+\newcommand{\Ev}{\mathbf{E}}
+\newcommand{\Fv}{\mathbf{F}}
+\newcommand{\Gv}{\mathbf{G}}
+\newcommand{\Hv}{\mathbf{H}}
+\newcommand{\Iv}{\mathbf{I}}
+\newcommand{\Jv}{\mathbf{J}}
+\newcommand{\Kv}{\mathbf{K}}
+\newcommand{\Lv}{\mathbf{L}}
+\newcommand{\Mv}{\mathbf{M}}
+\newcommand{\Nv}{\mathbf{N}}
+\newcommand{\Ov}{\mathbf{O}}
+\newcommand{\Pv}{\mathbf{P}}
+\newcommand{\Qv}{\mathbf{Q}}
+\newcommand{\Rv}{\mathbf{R}}
+\newcommand{\Sv}{\mathbf{S}}
+\newcommand{\Tv}{\mathbf{T}}
+\newcommand{\Uv}{\mathbf{U}}
+\newcommand{\Vv}{\mathbf{V}}
+\newcommand{\Wv}{\mathbf{W}}
+\newcommand{\Xv}{\mathbf{X}}
+\newcommand{\Yv}{\mathbf{Y}}
+\newcommand{\Zv}{\mathbf{Z}}
+
+% bold greek lowercase
+\newcommand{\alphav     }{\boldsymbol \alpha     }
+\newcommand{\betav      }{\boldsymbol \beta      }
+\newcommand{\gammav     }{\boldsymbol \gamma     }
+\newcommand{\deltav     }{\boldsymbol \delta     }
+\newcommand{\epsilonv   }{\boldsymbol \epsilon   }
+\newcommand{\varepsilonv}{\boldsymbol \varepsilon}
+\newcommand{\zetav      }{\boldsymbol \zeta      }
+\newcommand{\etav       }{\boldsymbol \eta       }
+\newcommand{\thetav     }{\boldsymbol \theta     }
+\newcommand{\varthetav  }{\boldsymbol \vartheta  }
+\newcommand{\iotav      }{\boldsymbol \iota      }
+\newcommand{\kappav     }{\boldsymbol \kappa     }
+\newcommand{\varkappav  }{\boldsymbol \varkappa  }
+\newcommand{\lambdav    }{\boldsymbol \lambda    }
+\newcommand{\muv        }{\boldsymbol \mu        }
+\newcommand{\nuv        }{\boldsymbol \nu        }
+\newcommand{\xiv        }{\boldsymbol \xi        }
+\newcommand{\omicronv   }{\boldsymbol \omicron   }
+\newcommand{\piv        }{\boldsymbol \pi        }
+\newcommand{\varpiv     }{\boldsymbol \varpi     }
+\newcommand{\rhov       }{\boldsymbol \rho       }
+\newcommand{\varrhov    }{\boldsymbol \varrho    }
+\newcommand{\sigmav     }{\boldsymbol \sigma     }
+\newcommand{\varsigmav  }{\boldsymbol \varsigma  }
+\newcommand{\tauv       }{\boldsymbol \tau       }
+\newcommand{\upsilonv   }{\boldsymbol \upsilon   }
+\newcommand{\phiv       }{\boldsymbol \phi       }
+\newcommand{\varphiv    }{\boldsymbol \varphi    }
+\newcommand{\chiv       }{\boldsymbol \chi       }
+\newcommand{\psiv       }{\boldsymbol \psi       }
+\newcommand{\omegav     }{\boldsymbol \omega     }
+
+% bold greek uppercase
+\newcommand{\Gammav     }{\boldsymbol \Gamma     }
+\newcommand{\Deltav     }{\boldsymbol \Delta     }
+\newcommand{\Thetav     }{\boldsymbol \Theta     }
+\newcommand{\Lambdav    }{\boldsymbol \Lambda    }
+\newcommand{\Xiv        }{\boldsymbol \Xi        }
+\newcommand{\Piv        }{\boldsymbol \Pi        }
+\newcommand{\Sigmav     }{\boldsymbol \Sigma     }
+\newcommand{\Upsilonv   }{\boldsymbol \Upsilon   }
+\newcommand{\Phiv       }{\boldsymbol \Phi       }
+\newcommand{\Psiv       }{\boldsymbol \Psi       }
+\newcommand{\Omegav     }{\boldsymbol \Omega     }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code highlighting with listings         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\definecolor{light-gray}{gray}{0.95}
+
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstdefinelanguage{Shell}{
+  keywords={tar, cd, make},
+  %keywordstyle=\color{bluekeywords}\bfseries,
+  alsoletter={+},
+  ndkeywords={python3, python, py, javac, java, gcc, c, g++, cpp, .txt, octave, m, .tar},
+  %ndkeywordstyle=\color{bluekeywords}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  %stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]",
+  backgroundcolor = \color{light-gray}
+}
+
+\lstset{columns=fixed, basicstyle=\ttfamily,
+    backgroundcolor=\color{light-gray},xleftmargin=0.5cm,frame=tlbr,framesep=4pt,framerule=0pt}
+
+\newcommand{\emptysquare}{{\LARGE $\square$}\ \ }
+\newcommand{\filledsquare}{{\LARGE $\boxtimes$}\ \ }
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+
+% \newcommand{\squaresolutionspace}[2][\emptysquare]{\newline #1}{#2}
+\def \squaresolutionspace#1{ \ifempty{#1} \emptysquare \else #1\hspace{0.75pt}\fi}
+
+
+\newcommand{\emptycircle}{{\LARGE $\fullmoon$}\ \ }
+\newcommand{\filledcircle}{{\LARGE $\newmoon$}\ \ }
+\def \circlesolutionspace#1{ \ifempty{#1} \emptycircle \else #1\hspace{0.75pt}\fi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom box for highlights               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define box and box title style
+\tikzstyle{mybox} = [fill=blue!10, very thick,
+    rectangle, rounded corners, inner sep=1em, inner ysep=1em]
+
+% \newcommand{\notebox}[1]{
+% \begin{tikzpicture}
+% \node [mybox] (box){%
+%     \begin{minipage}{\textwidth}
+%     #1
+%     \end{minipage}
+% };
+% \end{tikzpicture}%
+% }
+
+\NewEnviron{notebox}{
+\begin{tikzpicture}
+\node [mybox] (box){
+    \begin{minipage}{0.95\textwidth}
+        \BODY
+    \end{minipage}
+};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands showing / hiding solutions     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\solutionspace}[4]{\fbox{\begin{minipage}[t][#1][t]{#2} \textbf{#3} \solution{}{#4} \end{minipage}}}
+
+% To HIDE SOLUTIONS, set this value to 0:
+%\providecommand{\issoln}{0}
+%\providecommand{\issoln}{1}
+
+\ifthenelse{\equal{\issoln}{1}}{
+
+% SOLUTION environment
+\newenvironment{soln}{\leavevmode\color{red}\ignorespaces }{}
+
+% QUESTION AUTHORS environment
+\newenvironment{qauthor}{\leavevmode\color{blue}\ignorespaces }{}
+
+% Question tester comment environment
+\newenvironment{qtester}{\leavevmode\color{green}\ignorespaces}{}
+
+% Question learning objective comment environment
+\newenvironment{qlearningobjective}{\leavevmode\color{green}\ignorespaces}{}
+
+}{ % ELSE
+
+  \NewEnviron{soln}{}
+  \NewEnviron{qauthor}{}
+  \NewEnviron{qtester}{}
+  \NewEnviron{qlearningobjective}{}
+
+}
+
+%% To HIDE TAGS set this value to 0:
+\def\showtags{0}
+%%%%%%%%%%%%%%%%
+\ifcsname showtags\endcsname \else \def\showtags{1} \fi
+% Default to an empty tags environ.
+\NewEnviron{tags}{}{}
+\if\showtags 1
+% Otherwise, include solutions as below.
+\RenewEnviron{tags}{
+    \fbox{
+    \leavevmode\color{blue}\ignorespaces
+    \textbf{TAGS:} \texttt{\url{\BODY}}
+    }
+    \vspace{-.5em}
+}{}
+\fi
+
+\newtcolorbox[]{answer_box}[1][]{
+    % breakable,
+    fit,
+    enhanced,
+    % nobeforeafter,
+    colback=white,
+    title=Your Answer,
+    sidebyside align=top,
+    box align=top,
+    #1
+}
+
+%\pagestyle{fancyplain}
+\lhead{\hwName{}
+}
+\rhead{\courseNum}
+\cfoot{\thepage{} of \numpages{}}
+
+\title{\textsc{\hwNum}
+\\
+\textsc{\hwTopic}
+\thanks{Compiled on \today{} at \currenttime{}}\\
+\vspace{1em}
+} % Title
+
+
+\author{\textsc{\large \courseNum{} \courseName{}}\\
+\courseUrl
+\vspace{1em}\\
+\ifdefempty{\outDate}{}{  OUT: \outDate \\ }
+\ifdefempty{\dueDate}{}{  DUE: \dueDate \\ }
+  TAs: \taNames{}
+}
+
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful commands for typesetting the questions %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This command will allow long \lstinline{} text to wrap automatically.
+\sloppy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document configuration %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't display a date in the title and remove the white space
+\predate{}
+\postdate{}
+\date{}
+
+% Don't display an author and remove the white space
+%\preauthor{}
+%\postauthor{}
+
+% Question type commands
+\newcommand{\sall}{\textbf{Select all that apply: }}
+\newcommand{\sone}{\textbf{Select one: }}
+\newcommand{\tf}{\textbf{True or False: }}
+
+
+
+
+% Abhi messing around with examdoc
+\qformat{\textbf{{\Large \thequestion \; \; \thequestiontitle \ (\totalpoints \ points)}} \hfill}
+\renewcommand{\thequestion}{\arabic{question}}
+\renewcommand{\questionlabel}{\thequestion.}
+
+\renewcommand{\thepartno}{\thequestion.\arabic{partno}}
+%\renewcommand{\partlabel}{\thequestion.\thepartno.}
+\renewcommand{\partlabel}{\thepartno.}
+
+% not working: \renewcommand{\subpartlabel}{(\thequestion.\thepartno.\thesubpart)}
+% Commented after adding \question.\thepartno.
+%\renewcommand{\partshook}{\setlength{\leftmargin}{0pt}}
+
+\renewcommand{\thesubpart}{\thepartno.\alph{subpart}}
+\renewcommand{\subpartlabel}{\thesubpart.}
+
+\renewcommand{\thesubsubpart}{\thesubpart.\roman{subsubpart}}
+\renewcommand{\subsubpartlabel}{\thesubsubpart.}
+
+% copied from stack overflow, as all good things are
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+% quite possibly the worst workaround i have made for this class
+\newcommand{\sectionquestion}[1]{
+\titledquestion{#1}
+\invisiblesection{#1}
+~\vspace{-1em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New Environment for Pseudocode          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Python style for highlighting
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+morekeywords={self},              % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false
+}}
+
+
+% Python environment
+\lstnewenvironment{your_code_solution}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+\begin{document}
+ 
+\maketitle 
+
+\newcommand \maxsubs {10 }
+\section*{Instructions}
+\begin{itemize}
+
+\item \textbf{Collaboration Policy}: Please read the collaboration policy in the syllabus.
+\item\textbf{Late Submission Policy:} See the late submission policy in the syllabus.
+\item\textbf{Submitting your work:} You will use Gradescope to submit
+  answers to all questions\ifthenelse{\equal{\homeworktype}{\string written}}{}{ and code}. 
+
+\begin{itemize}
+    
+    % IF NOT USING TEMPLATE: 
+    % \item \textbf{Written:} You will submit your completed homework as a PDF to Gradescope. For each problem, please clearly indicate the question number (e.g. 3.2). Submissions can be handwritten, but must be clearly legible; otherwise, you will not be awarded marks.   Alternatively, submissions can be written in \LaTeX{}. You may use the \LaTeX{} source of this assignment (included in the handout .zip) as your starting point. For multiple choice / select all questions, simply write the letter(s) (e.g. A, B, C) corresponding to your chosen answer.
+    % IF USING TEMPLATE: 
+    \item \textbf{Written:} You will submit your completed homework as a PDF to Gradescope. Please use the provided template. Submissions can be handwritten, but must be clearly legible; otherwise, you will not be awarded marks. Alternatively, submissions can be written in \LaTeX{}. Each answer should be within the box provided. 
+    %If you do not follow the template or your submission is misaligned, your assignment may not be graded correctly by our AI assisted grader. 
+    If you do not follow the template, your assignment may not be graded correctly by our AI assisted grader and there will be a \textbf{\textcolor{red}{2\% penalty}} (e.g., if the homework is out of 100 points, 2 points will be deducted from your final score).
+    
+    \ifdefempty{\overleafUrl}{}{
+    \item \textbf{\LaTeX{} Source:} \overleafUrl
+    }
+
+    \ifthenelse{\equal{\homeworktype}{\string written}}{}{
+    \item \textbf{Programming:} You will submit your code for programming questions to Gradescope. There is no autograder. We will examine your code by hand and may award marks for its submission.
+    }{}
+   
+  \end{itemize}
+  
+\ifthenelse{\equal{\homeworktype}{\string written}}{}{\item\textbf{Materials:} The data that you will need in order to complete this assignment is posted along with the writeup and template on the course website.}
+
+\end{itemize}
+
+\begin{center}
+    \pointtable[v][questions]
+\end{center}\clearpage
+
+%\input{../shared/instructions_for_specific_problem_types.tex}
+%\clearpage
+\begin{questions}
+
+
+
+\sectionquestion{In-Context Learning}
+
+\begin{parts}
+
+\part[2] Explain the relationship between in-context learning and chain-of-thought prompting.
+\begin{answer_box}[title=,height=2cm, width=15cm]
+\end{answer_box}
+
+\part[3] Write a prompt to that might help facilitate in-context learning for the following question: 
+
+\begin{quote}
+    The cost of electricity per kilowatt-hour increases by 5 cents. Last month, a family used 150 kilowatt-hours at the old rate. This month, they used 100 kilowatt-hours at the new rate. Altogether, their electricity bills for these two months amount to \$45. How much was the old rate per kilowatt-hour?
+\end{quote}
+
+\begin{answer_box}[title=,height=5cm, width=15cm]
+\end{answer_box}
+
+\part[3] Modify your answer from the previous question to use chain-of-thought prompting.
+
+\begin{answer_box}[title=,height=8cm, width=15cm]
+\end{answer_box}
+
+\clearpage
+\part[3] Modify your answer from the previous question to use zero-shot chain-of-thought prompting.
+
+\begin{answer_box}[title=,height=3cm, width=15cm]
+\end{answer_box}
+
+\part[2] Describe an advantage and a disadvantage of zero-shot chain-of-thought prompting as compared to chain-of-thought prompting.
+
+\begin{answer_box}[title=,height=2cm, width=15cm]
+\end{answer_box}
+
+\part[1] Meta learning refers to the process of learning how to learn. One use case of meta learning is determining adaptation rules that, given small amounts of data for new tasks, facilitate good performance. Describe a similarity and a difference between in-context learning and meta learning.
+
+\begin{answer_box}[title=,height=2cm, width=15cm]
+\end{answer_box}
+
+\end{parts}
+
+\clearpage
+\sectionquestion{Programming: LoRA for GPT-2}
+
+\uplevel{\subsection*{Introduction}} 
+For large pre-trained models, full fine-tuning, which retrains all model parameters, becomes less feasible, due to the increased training time and memory requirements. In this section, you will explore, and build from scratch, a parameter efficient fine-tuning (PEFT) method, \textbf{Lo}w \textbf{R}ank \textbf{A}daptation (LoRA), and apply it to a pre-trained GPT2 model. 
+
+
+\uplevel{\subsection*{Dataset}} The dataset for this homework is the \href{https://huggingface.co/datasets/rotten_tomatoes}{ Rotten Tomatoes Dataset} from HuggingFace. It is a balanced movie review dataset containing positive and negative labels denoting sentiment. This dataset will download automatically when you run train.py
+
+
+\uplevel{\subsection*{Starter Code}}
+
+The main structure of the files is organized as follows:
+\begin{verbatim}
+hw3/
+   lora.py
+   model.py
+   dataloader.py
+   train.py
+   generate.py
+   configs/
+      finetune_params_config.py
+   configurator.py
+   requirements.txt
+   
+   
+\end{verbatim}
+
+Here is what you will find in each file:
+\begin{enumerate}
+    
+    
+    \item \lstinline{lora.py}: Implement LoRA in this. Some starter code is provided to help guide you. We only implement LoRA in a linear layer. (~20 lines of code)
+
+    \item \lstinline{model.py}: The vanilla working transformer implementation from HW1 (i.e. without GQA and ROPE). Use your implemented LoRA in the attention layers (~2 lines of code).
+
+    \item \lstinline{dataloader.py}: A custom dataloader implemented for the rotten tomatoes dataset. You only have to implement the \_add\_instruction\_finetuning method in this dataloader. (~5-10 lines of code)
+    
+    \item \lstinline{train.py}: The script for training GPT. This file is long but your only requirement is to make your model lora-friendly (~2 line of code, marked with a TODO). Note: This is only done if we are using a pretrained model to begin with.
+    
+    \item \lstinline{generate.py}: The script for generating text with your trained (or raw) GPT model. Since we are using a classification dataset, you are expected to implement the get\_accuracy function. (~10 lines of code) 
+        
+    \item \lstinline{configs/finetune_params_config.py}: You can use default parameters from this config or change them here 
+    
+    \item \lstinline{configurator.py}: Utility script for loading parameters from the command line. Overrides parameters in finetune\_params\_config.py
+
+    \item \lstinline{requirements.txt}: A list of packages that need to be installed for this homework.
+    
+    
+    
+    
+
+\end{enumerate}
+
+\uplevel{\subsection*{Flags}}
+
+All the parameters printed in the config can be modified by passing flags to \lstinline{train.py}. Table \ref{table:flag1} and Table \ref{table:flag2} and contains a list of flags you may find useful while implementing HW3. You can change other parameters as well in a similar manner.
+
+% \lstinline{mycode} inside tabulars breaks, so use \lstinline|mycode| instead. 
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{0.4\linewidth}|p{0.6\linewidth}|}
+\hline
+Configuration Parameter & Example Flag Usage \\ \hline
+init\_from &  \lstinline|--init_from=gpt2-medium|  \\ \hline
+out\_dir &  \lstinline|--out_dir=gpt_lora_default| \\ \hline
+rank &  \lstinline|--rank=8|  \\ \hline
+alpha &  \lstinline|--alpha=32|  \\ \hline
+lr &  \lstinline|--lr=2e-4|  \\ \hline
+max\_iters &  \lstinline|--max_iters=20| \\ \hline
+wandb\_run\_name &  \lstinline|--wandb_run_name=gpt-lora-r-8-alpha-32| \\ \hline
+\end{tabular}
+\caption{Useful flags for \lstinline{train.py}}
+\label{table:flag1}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{0.4\linewidth}|p{0.6\linewidth}|}
+\hline
+Configuration Parameter & Example Flag Usage \\ \hline
+init\_from & \lstinline|--init_from="resume"| \\ \hline
+out\_dir & \lstinline|--out_dir="gpt_lora_default"| \\ \hline
+device & \lstinline|--device="cuda"| \\ \hline
+max\_new\_tokens & \lstinline|--max_new_tokens=5| \\ \hline
+temperature & \lstinline|--temperature=1.0| \\ \hline
+top\_k & \lstinline|--top_k=200| \\ \hline
+\end{tabular}
+\caption{Useful flags for \lstinline{generate.py}}
+\label{table:flag2}
+\end{table}
+
+
+There are more parameters available to modify(see train.py), but we don't expect that you will need to modify more than the ones mentioned above.
+
+\uplevel{\subsection*{Command Line}}
+
+We recommend conducting this homework on Colab. Colab provides a free T4 GPU for code execution, albeit with a time limitation that may result in slower training. In the event of GPU depletion on Colab, options include waiting for GPU recovery, switching Google accounts, or purchasing additional GPU resources.
+
+\begin{lstlisting}
+python train.py 
+     config/finetune_params_config.py \
+    --init_from=gpt2-medium \
+    --out_dir="gpt-lora-default"
+\end{lstlisting}
+
+\begin{lstlisting}
+python generate.py 
+    --init_from=resume \
+    --out_dir="your_saved_lora_model" \
+\end{lstlisting}
+
+    
+
+
+
+\uplevel{\subsection*{Low-Rank Adaptation (LoRA) of LLMs}}
+
+
+In this problem, you will implement Low-Rank Adaptation (LoRA), following the approach outlined in \href{https://arxiv.org/pdf/2106.09685.pdf}{(Hu et al., 2021)}. Before you continue, we strongly recommend you to go through the paper and understand how LoRA works. \\
+Models can continue to learn efficiently even when their parameters are projected onto a smaller subspace. Essentially, this means that the vast majority of the model's capabilities can be retained and modified through adjustments in a significantly reduced parameter space. This allows for us to inject trainable low-rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks.\\
+For a pretrained weight matrix \(W_0 \in \mathbb{R}^{d \times k}\), LoRA constrains its update through a low-rank decomposition, expressed as follows:
+\[W_0 + \Delta W = W_0 + BA,\]
+where \(B \in \mathbb{R}^{d \times r}\), \(A \in \mathbb{R}^{r \times k}\), and the rank  \(r \ll \min(d,k)\). During the adaptation process, \(W_0\) remains unchanged—frozen—to ensure the stability of the pre-trained knowledge, while \(A\) and \(B\) are updated, serving as the trainable parameters. Note that that we achieve this by setting \texttt{requires\_grad = False} for all parameters except the matrices \(A\) and \(B\).
+
+We then apply both \(W_0\) and the adjustment \(\Delta W = BA\) to the same input \(x\), with their outputs being summed coordinate-wise, resulting in the modified forward pass:
+
+\[
+h = W_0x + \Delta Wx = W_0x + BAx
+\]
+
+As depicted in Figure 1, our initial conditions for training involve setting \(A\) with a random Gaussian distribution and \(B\) to zero, making \(\Delta W = BA\) start from zero. To integrate these updates effectively, remember to scale \(\Delta W x\) by \(\alpha/ r\), with \(\alpha\) acting as a constant relative to \(r\). This approach simplifies the optimization process, akin to adjusting the learning rate in Adam, and eliminates the need for hyperparameter retuning as \(r\) varies. You can start with setting \(\alpha\) to the initial value of \(r\) you explore, and experiment with different scaling factors(\(\alpha/ r\)) by adjusting  \(\alpha\) and \(r\) accordingly. Thus, the scaled LoRA forward pass you should implement is:
+\[
+h = W_0x + \frac{\alpha}{r} \Delta Wx  = W_0x + \frac{\alpha}{r} BAx 
+\]
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5cm]{fig/lora.png}
+\caption{Low-Rank Adaptation (LoRA) applied to a Transformer model.}
+\label{fig:lora}
+\end{figure}
+%\textcolor{red}{TODO} 
+
+\uplevel{\subsection*{Instruction FineTuning}}
+%\textcolor{red}{TODO}
+
+As you must have seen in Homework 1 with the Shakespeare dataset, when given a text, GPT2 (or any LLM for that matter) generates more text to complete the given text. But for a task like text classification, how do you get the model to generate the labels you want for the given context? \\
+Enter Instruction Fine Tuning. Instruction tuning is a specialized form of fine-tuning in which a model is trained using instruction-output pairs. It helps bridge the gap between the next-word prediction objective of LLMs and the our objective of having LLMs adhere to human instructions.\\
+For the purpose of this homework, you can do this by prepending the text in each sample in the Rotten Tomatoes dataset with an instruction prompt template and then appending it with the actual label. This modified text is what you will train the model with. You will do this in the \texttt{\_add\_instruction\_finetuning(self, rec)} function in \texttt{dataloader.py}. You can experiment with different instruction templates and ways to respresent the labels.
+\uplevel{\subsection*{Implementation}}
+Note: In the original paper, LoRA has been implemented only in the attention layers, specifically for the query and value matrices. In this homework you will implement LoRA on the query, key and value matrices. Note that you should also implement LoRA for the output projection in the attention layer.\\
+\textbf{The LoRA Linear Layer:}
+
+\begin{itemize}
+    \item In \texttt{lora.py}, implement these modifications in the \texttt{LoRALinear} class. This includes:
+    \begin{itemize}
+        \item \textbf{\_\_init\_\_}: Initialize inherited nn.Linear class, LoRA parameters, and matrices \(A\) and \(B\) if the LoRA rank is greater than 0.
+        \item \textbf{reset\_parameters}: Reinitialize weights of the inherited linear layer and LoRA matrices \(A\) and \(B\). \(A\) is typically initialized with \texttt{kaiming\_uniform\_} and \(B\) is initialized with zeroes according to the paper.
+        \item \textbf{forward}: Implement the forward pass of the layer, including the application of LoRA modifications and dropout if applicable.
+        \item \textbf{train}: Override to ensure LoRA matrices are demerged and set to training mode.
+        \item \textbf{eval}: Override to ensure that LoRA matrices are merged with the actual model weight metrices and set to evaluation mode.
+
+    \end{itemize}
+        \item \textbf{mark\_only\_lora\_as\_trainable}: A utility function to set only LoRA matrices as trainable parameters for a model. 
+\end{itemize}
+
+
+\textbf{LoRA for Transformer LMs:}
+\begin{itemize}
+    \item Apply your above implemented LoRALinear layer to the attention layers within your transformer model. This is marked with TODOs in \texttt{model.py}. 
+\end{itemize}
+
+\textbf{Instruction Fine-Tuning Method}
+\begin{itemize}
+    
+
+\item You are only required to implement  \texttt{\_add\_instruction\_finetuning} method in \texttt{CustomDataLoader}.
+
+    \begin{itemize}
+        \item \textbf{Method:} \texttt{\_add\_instruction\_finetuning(self, rec)}
+        \begin{itemize}
+            \item \textbf{Parameters:}
+            \begin{itemize}
+                \item \texttt{rec} (dict): A dataset record with "text" and "label" fields.
+            \end{itemize}
+            \item \textbf{Functionality:} Modifies the record by adding an \texttt{"instr\_tuned\_text"} field. This field integrates instructional cues into the original text to guide model training. Optionally convert labels to more intuitive formats (e.g., from numeric to textual labels such as positive/negative)
+        \end{itemize}
+        
+    \end{itemize}
+\end{itemize}
+\textbf{Training:}
+\begin{itemize}
+    \item Now that you have made your GPT model lora friendly, modify \lstinline{train.py} to enable training with the LoRA-enhanced model. Ensure the model is made LoRA-friendly as indicated by the relevant TODO.
+\end{itemize}
+
+
+\textbf{Accuracy Evaluation Method}
+
+\begin{itemize}
+    \item 
+In \texttt{generate.py} you must implement the method \texttt{get\_accuracy} designed to evaluate the model's performance on the test dataset (which will be passed in).
+
+\begin{itemize}
+    \item \textbf{Method:} \texttt{get\_accuracy(self)}
+        \begin{itemize}
+            \item \textbf{Functionality:} Iterates through a dataset to calculate the model's accuracy by comparing generated text against expected labels.
+    
+            \item \textbf{Details:} Small models like GPT2 may not easily generate EOS token (especially for small r). Acknowledging these limitations, one simple hack in our case(where training labels are categorical) is to simply check if these labels exists in the first few characters of the generated text. 
+        \end{itemize}
+        
+    \end{itemize}
+
+\end{itemize}
+    
+\uplevel{\subsection*{Hints}}
+\begin{enumerate}
+    \item While implementing your code, you may find it help to adjust the model, e.g. `gpt' is the smallest, but you will need at least `gpt-medium' to see decent results from fine-tuning with LORA.
+    \item When trying different variations (across r, alpha, etc) it is recommended you use the \lstinline{--out_dir}  
+ parameter so you can save the different models you create. 
+    \item If you are facing CUDA BLOCKING errors, run with CPU device instead of CUDA on Colab to isolate errors better. Switch to CUDA for the actual training though. 
+    \item Make sure that you account for garbage generations in your accuracy calculation. For example, for a given sample, if the model predicts something other than the specified labels(for eg, positive/negative) you should not omit it when calculating accuracy.
+\end{enumerate}
+\clearpage
+
+\uplevel{\subsection*{LoRA Implementation and Training}}
+Note: For all the empirical questions report results using gpt2-medium. If not specified, return results using default parameters (i.e with $r=128$, $\alpha=512$ and learning rate $=$ \lstinline{5e-4})
+\begin{parts}
+
+\part[2] Does training with LoRA add inference latency (i.e. are more parameters being learned that would add to inference time)? Explain
+
+\begin{answer_box}[title=,height=3cm, width=15cm]
+\end{answer_box}
+
+\part[4] Plot your validation loss curve for LoRA for the default configuration.
+
+[Expected runtime on Colab T4: 1-2 minutes]
+
+\begin{answer_box}[title=,height=7cm, width=15cm]
+  \end{answer_box}
+
+\part[2] What percentage of parameters are fine-tuned with when you set $r = 128$ and $\alpha = 512$?
+
+\begin{answer_box}[title=,height=3cm, width=15cm]
+\end{answer_box}
+
+\part[2] What string did you use as \lstinline{INSTRUCTION_TEMPLATE} for instruction fine-tuning? 
+
+\begin{answer_box}[title=,height=3cm, width=15cm]
+\end{answer_box}
+
+\uplevel{\subsection*{Inference and Evaluation with LoRA}}
+    
+\part[1] What is the accuracy of your model without any fine-tuning? (Hint: you can run this directly using python generate.py --init-from="gpt2-medium") 
+
+\begin{answer_box}[title=,height=2cm, width=15cm]
+\end{answer_box}
+
+\part[4] What is the test accuracy of your model with LORA fine-tuning across $r \in \{16,32,128\}$? What is the test accuracy of fine-tuning without LoRA? 
+(Hint: Make sure to also modify alpha to ensure a constant scaling factor of 4).\footnote{The LoRA paper indicates that we should be able to reach (and perhaps surpass) the accuracy of full fine-tuning. You are encouraged to play around with hyperparameters (e.g. learning rate) to try to accomplish this, but this is not required.}
+
+        \begin{center}
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|c|c|c|c|} 
+        \hline
+        method & $r$ & alpha & accuracy \\ \hline
+        LoRA & 16 & & \\ \hline 
+        LoRA & 128 & & \\ \hline
+        LoRA & 196 & & \\ \hline
+        Fine Tuning & -- & -- & \\ \hline
+        \end{tabular}
+        \end{center}
+
+\part[3] How does your LoRA model's performance compare to fine-tuning without LoRA? Also, how does the value of $r$ affect performance? Briefly discuss. 
+
+\begin{answer_box}[title=,height=4cm, width=15cm]
+\end{answer_box}
+
+\clearpage
+\part[4] Plot wandb validation loss curves for LoRA with $r \in \{16,128, 196\}$.
+
+\begin{answer_box}[title=,height=7cm, width=15cm]
+\end{answer_box}
+
+\part[1] Is there anything unexpected about the shape of the validation loss when $r=196$? If yes, explain what is unexpected. If no, describe why it appears typical.
+
+\begin{answer_box}[title=,height=7cm, width=15cm]
+\end{answer_box}
+
+\part[2] Changing both the learning rate and $\alpha$ may be redundant. Why?
+
+\begin{answer_box}[title=,height=3cm, width=15cm]
+\end{answer_box}
+
+\end{parts}
+
+
+\clearpage
+\sectionquestion{Code Upload}
+
+\begin{parts}
+
+\part[0] Did you upload your code to the appropriate programming slot on Gradescope? \\
+\emph{Hint:} The correct answer is `yes'.
+
+    \begin{checkboxes}
+     \choice Yes 
+     \choice No
+    \end{checkboxes}
+
+For this homework, you should upload all the code files that contain your new and/or changed code. Files of type \lstinline{.py} and \lstinline{.ipynb} are both fine.
+
+\end{parts}
+
+\newpage
+\sectionquestion{Collaboration Questions}
+
+\begin{parts}
+
+\uplevel{After you have completed all other components of this assignment, report your answers to these questions regarding the collaboration policy. Details of the policy can be found in the syllabus.}
+
+    \part[1] Did you collaborate with anyone on this assignment? If so, list their name or Andrew ID and which problems you worked together on.
+
+        \begin{answer_box}[title=,height=3cm, width=15cm]
+        \end{answer_box}
+
+    
+    \part[1] Did you find or come across code that implements any part of this assignment? If so, include full details.
+        \begin{answer_box}[title=,height=3cm, width=15cm]
+        \end{answer_box}
+\end{parts}
+\end{questions}
+
+
+\end{document}

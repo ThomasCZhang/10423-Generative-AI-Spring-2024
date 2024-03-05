@@ -1,0 +1,61 @@
+
+tokens per iteration will be: 32,768
+Map: 100%|██████████████████████████████████████████████████████| 4000/4000 [00:00<00:00, 14527.93 examples/s]
+Map: 100%|██████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 11761.43 examples/s]
+Initializing from OpenAI GPT-2 weights: gpt2-medium
+loading weights from pretrained gpt: gpt2-medium
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding lora_rank and lora_alpha to 64
+overriding lora_dropout to 0.05
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+GPTConfig(block_size=1024, vocab_size=50257, n_layer=24, n_head=16, n_embd=1024, dropout=0.0, bias=True, lora_rank=64, lora_alpha=512, lora_dropout=0.05)
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\train.py", line 189, in <module>
+    model = GPT.from_pretrained(init_from, override_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 270, in from_pretrained
+    model = GPT(config)
+            ^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 168, in __init__
+    self.apply(self._init_weights)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 890, in apply
+    module.apply(fn)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 890, in apply
+    module.apply(fn)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 890, in apply
+    module.apply(fn)
+  [Previous line repeated 2 more times]
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 891, in apply
+    fn(self)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw3\handout\model.py", line 191, in _init_weights
+    torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\init.py", line 175, in normal_
+    return _no_grad_normal_(tensor, mean, std, generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\init.py", line 20, in _no_grad_normal_
+    return tensor.normal_(mean, std, generator=generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

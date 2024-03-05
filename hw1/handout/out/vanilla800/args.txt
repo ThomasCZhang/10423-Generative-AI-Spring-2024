@@ -1,0 +1,1 @@
+.\chargpt.py --trainer.max_iters=200 --model.pretrained_folder=out//vanilla600 --system.work_dir=out//vanilla800 --data.block_size=256

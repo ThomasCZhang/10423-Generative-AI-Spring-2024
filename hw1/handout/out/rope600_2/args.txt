@@ -1,0 +1,1 @@
+chargpt.py --trainer.max_iters=600 --model.rope=True --system.work_dir=out/rope600_2

@@ -1,0 +1,37 @@
+{
+    "system": {
+        "seed": 3407,
+        "work_dir": "out//rope600"
+    },
+    "data": {
+        "block_size": 128,
+        "tokenizer": "default"
+    },
+    "model": {
+        "model_type": "gpt",
+        "n_layer": 6,
+        "n_query_head": 6,
+        "n_embd": 192,
+        "vocab_size": 65,
+        "block_size": 128,
+        "embd_pdrop": 0.1,
+        "resid_pdrop": 0.1,
+        "attn_pdrop": 0.1,
+        "pretrained_folder": null,
+        "n_kv_head": 6,
+        "rope": true
+    },
+    "trainer": {
+        "device": "auto",
+        "num_workers": 4,
+        "max_iters": 600,
+        "batch_size": 64,
+        "learning_rate": 0.0005,
+        "betas": [
+            0.9,
+            0.95
+        ],
+        "weight_decay": 0.1,
+        "grad_norm_clip": 1.0
+    }
+}

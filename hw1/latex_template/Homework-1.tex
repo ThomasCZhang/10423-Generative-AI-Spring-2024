@@ -1,0 +1,1184 @@
+\documentclass[11pt,addpoints,answers]{exam}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for customizing the assignment %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\courseNum}{10-423/10-623}
+\newcommand{\courseName}{Generative AI}
+\newcommand{\courseSem}{Spring 2024}
+\newcommand{\courseUrl}{\url{http://423.mlcourse.org}}
+\newcommand{\hwNum}{Homework 1}
+\newcommand{\hwTopic}{Generative Models of Text}
+\newcommand{\hwName}{\hwNum: \hwTopic}
+\newcommand{\outDate}{Jan. 27, 2024}
+\newcommand{\dueDate}{Feb. 07, 2024}
+\newcommand{\taNames}{Advaith, Afreen, Haohui, Tiancheng}
+\newcommand{\homeworktype}{\string written+prog}
+\newcommand{\overleafUrl}{}
+
+%% To HIDE SOLUTIONS (to post at the website for students), set this value to 0: \def\issoln{0}
+\providecommand{\issoln}{0}
+%\providecommand{\issoln}{1}
+
+%-----------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-----------------------------------------------------------------------------
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{xfrac}
+\usepackage{natbib}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{paralist}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage{environ}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage{parskip} % For NIPS style paragraphs.
+\usepackage[compact]{titlesec} % Less whitespace around titles
+\usepackage[inline]{enumitem} % For inline enumerate* and itemize*
+\usepackage{datetime}
+\usepackage{comment}
+% \usepackage{minted}
+\usepackage{lastpage}
+\usepackage{color}
+% \usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[final]{listings}
+\usepackage{tikz}
+\usetikzlibrary{shapes,decorations}
+\usepackage{framed}
+\usepackage{booktabs}
+\usepackage{cprotect}
+\usepackage{verbatimbox}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{mathtools} % For drcases
+\usepackage{cancel}
+\usepackage[many]{tcolorbox}
+\usepackage{soul}
+\usepackage[bottom]{footmisc}
+\usepackage{bm}
+\usepackage{wasysym}
+\usepackage{lipsum}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning, arrows, automata, calc}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting for \CorrectChoice of "exam" %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\CorrectChoiceEmphasis{}
+\checkedchar{\blackcircle}
+
+\newenvironment{checkboxessquare}{
+    \begingroup
+    \checkboxchar{$\Box$} \checkedchar{$\blacksquare$} % change checkbox style locally
+    \begin{checkboxes}
+    }{
+    \end{checkboxes}
+    \endgroup
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Better numbering                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+% \numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+% \numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\blackcircle}{\tikz\draw[black,fill=black] (0,0) circle (1ex);}
+\renewcommand{\circle}{\tikz\draw[black] (0,0) circle (1ex);}
+
+\newcommand{\solo}{ \textcolor{orange}{[SOLO]} }
+\newcommand{\open}{ \textcolor{blue}{[OPEN]} }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands for Math               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\vc}[1]{\boldsymbol{#1}}
+\newcommand{\adj}[1]{\frac{\partial \ell}{\partial #1}}
+\newcommand{\chain}[2]{\adj{#2} = \adj{#1}\frac{\partial #1}{\partial #2}}
+\newcommand{\ntset}{test}
+\newcommand{\zerov}{\mathbf{0}}
+\DeclareMathOperator*{\argmin}{argmin}
+
+% mathcal
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Wc}{\mathcal{W}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}}
+\newcommand{\Zc}{\mathcal{Z}}
+
+% mathbb
+\newcommand{\Ab}{\mathbb{A}}
+\newcommand{\Bb}{\mathbb{B}}
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\Db}{\mathbb{D}}
+\newcommand{\Eb}{\mathbb{E}}
+\newcommand{\Fb}{\mathbb{F}}
+\newcommand{\Gb}{\mathbb{G}}
+\newcommand{\Hb}{\mathbb{H}}
+\newcommand{\Ib}{\mathbb{I}}
+\newcommand{\Jb}{\mathbb{J}}
+\newcommand{\Kb}{\mathbb{K}}
+\newcommand{\Lb}{\mathbb{L}}
+\newcommand{\Mb}{\mathbb{M}}
+\newcommand{\Nb}{\mathbb{N}}
+\newcommand{\Ob}{\mathbb{O}}
+\newcommand{\Pb}{\mathbb{P}}
+\newcommand{\Qb}{\mathbb{Q}}
+\newcommand{\Rb}{\mathbb{R}}
+\newcommand{\Sb}{\mathbb{S}}
+\newcommand{\Tb}{\mathbb{T}}
+\newcommand{\Ub}{\mathbb{U}}
+\newcommand{\Vb}{\mathbb{V}}
+\newcommand{\Wb}{\mathbb{W}}
+\newcommand{\Xb}{\mathbb{X}}
+\newcommand{\Yb}{\mathbb{Y}}
+\newcommand{\Zb}{\mathbb{Z}}
+
+% mathbf lowercase
+\newcommand{\av}{\mathbf{a}}
+\newcommand{\bv}{\mathbf{b}}
+\newcommand{\cv}{\mathbf{c}}
+\newcommand{\dv}{\mathbf{d}}
+\newcommand{\ev}{\mathbf{e}}
+\newcommand{\fv}{\mathbf{f}}
+\newcommand{\gv}{\mathbf{g}}
+\newcommand{\hv}{\mathbf{h}}
+\newcommand{\iv}{\mathbf{i}}
+\newcommand{\jv}{\mathbf{j}}
+\newcommand{\kv}{\mathbf{k}}
+\newcommand{\lv}{\mathbf{l}}
+\newcommand{\mv}{\mathbf{m}}
+\newcommand{\nv}{\mathbf{n}}
+\newcommand{\ov}{\mathbf{o}}
+\newcommand{\pv}{\mathbf{p}}
+\newcommand{\qv}{\mathbf{q}}
+\newcommand{\rv}{\mathbf{r}}
+\newcommand{\sv}{\mathbf{s}}
+\newcommand{\tv}{\mathbf{t}}
+\newcommand{\uv}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\wv}{\mathbf{w}}
+\newcommand{\xv}{\mathbf{x}}
+\newcommand{\yv}{\mathbf{y}}
+\newcommand{\zv}{\mathbf{z}}
+
+% mathbf uppercase
+\newcommand{\Av}{\mathbf{A}}
+\newcommand{\Bv}{\mathbf{B}}
+\newcommand{\Cv}{\mathbf{C}}
+\newcommand{\Dv}{\mathbf{D}}
+\newcommand{\Ev}{\mathbf{E}}
+\newcommand{\Fv}{\mathbf{F}}
+\newcommand{\Gv}{\mathbf{G}}
+\newcommand{\Hv}{\mathbf{H}}
+\newcommand{\Iv}{\mathbf{I}}
+\newcommand{\Jv}{\mathbf{J}}
+\newcommand{\Kv}{\mathbf{K}}
+\newcommand{\Lv}{\mathbf{L}}
+\newcommand{\Mv}{\mathbf{M}}
+\newcommand{\Nv}{\mathbf{N}}
+\newcommand{\Ov}{\mathbf{O}}
+\newcommand{\Pv}{\mathbf{P}}
+\newcommand{\Qv}{\mathbf{Q}}
+\newcommand{\Rv}{\mathbf{R}}
+\newcommand{\Sv}{\mathbf{S}}
+\newcommand{\Tv}{\mathbf{T}}
+\newcommand{\Uv}{\mathbf{U}}
+\newcommand{\Vv}{\mathbf{V}}
+\newcommand{\Wv}{\mathbf{W}}
+\newcommand{\Xv}{\mathbf{X}}
+\newcommand{\Yv}{\mathbf{Y}}
+\newcommand{\Zv}{\mathbf{Z}}
+
+% bold greek lowercase
+\newcommand{\alphav     }{\boldsymbol \alpha     }
+\newcommand{\betav      }{\boldsymbol \beta      }
+\newcommand{\gammav     }{\boldsymbol \gamma     }
+\newcommand{\deltav     }{\boldsymbol \delta     }
+\newcommand{\epsilonv   }{\boldsymbol \epsilon   }
+\newcommand{\varepsilonv}{\boldsymbol \varepsilon}
+\newcommand{\zetav      }{\boldsymbol \zeta      }
+\newcommand{\etav       }{\boldsymbol \eta       }
+\newcommand{\thetav     }{\boldsymbol \theta     }
+\newcommand{\varthetav  }{\boldsymbol \vartheta  }
+\newcommand{\iotav      }{\boldsymbol \iota      }
+\newcommand{\kappav     }{\boldsymbol \kappa     }
+\newcommand{\varkappav  }{\boldsymbol \varkappa  }
+\newcommand{\lambdav    }{\boldsymbol \lambda    }
+\newcommand{\muv        }{\boldsymbol \mu        }
+\newcommand{\nuv        }{\boldsymbol \nu        }
+\newcommand{\xiv        }{\boldsymbol \xi        }
+\newcommand{\omicronv   }{\boldsymbol \omicron   }
+\newcommand{\piv        }{\boldsymbol \pi        }
+\newcommand{\varpiv     }{\boldsymbol \varpi     }
+\newcommand{\rhov       }{\boldsymbol \rho       }
+\newcommand{\varrhov    }{\boldsymbol \varrho    }
+\newcommand{\sigmav     }{\boldsymbol \sigma     }
+\newcommand{\varsigmav  }{\boldsymbol \varsigma  }
+\newcommand{\tauv       }{\boldsymbol \tau       }
+\newcommand{\upsilonv   }{\boldsymbol \upsilon   }
+\newcommand{\phiv       }{\boldsymbol \phi       }
+\newcommand{\varphiv    }{\boldsymbol \varphi    }
+\newcommand{\chiv       }{\boldsymbol \chi       }
+\newcommand{\psiv       }{\boldsymbol \psi       }
+\newcommand{\omegav     }{\boldsymbol \omega     }
+
+% bold greek uppercase
+\newcommand{\Gammav     }{\boldsymbol \Gamma     }
+\newcommand{\Deltav     }{\boldsymbol \Delta     }
+\newcommand{\Thetav     }{\boldsymbol \Theta     }
+\newcommand{\Lambdav    }{\boldsymbol \Lambda    }
+\newcommand{\Xiv        }{\boldsymbol \Xi        }
+\newcommand{\Piv        }{\boldsymbol \Pi        }
+\newcommand{\Sigmav     }{\boldsymbol \Sigma     }
+\newcommand{\Upsilonv   }{\boldsymbol \Upsilon   }
+\newcommand{\Phiv       }{\boldsymbol \Phi       }
+\newcommand{\Psiv       }{\boldsymbol \Psi       }
+\newcommand{\Omegav     }{\boldsymbol \Omega     }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code highlighting with listings         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\definecolor{light-gray}{gray}{0.95}
+
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstdefinelanguage{Shell}{
+  keywords={tar, cd, make},
+  %keywordstyle=\color{bluekeywords}\bfseries,
+  alsoletter={+},
+  ndkeywords={python3, python, py, javac, java, gcc, c, g++, cpp, .txt, octave, m, .tar},
+  %ndkeywordstyle=\color{bluekeywords}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  %stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]",
+  backgroundcolor = \color{light-gray}
+}
+
+\lstset{columns=fixed, basicstyle=\ttfamily,
+    backgroundcolor=\color{light-gray},xleftmargin=0.5cm,frame=tlbr,framesep=4pt,framerule=0pt}
+
+\newcommand{\emptysquare}{{\LARGE $\square$}\ \ }
+\newcommand{\filledsquare}{{\LARGE $\boxtimes$}\ \ }
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+
+% \newcommand{\squaresolutionspace}[2][\emptysquare]{\newline #1}{#2}
+\def \squaresolutionspace#1{ \ifempty{#1} \emptysquare \else #1\hspace{0.75pt}\fi}
+
+
+\newcommand{\emptycircle}{{\LARGE $\fullmoon$}\ \ }
+\newcommand{\filledcircle}{{\LARGE $\newmoon$}\ \ }
+\def \circlesolutionspace#1{ \ifempty{#1} \emptycircle \else #1\hspace{0.75pt}\fi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom box for highlights               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define box and box title style
+\tikzstyle{mybox} = [fill=blue!10, very thick,
+    rectangle, rounded corners, inner sep=1em, inner ysep=1em]
+
+% \newcommand{\notebox}[1]{
+% \begin{tikzpicture}
+% \node [mybox] (box){%
+%     \begin{minipage}{\textwidth}
+%     #1
+%     \end{minipage}
+% };
+% \end{tikzpicture}%
+% }
+
+\NewEnviron{notebox}{
+\begin{tikzpicture}
+\node [mybox] (box){
+    \begin{minipage}{0.95\textwidth}
+        \BODY
+    \end{minipage}
+};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands showing / hiding solutions     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\solutionspace}[4]{\fbox{\begin{minipage}[t][#1][t]{#2} \textbf{#3} \solution{}{#4} \end{minipage}}}
+
+% To HIDE SOLUTIONS, set this value to 0:
+%\providecommand{\issoln}{0}
+%\providecommand{\issoln}{1}
+
+\ifthenelse{\equal{\issoln}{1}}{
+
+% SOLUTION environment
+\newenvironment{soln}{\leavevmode\color{red}\ignorespaces }{}
+
+% QUESTION AUTHORS environment
+\newenvironment{qauthor}{\leavevmode\color{blue}\ignorespaces }{}
+
+% Question tester comment environment
+\newenvironment{qtester}{\leavevmode\color{green}\ignorespaces}{}
+
+% Question learning objective comment environment
+\newenvironment{qlearningobjective}{\leavevmode\color{green}\ignorespaces}{}
+
+}{ % ELSE
+
+  \NewEnviron{soln}{}
+  \NewEnviron{qauthor}{}
+  \NewEnviron{qtester}{}
+  \NewEnviron{qlearningobjective}{}
+
+}
+
+%% To HIDE TAGS set this value to 0:
+\def\showtags{0}
+%%%%%%%%%%%%%%%%
+\ifcsname showtags\endcsname \else \def\showtags{1} \fi
+% Default to an empty tags environ.
+\NewEnviron{tags}{}{}
+\if\showtags 1
+% Otherwise, include solutions as below.
+\RenewEnviron{tags}{
+    \fbox{
+    \leavevmode\color{blue}\ignorespaces
+    \textbf{TAGS:} \texttt{\url{\BODY}}
+    }
+    \vspace{-.5em}
+}{}
+\fi
+
+\newtcolorbox[]{answer_box}[1][]{
+    % breakable,
+    fit,
+    enhanced,
+    % nobeforeafter,
+    colback=white,
+    title=Your Answer,
+    sidebyside align=top,
+    box align=top,
+    #1
+}
+
+%\pagestyle{fancyplain}
+\lhead{\hwName{}
+}
+\rhead{\courseNum}
+\cfoot{\thepage{} of \numpages{}}
+
+\title{\textsc{\hwNum}
+\\
+\textsc{\hwTopic}
+\thanks{Compiled on \today{} at \currenttime{}}\\
+\vspace{1em}
+} % Title
+
+
+\author{\textsc{\large \courseNum{} \courseName{}}\\
+\courseUrl
+\vspace{1em}\\
+\ifdefempty{\outDate}{}{  OUT: \outDate \\ }
+\ifdefempty{\dueDate}{}{  DUE: \dueDate \\ }
+  TAs: \taNames{}
+}
+
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful commands for typesetting the questions %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This command will allow long \lstinline{} text to wrap automatically.
+\sloppy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document configuration %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't display a date in the title and remove the white space
+\predate{}
+\postdate{}
+\date{}
+
+% Don't display an author and remove the white space
+%\preauthor{}
+%\postauthor{}
+
+% Question type commands
+\newcommand{\sall}{\textbf{Select all that apply: }}
+\newcommand{\sone}{\textbf{Select one: }}
+\newcommand{\tf}{\textbf{True or False: }}
+
+
+
+
+% Abhi messing around with examdoc
+\qformat{\textbf{{\Large \thequestion \; \; \thequestiontitle \ (\totalpoints \ points)}} \hfill}
+\renewcommand{\thequestion}{\arabic{question}}
+\renewcommand{\questionlabel}{\thequestion.}
+
+\renewcommand{\thepartno}{\arabic{partno}}
+\renewcommand{\partlabel}{\thequestion.\thepartno.}
+% not working: \renewcommand{\subpartlabel}{(\thequestion.\thepartno.\thesubpart)}
+% Commented after adding \question.\thepartno.
+%\renewcommand{\partshook}{\setlength{\leftmargin}{0pt}}
+
+\renewcommand{\thesubpart}{\alph{subpart}}
+\renewcommand{\subpartlabel}{(\thesubpart)}
+
+\renewcommand{\thesubsubpart}{\roman{subsubpart}}
+\renewcommand{\subsubpartlabel}{\thesubsubpart.}
+
+% copied from stack overflow, as all good things are
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+% quite possibly the worst workaround i have made for this class
+\newcommand{\sectionquestion}[1]{
+\titledquestion{#1}
+\invisiblesection{#1}
+~\vspace{-1em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New Environment for Pseudocode          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Python style for highlighting
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+morekeywords={self},              % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false
+}}
+
+
+% Python environment
+\lstnewenvironment{your_code_solution}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+\begin{document}
+ 
+\maketitle 
+
+\newcommand \maxsubs {10 }
+\section*{Instructions}
+\begin{itemize}
+
+\item \textbf{Collaboration Policy}: Please read the collaboration policy in the syllabus.
+\item\textbf{Late Submission Policy:} See the late submission policy in the syllabus.
+\item\textbf{Submitting your work:} You will use Gradescope to submit
+  answers to all questions\ifthenelse{\equal{\homeworktype}{\string written}}{}{ and code}. 
+
+\begin{itemize}
+    
+    % IF NOT USING TEMPLATE: 
+    % \item \textbf{Written:} You will submit your completed homework as a PDF to Gradescope. For each problem, please clearly indicate the question number (e.g. 3.2). Submissions can be handwritten, but must be clearly legible; otherwise, you will not be awarded marks.   Alternatively, submissions can be written in \LaTeX{}. You may use the \LaTeX{} source of this assignment (included in the handout .zip) as your starting point. For multiple choice / select all questions, simply write the letter(s) (e.g. A, B, C) corresponding to your chosen answer.
+    % IF USING TEMPLATE: 
+    \item \textbf{Written:} You will submit your completed homework as a PDF to Gradescope. Please use the provided template. Submissions can be handwritten, but must be clearly legible; otherwise, you will not be awarded marks. Alternatively, submissions can be written in \LaTeX{}. Each answer should be within the box provided. If you do not follow the template or your submission is misaligned, your assignment may not be graded correctly by our AI assisted grader. 
+    
+    \ifdefempty{\overleafUrl}{}{
+    \item \textbf{\LaTeX{} Source:} \overleafUrl
+    }
+
+    \ifthenelse{\equal{\homeworktype}{\string written}}{}{
+    \item \textbf{Programming:} You will submit your code for programming questions to Gradescope. There is no autograder. We will examine your code by hand and may award marks for its submission.
+    }{}
+   
+  \end{itemize}
+  
+\ifthenelse{\equal{\homeworktype}{\string written}}{}{\item\textbf{Materials:} The data that you will need in order to complete this assignment is posted along with the writeup and template on the course website.}
+
+\end{itemize}
+
+\begin{center}
+    \pointtable[v][questions]
+\end{center}\clearpage
+
+%\input{../shared/instructions_for_specific_problem_types.tex}
+%\clearpage
+\begin{questions}
+
+
+\sectionquestion{Recurrent Neural Network (RNN) Language Models}
+
+\begin{parts}
+    
+\part[3] \textbf{Numerical answer:} Consider an RNN (Elman Network) that takes inputs $\xv_t \in \{0,1\}^2$, has hidden vectors $\hv_t \in \Rb^2$, and output units $y_t \in \Rb$ for all $t \in \{1,\ldots,T\}$. Assume the recurrence is given by:
+    \begin{align*}
+        h_t &= \text{slide}(W_{hh}  h_{t-1} + W_{hx}  x_t + b_h) \\
+        y_t &= \text{slide}(W_{yh}  h_t + b_y)
+    \end{align*}
+    where $\text{slide}(a) = \min(1,\max(0, a))$ is the activation function. Define parameters $W_{hh}\in \Rb^{2 \times 2}, W_{hx} \in \Rb^{2 \times 2}, W_{yh} \in \Rb^{1 \times 2}, b_h \in \Rb^2, b_y \in \Rb$ to satisfy the following condition: $y_t = 1$ if $\exists\, r,s \leq t$ such that $x_{r,0} = 1$ and $x_{s,1} = 1$ and $y_t = 0$ otherwise. Assume $h_0 = [0,0]^T$.
+
+    \begin{answer_box}[title=,height=6cm,width=15cm]    
+    \end{answer_box}
+
+\part An autoregressive language model defines a probability distribution over sequences $\xv_{1:T}$ of the form: $p(\xv_{1:T}) = \prod_{t=1}^T p(x_t \mid x_1, \ldots, x_{t-1})$.
+\begin{subparts}
+    
+    
+    \subpart[2] \textbf{Short answer:} Suppose we are given an input $\xv_{1:T}$ and we define a bidirectional RNN of the following form:
+    \begin{align*}
+        f_t &= \sigma(W_{ff}  f_{t-1} + W_{fx}  x_t + b_f), \quad \forall t \in \{1,\dots, T\} \\
+        g_t &= \sigma(W_{gg}  g_{t+1} + W_{gx}  x_t + b_g), \quad \forall t \in \{1,\dots, T\} \\
+        h_t &= \sigma(W_{hf}  f_{t} + W_{hg}  g_t + b_g), \quad \forall t \in \{1,\dots, T\} 
+    \end{align*}
+    (Notice that $f_t$ builds up context from the left, $g_t$ builds up context from the right, and $h_t$ combines the two.)
+    Can we define an autoregressive language model of the form $p(\xv_{1:T}) = \prod_{t=1}^T p(x_t \mid h_{t-1})$? If so, define the probability distribution. If not, why not?
+
+
+    \begin{answer_box}[title=,height=4cm,width=15cm]        
+    \end{answer_box}
+
+    \subpart[2] \textbf{Short answer:} Suppose $\text{BiRNN}(\xv_{1:t-1})$ computes a bidirectional RNN on the subsequence $\xv_{1:t-1}$ and then returns $h_{t-1}$. Can we define an autoregressive language model of the form $p(\xv_{1:T}) = \prod_{t=1}^T p(x_t \mid \text{BiRNN}(\xv_{1:t-1})$? If so, define the probability distribution. If not, why not?
+
+    \begin{answer_box}[title=,height=4cm,width=15cm]
+    \end{answer_box}
+    
+    
+\end{subparts}
+    
+\end{parts}
+
+\clearpage
+\sectionquestion{Transformer Language Models}
+
+\begin{parts}
+
+\part[2] Transformers use scaled-dot-product attention:
+\begin{align*}
+    % \vv_j &= \Wv_v^T \xv_j, \forall j 
+    % \qv_j &= \Wv_q^T \xv_j, \forall j \\
+    % \kv_j &= \Wv_k^T \xv_j, \forall j \\
+    s_{t,j} &= \kv_j^T \qv_t / \sqrt{|\kv|}, \forall j,t\\
+    \av_t &= \text{softmax}(\sv_t), \forall t
+\end{align*}
+where the values, queries, and keys are respectively given by: $\vv_j = \Wv_v^T \xv_j$, $\qv_j = \Wv_q^T \xv_j$, and $\kv_j = \Wv_k^T \xv_j$ for all $j$ and $\vv_j, \vv_q, \vv_k \in \Rb^{d_k}$. 
+
+\begin{subparts}
+    
+    \subpart[2] \textbf{Short answer:} Multiplicative attention instead defines the attention weights as:
+    \begin{align*}
+        \tilde{s}_{t,j} &= \kv_j^T \Wv_s \qv_t / \sqrt{|\kv|}, \forall j,t\\
+        \tilde{\av}_t &= \text{softmax}(\tilde{\sv}_t), \forall t
+    \end{align*}
+    where $\Wv_s \in \Rb^{d_k \times d_k}$ is a parameter matrix.
+    %
+    Could a Transformer with multiplicative attention learn a different class of functions than the simpler scaled-dot-product attention? Briefly justify your answer.
+
+    \begin{answer_box}[title=,height=4cm,width=15cm]
+    \end{answer_box}
+
+    \subpart[2] \textbf{Short answer:} Concatenated attention defines the attention weights as:
+    \begin{align*}
+        \hat{s}_{t,j} &= \wv_s^T [ \kv_j ; \qv_t ], \forall j,t\\
+        \hat{\av}_t &= \text{softmax}(\hat{\sv}_t), \forall t
+    \end{align*}
+    where $\wv_s \in \Rb^{2d_k}$ is a parameter vector, and $[\av; \bv]$ is the concatenation of vectors $\av$ and $\bv$.
+    %
+    Do there exist parameters $\wv_s$ such that $s_{t,j}$ will approximately equal the angle $\theta$ between the two vectors $\kv_j,\qv_t$, or to $\cos(\theta)$? (Briefly justify your answer---a formal proof is not required.)
+
+    \begin{answer_box}[title=,height=4cm,width=15cm]
+    \end{answer_box}
+
+\clearpage
+
+    \subpart[2] \textbf{Short answer:} Additive attention defines the attention weights as:
+    \begin{align*}
+        \hat{s}_{t,j} &= \wv_s^T \text{tanh}(\Wv_s [ \kv_j ; \qv_t ]), \forall j,t\\
+        \hat{\av}_t &= \text{softmax}(\hat{\sv}_t), \forall t
+    \end{align*}
+    where the parameters are $\wv_s \in \Rb^{d_s}$ and $\Wv_s \in \Rb^{d_s \times d_s}$, dimensionality $d_s$ is a hyperparameter, and $[\av; \bv]$ is the concatenation of vectors $\av$ and $\bv$.
+    %
+    Do there exist parameters $\wv_s, \Wv_s$ such that $s_{t,j}$ will approximately equal the angle $\theta$ between the two vectors $\kv_j,\qv_t$, or to $\cos(\theta)$? (Briefly justify your answer---a formal proof is not required.)
+
+    \begin{answer_box}[title=,height=4cm,width=15cm]
+    \end{answer_box}
+
+\end{subparts}
+
+
+\part Self-attention is typically computed via matrix multiplication. Here we consider multi-headed attention without a causal attention mask.
+\begin{align*}
+    \Xv &= [\xv_1, \ldots, \xv_N]^T  \\
+    \Vv^{(i)} &= \Xv \Wv_v^{(i)} \\
+    \Kv^{(i)} &= \Xv \Wv_k^{(i)} \\
+    \Qv^{(i)} &= \Xv \Wv_q^{(i)} \\
+    \Sv^{(i)} &= \Qv^{(i)} (\Kv^{(i)})^T / \sqrt{d_k} \\
+    \Av^{(i)} &= \text{softmax}(\Sv^{(i)}) \\
+    \Xv'^{(i)} &= \Av^{(i)} \Vv^{(i)} \\
+    \Xv' &= \text{concat}(\Xv'^{(1)}, \ldots, \Xv'^{(h)})
+\end{align*}
+where $N$ is the sequence length, $h$ is the number of attention heads, and each row involving $i$ is defined $\forall i \in \{1, \ldots, h\}$.
+\begin{subparts}
+
+\subpart[3] \textbf{Short answer:} Is the attention matrix $\Av^{(i)}$ always symmetric? If yes, show that it is. If not, describe a condition that would ensure it is symmetric.
+
+    \begin{answer_box}[title=,height=4cm,width=15cm]    
+    \end{answer_box}
+
+\clearpage
+
+\subpart[4] \textbf{Short answer:} Suppose we have two attention heads, $h=2$, we let $d_k = d_{m}/h$, and we have a single input $\Xv$. Let $\Xv'$ be the output of multi-headed attention on $\Xv$ with the parameters:
+\begin{align*}
+    \Wv_v^{(1)}, \Wv_k^{(1)}, \Wv_q^{(1)}, \Wv_v^{(2)}, \Wv_k^{(2)}, \Wv_q^{(2)} \in \Rb^{d_m \times d_{k}}
+\end{align*}
+Now suppose we take those same parameters and concatenate along the rows to yield new parameters:
+\begin{align*}
+\Wv_v' = \text{concat}(\Wv_v^{(1)}, \Wv_v^{(2)}), \, \Wv_k' = \text{concat}(\Wv_k^{(1)}, \Wv_k^{(2)}), \, \Wv_q' = \text{concat}(\Wv_q^{(1)}, \Wv_q^{(2)}) \in \Rb^{d_{m} \times d_{m}}
+\end{align*}
+And let $\Xv''$ be the output of single-headed attention on $\Xv$ with the parameters $\Wv_v', \Wv_k', \Wv_q'$.
+
+In this case, does $\Xv'' = \Xv'$? Justify your answer.
+
+    \begin{answer_box}[title=,height=8cm,width=15cm]
+    \end{answer_box}
+
+\end{subparts}
+
+\end{parts}
+
+\clearpage
+
+\sectionquestion{Sliding Window Attention}
+
+\begin{parts}
+    
+\part The simplest way to define sliding window attention is by setting the causal mask $\Mv$ to only include a window of $\frac{1}{2}w+1$ tokens, with the rightmost window element being the current token (i.e. on the diagonal). Then our attention computation is:
+\begin{align}
+    \Xv' &= \text{softmax}((\Qv \Kv^T / \sqrt{d_k}) + \Mv) \Vv 
+    \label{eq:slidingwindow}
+\end{align}
+For example, if we have a sequence of length $N=6$, and window size $w=4$, then our mask matrix is:
+\begin{align*}
+    \Mv &= \begin{bmatrix}
+      0 & -\infty & -\infty & -\infty & -\infty & -\infty \\
+      0 & 0 & -\infty & -\infty & -\infty & -\infty \\
+      0 & 0 & 0 & -\infty & -\infty & -\infty \\
+      -\infty & 0 & 0 & 0 & -\infty & -\infty \\
+      -\infty & -\infty & 0 & 0 & 0 & -\infty \\
+      -\infty & -\infty & -\infty & 0 & 0 & 0 \\
+    \end{bmatrix}
+\end{align*}
+
+    \begin{subparts}
+
+    \subpart[1] \textbf{Short answer:} If we implement sliding window using the matrix multiplications described in Equation \ref{eq:slidingwindow}, what is the time complexity in terms of $N$ and $w$? (For this and subsequent questions, assume that the cost of multiplying two matrices $\Xv \in \Rb^{m \times n}$ and $\Yv \in \Rb^{n \times p}$ is $O(mnp)$.) 
+
+    \begin{answer_box}[title=,height=2cm,width=3cm]
+    \end{answer_box}
+    
+    \subpart[1] \textbf{Short answer:} If we implement sliding window using the matrix multiplications described in Equation \ref{eq:slidingwindow}, what is the space complexity in terms of $N$ and $w$?
+
+    \begin{answer_box}[title=,height=2cm,width=3cm]
+    \end{answer_box}
+
+\clearpage
+
+    \subpart[4] \textbf{Pseudocode:} Write pseudocode/math for a function that takes in the queries, keys, and values and the window size $w$ and computes the $\Xv'$: 
+    $$\textsc{ScaledDotProductAttention}(\Qv, \Kv, \Vv, d_k, w)$$
+    Your pseudocode/math must have lower asymptotic computational than the naive matrix multiplication approach described above. Your solution can and should include for loops. Assume access to a function $\text{softmax}(\xv)$ which applies softmax to a vector $\xv$ and a function $\text{tensor}(\cdot)$ that can be used to contruct vectors, matrices, tensors of arbitrary shape.
+
+    \begin{answer_box}[title=,height=10cm,width=15cm]
+    \end{answer_box}
+
+    \subpart[1] \textbf{Short answer:} What is the space complexity of your pseudocode in terms of $N$ and $w$?
+
+    \begin{answer_box}[title=,height=2cm,width=3cm]
+    \end{answer_box}
+
+    \subpart[1] \textbf{Short answer:} What is the time complexity of your pseudocode in terms of $N$ and $w$?
+
+    \begin{answer_box}[title=,height=2cm,width=3cm]
+    \end{answer_box}
+    
+    \end{subparts}
+    
+\end{parts}
+
+\clearpage
+
+\sectionquestion{Programming: RoPE and GQA}
+
+\uplevel{\subsection*{Introduction}} 
+In this section, you will take a run-of-the-mill GPT model and upgrade it to incorporate two of the key ingredients found in state-of-the-art large language models (LLMs), such as \href{https://arxiv.org/pdf/2307.09288.pdf}{\textsc{Llama}-2}. 
+
+The first ingredient are rotary position embeddings (RoPE). These will replace the existing absolute position embeddings with a relative position embedding that rotates small segments of each key and query vector. 
+
+The second ingredient is grouped-query attention (GQA). Although the GQA mechanism is fundamentally still causal attention, it enables the model to use less memory and run faster. 
+
+You will experiment with how these two model improvements lead to changes in model performance. And you will even evaluate how they perform in tandem.
+
+Upon completion of this section, you will unfortunately not be able to claim to have trained a \emph{large} language model, for the dataset we provide here (the complete works of Shakespeare) is rather small if not trite. However, you can reasonably claim to have built your own \textsc{Llama}-2 model.
+
+
+\uplevel{\subsection*{Dataset}} The dataset for this homework is a collection of the complete works of Shakespeare. The dataset file is \lstinline{input.txt}, and is around 1.1MB in size. 
+
+\uplevel{\subsection*{Starter Code}} The starter code was originally authored by \href{https://karpathy.ai/}{Andrej Karpathy}, of OpenAI fame, and released as \href{https://github.com/karpathy/minGPT}{minGPT}. It offers a clear glimpse into the inner workings of a GPT model. We have simplified the codebase and provided to you a modified version. Ours contains the following files:
+\begin{verbatim}
+hw1/
+   requirements.txt
+   input.txt
+   chargpt.py
+   mingpt/
+      model.py
+      trainer.py
+      utils.py
+\end{verbatim}
+Here is what you will find in each file:
+\begin{enumerate}
+    
+    \item \lstinline{requirements.txt}: A list of packages that need to be installed for this homework. This homework only requires 2 packages - \lstinline{torch} and \lstinline{einops}.
+    
+    \item \lstinline{input.txt}: The dataset---the works of Shakespeare.
+    
+    \item \lstinline{chargpt.py}: The main entry point used to train your transformer. It can be run with the command \lstinline{python chargpt.py}. Append flags to this command to adjust the transformer configuration.
+    
+    \item \lstinline{mingpt/model.py}: The only file you need to modify for this homework. This file contains the construction of the GPT model. A vanilla, working transformer implementation is already provided. You will implement the classes \lstinline{RotaryPositionalEmbeddings} and \lstinline{GroupedQueryAttention}. You will also need to make changes to the class \lstinline{CausalSelfAttention} while implementing RoPE. (Hint: Locations in the code where changes ought to be made are marked with a \textbf{TODO}.)
+
+    \item \lstinline{mingpt/trainer.py}: Code for the training loop of the transformer.
+    
+    \item \lstinline{mingpt/utils.py}: Helper functions for saving logs and configs.
+    
+\end{enumerate}
+
+\uplevel{\subsection*{Flags}}
+
+All the parameters printed in the config can be modified by passing flags to \lstinline{chargpt.py}. Table \ref{table:flag} contains a list of flags you may find useful while implementing HW1. You can change other parameters as well in a similar manner. Simply specify the config node (i.e. one of \{system,data,model,trainer\}), followed by a period `.', followed by the parameter you wish to modify.
+
+% \lstinline{mycode} inside tabulars breaks, so use \lstinline|mycode| instead. 
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{0.35\linewidth}|p{0.65\linewidth}|}
+\hline
+Configuration Parameter & Example Flag Usage \\ \hline
+Model sequence length &  \lstinline|--data.block_size=128|
+
+( \lstinline|model.block_size| is autoset based on this flag) \\ \hline
+Directory where model is stored &  \lstinline|--system.work_dir=out/new_chargpt| \\ \hline
+Number of query heads 
+
+(hyperparameter for GQA) &  \lstinline|--model.n_query_head=6| \\ \hline
+Number of key-value heads 
+
+(hyperparameter for GQA) &  \lstinline|--model.n_kv_head=3| 
+
+(\lstinline|n_query_head| must be divisible by \lstinline|n_kv_head|) 
+
+(For standard multi-head attention \lstinline|n_query_head| = \lstinline|n_kv_head|)\\ \hline
+Directory from which to load a model trained in a previous run &  \lstinline|--model.pretrained_folder=out/chargpt3| \\ \hline
+Whether to enable RoPE embeddings &  \lstinline|--model.rope=True| \\ \hline
+Number of iterations to train the model & \lstinline|--trainer.max_iters=200| \\ \hline
+Device type (useful for debugging), one of  & \lstinline|--trainer.device=cpu| \\ \hline
+\end{tabular}
+\caption{Useful flags for \lstinline{chargpt.py}}
+\label{table:flag}
+\end{table}
+
+\uplevel{\subsection*{Model}}
+
+The default model in \lstinline{chargpt.py} is a GPT model with 6 transformer layers. Each attention layer uses $h=6$ attention heads. The maximum sequence length is $N=128$. Because the vocabulary is comprised of only characters, the vocabulary size is only 65. The embedding dimension is $d_{model} = 192$ and the key/value/query dimension size is $d_k = d_{model}/h =32$. 
+
+\clearpage
+
+\uplevel{\subsection*{Rotary Position Embeddings (RoPE)}}
+
+    In this section, you will implement Rotary Position Embeddings (RoPE) \href{https://arxiv.org/pdf/2104.09864.pdf}{(Su et al., 2021)}. 
+
+
+    \textbf{Background:}
+    Absolute position embeddings are added to the word embeddings in the first layer of a standard Transformer language model. Subsequent layers propagate position information up from the bottom. 
+
+    Traditional attention is defined as below.
+    \begin{align*}
+        \qv_j &= \Wv_q^T \xv_j, \forall j \\
+        \kv_j &= \Wv_k^T \xv_j, \forall j \\
+        s_{t,j} &= \kv_j^T \qv_t / \sqrt{d_k}, \forall j,t\\
+        \av_t &= \text{softmax}(\sv_t), \forall t
+    \end{align*}
+    where $d_k = |\kv_j|$ is the size of the query/key/value vectors.
+
+    \textbf{RoPE:}
+    Rotary Position Embeddings (RoPE) \href{https://arxiv.org/pdf/2104.09864.pdf}{(Su et al., 2021)} incorporate positional information directly into the attention computation, in every layer. If the input to the next attention layer is $\Xv = [\xv_1, \ldots, \xv_N]^T$, then we introduce two functions $f_q(\xv_j, j)$ and $f_k(\xv_j, j)$, which compute the position-aware queries and keys respectively. Then the attention scores are computed as below:
+    \renewcommand{\tilde}{\widetilde}
+    \begin{align*}
+        \qv_j &= \Wv_q^T \xv_j, \forall j 
+        & \kv_j &= \Wv_k^T \xv_j, \forall j \\
+        \tilde{\qv}_j &= \Rv_{\Theta,j} \qv_j
+        & \tilde{\kv}_j &= \Rv_{\Theta,j} \kv_j \\
+        %f_q(\xv_j, j) &\triangleq \Rv_{\Theta,j} \Wv_q^T \xv_j \\
+        %f_k(\xv_j, j) &\triangleq \Rv_{\Theta,j} \Wv_k^T \xv_j \\
+        %s_{t,j} &= f_k(\xv_j, t)^T f_q(\xv_t, j) / \sqrt{d_k}, \forall j,t \\
+        %&= (\Rv_{\Theta,t} \Wv_k^T \xv_t)^T (\Rv_{\Theta,j} \Wv_q^T \xv_j) / \sqrt{d_k}, \forall j,t \\
+        s_{t,j} &= \tilde{\kv}_j^T \tilde{\qv}_t / \sqrt{d_k}, \forall j,t\\
+        \av_t &= \text{softmax}(\sv_t), \forall t
+    \end{align*}
+    where $d = d_k / 2$, $\Wv_k, \Wv_q \in \Rb^{d_{model} \times d_k}$. For some fixed absolute position $m$, the rotary matrix $\Rv_{\Theta,m} \in \Rb^{d_k \times d_k}$ is given by:
+    \begin{align*}
+        R_{\Theta,m} =
+        \left(
+        \begin{array}{ccccccc}
+        \cos m\theta_1 & -\sin m\theta_1 & 0 & 0 & \dots & 0 & 0  \\
+        \sin m\theta_1 & \cos m\theta_1 & 0 & 0 & \dots & 0 & 0 \\
+        0 & 0 & \cos m\theta_2 & -\sin m\theta_2 & \dots & 0 & 0\\
+        0 & 0 & \sin m\theta_2 & \cos m\theta_2 & \dots & 0 & 0\\
+        \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+        0 & 0 & 0 & 0 & \dots & \cos m\theta_{d_k/2} & -\sin m\theta_{d_k/2} \\
+        0 & 0 & 0 & 0 & \dots & \sin m\theta_{d_k/2} & \cos m\theta_{d_k/2} \\
+        \end{array}
+        \right)
+    \end{align*}
+    The $\theta_i$ parameters are fixed ahead of time and defined as below.
+    \begin{align*}
+        \Theta = \{\theta_i = 10000^{-2^{i-1}/d}, i \in [1, 2, \ldots, d/2]\}
+    \end{align*}
+
+\clearpage
+    
+    Because of the block sparse pattern in $\Rv_{\theta,m}$, we can efficiently compute the matrix-vector product of $\Rv_{\theta,m}$ with some arbitrary vector $\yv$ in a more efficient manner:
+
+    \begin{align*}
+        \Rv_{\Theta,m} \yv = 
+        \left( \begin{array}{c} 
+        y_1 \\ y_2 \\ y_3 \\ y_4 \\ \vdots \\ y_{d-1} \\ y_d 
+        \end{array} \right)
+        \otimes
+        \left( \begin{array}{c}
+        \cos m\theta_1 \\ \cos m\theta_1 \\ \cos m\theta_2 \\ \cos m\theta_2 \\ \vdots \\ 
+        \cos m\theta_{d/2} \\ \cos m\theta_{d/2} 
+        \end{array} \right)
+        +
+        \left( \begin{array}{c}
+        -y_2 \\ y_1 \\ -y_4 \\ y_3 \\ \vdots \\ -y_d \\ y_{d-1} 
+        \end{array} \right)
+        \otimes
+        \left( \begin{array}{c}
+        \sin m\theta_1 \\ \sin m\theta_1 \\ \sin m\theta_2 \\ \sin m\theta_2 \\ \vdots \\
+        \sin m\theta_{d/2} \\ \sin m\theta_{d/2} 
+        \end{array} \right)
+    \end{align*}
+
+    Implementing this efficiently in PyTorch still requires some care. If we have some matrix of embeddings $\Yv = [\yv_1, \ldots, \yv_N]^T \in \Rb^{N \times d_k}$ (in practice this $\Yv$ would be either the queries $\Qv$ or the keys $\Kv$), then we want to construct a new matrix $\tilde{\Yv} = g(\Yv; \Theta)$ such that $\tilde{\Yv}_{m, \cdot} = \Rv_{\Theta,m} \yv_m$. Without loss of generality, we can permute the indices of the vectors $\yv_m$ such that we are working with the indices of the first/second half of the vector instead of the even/odd indices.
+    Below let $d = d_k$ for brevity.
+    {\small 
+    \begin{align*}
+        \tilde{\Yv} &= g(\Yv; \Theta) \\
+        &= \left[ \begin{array}{ccc|ccc} 
+            Y_{1,1} & \cdots & Y_{1,\frac{d}{2}} & Y_{1,\frac{d}{2}+1} & \cdots & Y_{1,d} \\
+            \vdots & & \vdots & \vdots & & \vdots \\
+            Y_{N,1} & \cdots & Y_{N,\frac{d}{2}} & Y_{N,\frac{d}{2}+1} & \cdots & Y_{N,d} \\
+            %\Yv_{\cdot,1:d/2} & \Yv_{\cdot,d/2+1:d} 
+        \end{array} \right] 
+        \otimes
+        \left[ \begin{array}{ccc|ccc} 
+            \cos 1 \theta_1 & \cdots & \cos 1 \theta_{\frac{d}{2}} & \cos 1 \theta_1 & \cdots & \cos 1 \theta_{\frac{d}{2}} \\
+            \vdots & & \vdots & \vdots & & \vdots \\
+            \cos N \theta_1 & \cdots & \cos N \theta_{\frac{d}{2}} & \cos N \theta_1 & \cdots & \cos N \theta_{\frac{d}{2}} \\
+            %\Yv_{\cdot,1:d/2} & \Yv_{\cdot,d/2+1:d} 
+        \end{array} \right] 
+        \\
+        &+\left[ \begin{array}{ccc|ccc} 
+            -Y_{1,\frac{d}{2}+1} & \cdots & -Y_{1,d} & Y_{1,1} & \cdots & Y_{1,\frac{d}{2}} \\
+            \vdots & & \vdots & \vdots & & \vdots \\
+            -Y_{N,\frac{d}{2}+1} & \cdots & -Y_{N,d} & Y_{N,1} & \cdots & Y_{N,\frac{d}{2}}  \\
+            %\Yv_{\cdot,1:d/2} & \Yv_{\cdot,d/2+1:d} 
+        \end{array} \right] 
+        \otimes
+        \left[ \begin{array}{ccc|ccc} 
+            \sin 1 \theta_1 & \cdots & \sin 1 \theta_{\frac{d}{2}} & \sin 1 \theta_1 & \cdots & \sin 1 \theta_{\frac{d}{2}} \\
+            \vdots & & \vdots & \vdots & & \vdots \\
+            \sin N \theta_1 & \cdots & \sin N \theta_{\frac{d}{2}} & \sin N \theta_1 & \cdots & \sin N \theta_{\frac{d}{2}} \\
+            %\Yv_{\cdot,1:d/2} & \Yv_{\cdot,d/2+1:d} 
+        \end{array} \right] 
+    \end{align*}
+    }
+    Or more compactly:
+    \begin{align*}
+        \Cv =& \left[ \begin{array}{ccc|ccc} 
+            1 \theta_1 & \cdots & 1 \theta_{\frac{d}{2}} & 1 \theta_1 & \cdots & 1 \theta_{\frac{d}{2}} \\
+            \vdots & & \vdots & \vdots & & \vdots \\
+            N \theta_1 & \cdots & N \theta_{\frac{d}{2}} & N \theta_1 & \cdots & N \theta_{\frac{d}{2}} \\
+        \end{array} \right] \\
+        \tilde{\Yv} =& g(\Yv; \Theta) \\
+        =& \left[ \begin{array}{c|c} 
+            \Yv_{\cdot,1:d/2} & \Yv_{\cdot,d/2+1:d} 
+        \end{array} \right] 
+        \otimes \cos(\Cv) \\
+        &+ \left[ \begin{array}{c|c} 
+            - \Yv_{\cdot,d/2+1:d} & \Yv_{\cdot,1:d/2} 
+        \end{array} \right] 
+        \otimes \sin(\Cv) 
+    \end{align*}
+    Now we can compute RoPE embeddings efficiently as below:
+    \begin{align*}
+        \Qv &= \Xv \Wv_q 
+        & \Kv &= \Xv \Wv_k \\
+        \tilde{\Qv} &= g(\Qv; \Theta) 
+        & \tilde{\Kv} &= g(\Kv; \Theta) \\
+        \Sv &= \tilde{\Qv} \tilde{\Kv}^T / \sqrt{d_k} \\
+        \Av &= \text{softmax}(\Sv) 
+    \end{align*}
+    
+    You do not have to understand all the math in the paper, but you may go through it to understand the intuition behind RoPE. 
+
+    \textbf{Implementation:}
+    You will implement RoPE within \lstinline{minGPT}. To do so, you should make changes to the \lstinline{RotaryPositionalEmbeddings} and the \lstinline{CausalSelfAttention} classes in \lstinline{mingpt/model.py}.
+
+    % (Hint: Ensure that the absolute position embeddings and the RoPE embeddings are not active simultaneously.) 
+    % Commented out the above hint because ensuring abs pos embeddings and RoPE are not active simultaneously has been done for them (its a small change that we made because we didnt want them to deal with config flags). Happy to also reverse this and get them to add the config, please tell Advaith if so!
+
+
+\clearpage
+
+
+\uplevel{\subsection*{RoPE Empirical Questions}}
+
+\begin{parts}
+
+\part[4] Plot the training loss of your RoPE implementation and vanilla minGPT over 600 iterations with a sequence length of 128.
+\begin{answer_box}[title=,height=9cm, width=15cm]
+\end{answer_box}
+
+\part[4] Plot the training loss of your RoPE implementation and vanilla minGPT over 800 total training iterations: 600 iterations with a sequence length of 128, followed by 200 iterations with a sequence length of 256. 
+\begin{answer_box}[title=,height=9cm, width=15cm]
+\end{answer_box}
+
+\clearpage
+
+\part[2] Provide a sample from your RoPE model after 600 iterations of training with a sequence length of 128. Condition the sample on the first line of your favorite Shakespeare play.
+\begin{answer_box}[title=,height=9cm, width=15cm]
+\end{answer_box}
+
+\part[2] Provide a sample from your RoPE model after 600 iterations with a sequence length of 128, followed by 200 iterations with a sequence length of 256. Condition the sample on the first line of your favorite Shakespeare play.
+\begin{answer_box}[title=,height=9cm, width=15cm]
+\end{answer_box}
+
+\clearpage
+
+\uplevel{\subsection*{Grouped Query Attention (GQA)}}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=1\linewidth]{fig/GQA_arch_diagram.png}
+        \caption{Schematic representation of attention mechanisms, showcasing Multi-head attention with individual keys and values for each head, Grouped-query attention with queries grouped to share common keys and values, and Multi-query attention utilizing a singular key and value for all queries.}
+        \label{fig:GQA_arch_diagram}
+    \end{figure}
+    
+    In this section, you will implement Grouped Query Attention (GQA) 
+    \href{https://arxiv.org/pdf/2305.13245.pdf}{(Ainslie et al., 2023)}.
+    
+    \textbf{GQA:} Grouped Query Attention (GQA) is a technique in neural network architectures that modifies the attention mechanism used in models such as transformers. It involves dividing the query heads into groups, each sharing a single key head and value head. This approach can interpolate between Multi-Query Attention (MQA) and Multi-Head Attention (MHA), offering a balance between computational efficiency and model quality [Figure \ref{fig:GQA_arch_diagram}].
+
+    Let $h_q$ denote the number of query heads and $h_{kv}$ the number of key/value heads. We assume $h_q$ is divisible by $h_{kv}$ and $g = h_q / h_{kv}$ is the size of each group (i.e. the number of query vectors per key/value vector).
+
+    Our parameter matrices for GQA are all the same size: $\Wv_q^{(g,i)},\Wv_k^{(g)},\Wv_v^{(g)} \in \Rb^{d_{model} \times d_k}$  where $d_k = d_{model}/h_q$. However, we now have different numbers of query, key, and value heads:
+    \begin{align*}
+        \Xv &= [\xv_1, \ldots, \xv_T]^T  \\
+        \Vv^{(i)} &= \Xv \Wv_v^{(i)}, \forall i \in \{1, \ldots, d_{kv} \} \\
+        \Kv^{(i)} &= \Xv \Wv_k^{(i)}, \forall i \in \{1, \ldots, d_{kv} \} \\
+        \Qv^{(i,j)} &= \Xv \Wv_q^{(i,j)}, \forall i \in \{1, \ldots, d_{kv} \}, \forall j \in \{1, \ldots, g \} 
+    \end{align*}
+    Above, we define $g$ times more query vectors than key/value vectors. 
+    Then we compute the scaled dot-product between each query vector $(i,j)$ and its corresponding key $(i)$ and sum over the queries within each group to get the similarity scores. The similarity scores are used to compute an attention matrix, but with only $h_{kv}$ heads:
+    \begin{align*}
+        \Sv^{(i)} &= \sum_{j=1}^{g} \Qv^{(i,j)} (\Kv^{(i)})^T / \sqrt{d_k} \\
+        \Av^{(i)} &= \text{softmax}(\Sv^{(i)}) \\
+        \Xv'^{(i)} &= \Av^{(i)} \Vv^{(i)} 
+    \end{align*}
+
+    \textbf{Implementation Details:}
+    You will implement GQA in the \lstinline{GroupedQueryAttention} class in \lstinline{mingpt/model.py}. Much of your code will be similar to that in \lstinline{CausalSelfAttention}. 
+
+    \emph{Hint:} You may find it easier to first re-implement \lstinline{CausalSelfAttention} using \lstinline{einops.rearrange()} in place of \lstinline{tensor.view()}/\lstinline{tensor.transpose()} and \lstinline{einops.einsum()} in place of the \lstinline{@} operator. If you implement \lstinline{GroupedQueryAttention} by extending an implementation of this form, it \emph{might} be more straightforward.
+
+
+    \begin{itemize}
+        
+    \item \textbf{ Initialization:}
+    \begin{itemize}
+        \item Familiarize yourself with the configuration settings that initialize the attention mechanism, including the number of query heads, key/value heads, and embedding dimensions.
+        \item Ensure that the embedding dimension is divisible by the number of query and key/value heads.
+    \end{itemize}
+    
+    \item \textbf{Regularization:}
+    \begin{itemize}
+        \item Incorporate dropout layers for attention and residuals to prevent overfitting.
+    \end{itemize}
+    
+    \item \textbf{Dimensionality and Projections:}
+    \begin{itemize}
+        \item Implement the linear projection layers for queries, keys, and values, considering the dimensionality constraints and the grouped nature of the mechanism.
+    \end{itemize}
+
+    \item \textbf{Rotary Positional Embeddings:}
+    \begin{itemize}
+        \item If rotary positional embeddings are enabled, integrate RoPE with query and key projections. (Note: Integrating RoPE and GQA is entirely optional, but straightforward.)
+    \end{itemize}
+    
+    \item \textbf{Forward Pass:}
+    \begin{itemize}
+        \item In the forward method, transform the input according to the query, key, and value projections.
+        \item Apply the attention mechanism by computing grouped scaled dot-product attention
+        \item Mask the attention to ensure causality (preventing future tokens from being attended to).
+        \item Aggregate the attention with the values and project the output back to the embedding dimension.
+    \end{itemize}
+    
+    \item \textbf{Memory Efficiency:}
+    \begin{itemize}
+        \item Monitor and record the CUDA memory allocation before and after the attention operation to analyze the memory efficiency of the GQA. A reference code to monitor memory is present in \lstinline{CausalSelfAttention} class.
+    \end{itemize}
+    
+    \end{itemize}
+
+    
+\clearpage
+
+\uplevel{\subsection*{GQA Empirical Questions}}
+
+\uplevel{
+The questions below assume you are using absolute position embeddings, not RoPE.
+}
+
+\part[4] Plot the average time taken to compute attention per iteration in milliseconds across \{1, 2, 3, 6\} number of key heads.
+\begin{answer_box}[title=,height=9cm, width=15cm]
+\end{answer_box}
+
+
+\part[4] Plot the memory consumption in MB per iteration across \{1, 2, 3, 6\} number of key heads.
+\begin{answer_box}[title=,height=9cm, width=15cm]
+\end{answer_box}
+
+\clearpage
+
+\part[4] Plot the training loss of your GQA implementation with 2 key heads vs vanilla (multi head attention) minGPT over 600 iterations with a sequence length of 128.
+\begin{answer_box}[title=,height=10cm, width=15cm]
+\end{answer_box}
+
+
+\end{parts}
+
+
+\clearpage
+
+\sectionquestion{Code Upload}
+
+\begin{parts}
+
+\part[0] Did you upload your code to the appropriate programming slot on Gradescope? \\
+\emph{Hint:} The correct answer is `yes'.
+
+    \begin{checkboxes}
+     \choice Yes 
+     \choice No
+    \end{checkboxes}
+
+For this homework, you should upload all the code files that contain your new and/or changed code. Files of type \lstinline{.py} and \lstinline{.ipynb} are both fine.
+
+\end{parts}
+
+\newpage
+\sectionquestion{Collaboration Questions}
+
+\begin{parts}
+
+\uplevel{After you have completed all other components of this assignment, report your answers to these questions regarding the collaboration policy. Details of the policy can be found in the syllabus.}
+
+    \part[1] Did you collaborate with anyone on this assignment? If so, list their name or Andrew ID and which problems you worked together on.
+
+        \begin{answer_box}[title=,height=3cm, width=15cm]
+        \end{answer_box}
+
+    
+    \part[1] Did you find or come across code that implements any part of this assignment? If so, include full details.
+        \begin{answer_box}[title=,height=3cm, width=15cm]
+        \end{answer_box}
+\end{parts}
+\end{questions}
+
+
+\end{document}

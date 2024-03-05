@@ -1,0 +1,1 @@
+.\chargpt.py --trainer.max_iters=600 --system.work_dir=out//vanilla600

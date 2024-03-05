@@ -1,0 +1,1 @@
+chargpt.py --trainer.max_iters=600 --system.work_dir=out/gqa_3 --model.n_kv_head=3

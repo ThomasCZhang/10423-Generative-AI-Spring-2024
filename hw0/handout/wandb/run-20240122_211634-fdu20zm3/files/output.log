@@ -1,0 +1,18 @@
+Epoch 1
+-------------------------------
+Train loss = 0.135191  [    8/  540]
+Train loss = 0.118085  [   88/  540]
+Train loss = 0.102558  [  168/  540]
+Train loss = 0.109116  [  248/  540]
+Train loss = 0.097667  [  328/  540]
+Train loss = 0.245648  [  408/  540]
+Train loss = 0.099291  [  488/  540]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 193, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 171, in main
+    evaluate(train_dataloader, "Train", model, loss_fn, t, n_epochs)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 135, in evaluate
+    true_label = num_to_label[y[j]]
+                 ~~~~~~~~~~~~^^^^^^
+KeyError: tensor(2, device='cuda:0')

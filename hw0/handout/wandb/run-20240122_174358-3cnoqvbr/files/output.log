@@ -1,0 +1,98 @@
+Epoch 1
+-------------------------------
+Train loss = 0.137407  [    8/  540]
+Train loss = 0.121118  [   88/  540]
+Train loss = 0.106198  [  168/  540]
+Train loss = 0.107226  [  248/  540]
+Train loss = 0.094109  [  328/  540]
+Train loss = 0.239109  [  408/  540]
+Train loss = 0.097093  [  488/  540]
+Train accuracy = 77.2%, Train avg loss = 0.074538
+Test accuracy = 61.7%, Test avg loss = 0.110539
+Epoch 2
+-------------------------------
+Train loss = 0.087627  [    8/  540]
+Train loss = 0.090873  [   88/  540]
+Train loss = 0.070609  [  168/  540]
+Train loss = 0.063643  [  248/  540]
+Train loss = 0.059044  [  328/  540]
+Train loss = 0.207613  [  408/  540]
+Train loss = 0.059120  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 548 is less than current step: 627. Dropping entry: {'train_loss': 0.08762723952531815, '_timestamp': 1705963456.7241406}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 556 is less than current step: 627. Dropping entry: {'train_loss': 0.08181031048297882, '_timestamp': 1705963456.8771758}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 564 is less than current step: 627. Dropping entry: {'train_loss': 0.0499095655977726, '_timestamp': 1705963457.058216}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 572 is less than current step: 627. Dropping entry: {'train_loss': 0.11820507794618607, '_timestamp': 1705963457.2212532}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 580 is less than current step: 627. Dropping entry: {'train_loss': 0.03937787190079689, '_timestamp': 1705963457.3029225}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 588 is less than current step: 627. Dropping entry: {'train_loss': 0.09292498975992203, '_timestamp': 1705963457.4109468}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 596 is less than current step: 627. Dropping entry: {'train_loss': 0.12104194611310959, '_timestamp': 1705963457.5019677}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 604 is less than current step: 627. Dropping entry: {'train_loss': 0.06943155825138092, '_timestamp': 1705963457.6160505}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 612 is less than current step: 627. Dropping entry: {'train_loss': 0.07965525984764099, '_timestamp': 1705963457.7350779}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 620 is less than current step: 627. Dropping entry: {'train_loss': 0.06392264366149902, '_timestamp': 1705963457.823097}).
+Train accuracy = 91.1%, Train avg loss = 0.044464
+Test accuracy = 67.8%, Test avg loss = 0.103899
+Epoch 3
+-------------------------------
+Train loss = 0.070900  [    8/  540]
+Train loss = 0.058519  [   88/  540]
+Train loss = 0.047050  [  168/  540]
+Train loss = 0.038690  [  248/  540]
+Train loss = 0.039407  [  328/  540]
+Train loss = 0.169998  [  408/  540]
+Train loss = 0.036997  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1088 is less than current step: 1167. Dropping entry: {'train_loss': 0.07090025395154953, '_timestamp': 1705963473.972902}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1096 is less than current step: 1167. Dropping entry: {'train_loss': 0.047349393367767334, '_timestamp': 1705963474.2459617}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1104 is less than current step: 1167. Dropping entry: {'train_loss': 0.023990949615836143, '_timestamp': 1705963474.3539858}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1112 is less than current step: 1167. Dropping entry: {'train_loss': 0.08249631524085999, '_timestamp': 1705963474.46001}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1120 is less than current step: 1167. Dropping entry: {'train_loss': 0.01701771467924118, '_timestamp': 1705963474.54703}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1128 is less than current step: 1167. Dropping entry: {'train_loss': 0.06278423219919205, '_timestamp': 1705963474.6650565}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1136 is less than current step: 1167. Dropping entry: {'train_loss': 0.09499072283506393, '_timestamp': 1705963474.7590775}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1144 is less than current step: 1167. Dropping entry: {'train_loss': 0.04087596386671066, '_timestamp': 1705963474.873131}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1152 is less than current step: 1167. Dropping entry: {'train_loss': 0.0486135371029377, '_timestamp': 1705963474.989157}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1160 is less than current step: 1167. Dropping entry: {'train_loss': 0.04095663130283356, '_timestamp': 1705963475.0821784}).
+Train accuracy = 96.3%, Train avg loss = 0.030114
+Test accuracy = 65.2%, Test avg loss = 0.106501
+Epoch 4
+-------------------------------
+Train loss = 0.049485  [    8/  540]
+Train loss = 0.036816  [   88/  540]
+Train loss = 0.032156  [  168/  540]
+Train loss = 0.023851  [  248/  540]
+Train loss = 0.029504  [  328/  540]
+Train loss = 0.135816  [  408/  540]
+Train loss = 0.026181  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1628 is less than current step: 1707. Dropping entry: {'train_loss': 0.04948486387729645, '_timestamp': 1705963491.4707594}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1636 is less than current step: 1707. Dropping entry: {'train_loss': 0.035343579947948456, '_timestamp': 1705963491.745821}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1644 is less than current step: 1707. Dropping entry: {'train_loss': 0.014701025560498238, '_timestamp': 1705963491.860847}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1652 is less than current step: 1707. Dropping entry: {'train_loss': 0.057147108018398285, '_timestamp': 1705963491.9638703}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1660 is less than current step: 1707. Dropping entry: {'train_loss': 0.011189447715878487, '_timestamp': 1705963492.0538912}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1668 is less than current step: 1707. Dropping entry: {'train_loss': 0.0408058725297451, '_timestamp': 1705963492.172917}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1676 is less than current step: 1707. Dropping entry: {'train_loss': 0.079464390873909, '_timestamp': 1705963492.269939}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1684 is less than current step: 1707. Dropping entry: {'train_loss': 0.025026092305779457, '_timestamp': 1705963492.3869655}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1692 is less than current step: 1707. Dropping entry: {'train_loss': 0.030934559181332588, '_timestamp': 1705963492.5069923}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1700 is less than current step: 1707. Dropping entry: {'train_loss': 0.027798283845186234, '_timestamp': 1705963492.603019}).
+Train accuracy = 98.3%, Train avg loss = 0.021299
+Test accuracy = 61.7%, Test avg loss = 0.110726
+Epoch 5
+-------------------------------
+Train loss = 0.030341  [    8/  540]
+Train loss = 0.023682  [   88/  540]
+Train loss = 0.021576  [  168/  540]
+Train loss = 0.015530  [  248/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2168 is less than current step: 2247. Dropping entry: {'train_loss': 0.03034144826233387, '_timestamp': 1705963508.9119012}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2176 is less than current step: 2247. Dropping entry: {'train_loss': 0.026294119656085968, '_timestamp': 1705963509.0099237}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2184 is less than current step: 2247. Dropping entry: {'train_loss': 0.009986912831664085, '_timestamp': 1705963509.1229486}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2192 is less than current step: 2247. Dropping entry: {'train_loss': 0.038255490362644196, '_timestamp': 1705963509.2299728}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2200 is less than current step: 2247. Dropping entry: {'train_loss': 0.007593045011162758, '_timestamp': 1705963509.3209932}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2208 is less than current step: 2247. Dropping entry: {'train_loss': 0.02538691833615303, '_timestamp': 1705963509.4440217}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2216 is less than current step: 2247. Dropping entry: {'train_loss': 0.061854634433984756, '_timestamp': 1705963509.541043}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2224 is less than current step: 2247. Dropping entry: {'train_loss': 0.016554750502109528, '_timestamp': 1705963509.6560717}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2232 is less than current step: 2247. Dropping entry: {'train_loss': 0.020376719534397125, '_timestamp': 1705963509.789099}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2240 is less than current step: 2247. Dropping entry: {'train_loss': 0.01920199580490589, '_timestamp': 1705963509.8861208}).
+Train loss = 0.023708  [  328/  540]
+Train loss = 0.113806  [  408/  540]
+Train loss = 0.019969  [  488/  540]
+Train accuracy = 99.3%, Train avg loss = 0.015754
+Test accuracy = 62.6%, Test avg loss = 0.114974
+Done!
+Saved PyTorch Model State to model.pth

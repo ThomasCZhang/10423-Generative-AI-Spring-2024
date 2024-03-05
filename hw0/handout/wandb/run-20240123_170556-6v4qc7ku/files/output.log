@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\txt_classifier.py", line 248, in <module>
+    main()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\txt_classifier.py", line 215, in main
+    raise Exception()
+Exception
+Shape of X [B, N]: torch.Size([8, 1024])
+Shape of y: torch.Size([8]) torch.int64

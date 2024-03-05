@@ -1,0 +1,18 @@
+Epoch 1
+-------------------------------
+Train loss = 0.139733  [    8/  540]
+Train loss = 0.121738  [   88/  540]
+Train loss = 0.097135  [  168/  540]
+Train loss = 0.104656  [  248/  540]
+Train loss = 0.095875  [  328/  540]
+Train loss = 0.238826  [  408/  540]
+Train loss = 0.091204  [  488/  540]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 193, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 171, in main
+    evaluate(train_dataloader, "Train", model, loss_fn, t, n_epochs)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 134, in evaluate
+    pred_label = num_to_label[torch.argmax(pred[j])[0]]
+                              ~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: invalid index of a 0-dim tensor. Use `tensor.item()` in Python or `tensor.item<T>()` in C++ to convert a 0-dim tensor to a number

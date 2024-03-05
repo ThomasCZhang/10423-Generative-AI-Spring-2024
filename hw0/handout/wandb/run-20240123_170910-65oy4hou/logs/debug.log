@@ -1,0 +1,29 @@
+2024-01-23 17:09:11,000 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Current SDK version is 0.16.2
+2024-01-23 17:09:11,000 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Configure stats pid to 16432
+2024-01-23 17:09:11,000 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\.config\wandb\settings
+2024-01-23 17:09:11,000 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\wandb\settings
+2024-01-23 17:09:11,000 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-01-23 17:09:11,000 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'txt_classifier.py', 'program_abspath': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw0\\handout\\txt_classifier.py', 'program': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw0\\handout\\txt_classifier.py'}
+2024-01-23 17:09:11,007 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-01-23 17:09:11,007 INFO    MainThread:16432 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-01-23 17:09:11,007 INFO    MainThread:16432 [wandb_init.py:_log_setup():526] Logging user logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\wandb\run-20240123_170910-65oy4hou\logs\debug.log
+2024-01-23 17:09:11,008 INFO    MainThread:16432 [wandb_init.py:_log_setup():527] Logging internal logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\wandb\run-20240123_170910-65oy4hou\logs\debug-internal.log
+2024-01-23 17:09:11,008 INFO    MainThread:16432 [wandb_init.py:init():566] calling init triggers
+2024-01-23 17:09:11,008 INFO    MainThread:16432 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'learning_rate': 5, 'n_epochs': 5, 'batch_size': 8}
+2024-01-23 17:09:11,008 INFO    MainThread:16432 [wandb_init.py:init():616] starting backend
+2024-01-23 17:09:11,008 INFO    MainThread:16432 [wandb_init.py:init():620] setting up manager
+2024-01-23 17:09:11,009 INFO    MainThread:16432 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-01-23 17:09:11,012 INFO    MainThread:16432 [wandb_init.py:init():628] backend started and connected
+2024-01-23 17:09:11,015 INFO    MainThread:16432 [wandb_init.py:init():720] updated telemetry
+2024-01-23 17:09:11,017 INFO    MainThread:16432 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-01-23 17:09:11,317 INFO    MainThread:16432 [wandb_run.py:_on_init():2254] communicating current version
+2024-01-23 17:09:11,427 INFO    MainThread:16432 [wandb_run.py:_on_init():2263] got version response 
+2024-01-23 17:09:11,428 INFO    MainThread:16432 [wandb_init.py:init():804] starting run threads in backend
+2024-01-23 17:09:11,506 INFO    MainThread:16432 [wandb_run.py:_console_start():2233] atexit reg
+2024-01-23 17:09:11,506 INFO    MainThread:16432 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2024-01-23 17:09:11,506 INFO    MainThread:16432 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2024-01-23 17:09:11,506 INFO    MainThread:16432 [wandb_run.py:_redirect():2178] Redirects installed.
+2024-01-23 17:09:11,507 INFO    MainThread:16432 [wandb_init.py:init():847] run started, returning control to user process
+2024-01-23 17:09:11,665 INFO    MainThread:16432 [wandb_run.py:_config_callback():1342] config_cb ('_wandb', 'visualize', 'Article_Lengths') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/histogram/v0', 'fieldSettings': {'value': 'Article Length'}, 'stringSettings': {'title': 'Article Length Histogram'}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'Article_Lengths_table'}], 'fields': []}]}]}}} None
+2024-01-23 17:09:16,569 WARNING MsgRouterThr:16432 [router.py:message_loop():77] message_loop has been closed

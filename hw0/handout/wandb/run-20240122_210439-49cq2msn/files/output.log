@@ -1,0 +1,18 @@
+Epoch 1
+-------------------------------
+Train loss = 0.150219  [    8/  540]
+Train loss = 0.111101  [   88/  540]
+Train loss = 0.092987  [  168/  540]
+Train loss = 0.103269  [  248/  540]
+Train loss = 0.095156  [  328/  540]
+Train loss = 0.259386  [  408/  540]
+Train loss = 0.102941  [  488/  540]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 193, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 171, in main
+    evaluate(train_dataloader, "Train", model, loss_fn, t, n_epochs)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 136, in evaluate
+    temp_img = wandb.Image(transform(img), caption = f'{pred[j]}/{y[j]}')
+                                                             ^
+NameError: name 'j' is not defined

@@ -1,0 +1,28 @@
+2024-01-22 20:26:16,500 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Current SDK version is 0.16.2
+2024-01-22 20:26:16,500 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Configure stats pid to 14200
+2024-01-22 20:26:16,500 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\.config\wandb\settings
+2024-01-22 20:26:16,500 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\wandb\settings
+2024-01-22 20:26:16,500 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'img_classifiery.py', 'program_abspath': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw0\\handout\\img_classifiery.py', 'program': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw0\\handout\\img_classifiery.py'}
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_init.py:_log_setup():526] Logging user logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\wandb\run-20240122_202616-g4v83hme\logs\debug.log
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_init.py:_log_setup():527] Logging internal logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\wandb\run-20240122_202616-g4v83hme\logs\debug-internal.log
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_init.py:init():566] calling init triggers
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'n_epochs': 5, 'batch_size': 8}
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_init.py:init():616] starting backend
+2024-01-22 20:26:16,501 INFO    MainThread:14200 [wandb_init.py:init():620] setting up manager
+2024-01-22 20:26:16,503 INFO    MainThread:14200 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-01-22 20:26:16,505 INFO    MainThread:14200 [wandb_init.py:init():628] backend started and connected
+2024-01-22 20:26:16,508 INFO    MainThread:14200 [wandb_init.py:init():720] updated telemetry
+2024-01-22 20:26:16,510 INFO    MainThread:14200 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-01-22 20:26:16,987 INFO    MainThread:14200 [wandb_run.py:_on_init():2254] communicating current version
+2024-01-22 20:26:17,112 INFO    MainThread:14200 [wandb_run.py:_on_init():2263] got version response 
+2024-01-22 20:26:17,117 INFO    MainThread:14200 [wandb_init.py:init():804] starting run threads in backend
+2024-01-22 20:26:17,197 INFO    MainThread:14200 [wandb_run.py:_console_start():2233] atexit reg
+2024-01-22 20:26:17,197 INFO    MainThread:14200 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2024-01-22 20:26:17,198 INFO    MainThread:14200 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2024-01-22 20:26:17,198 INFO    MainThread:14200 [wandb_run.py:_redirect():2178] Redirects installed.
+2024-01-22 20:26:17,199 INFO    MainThread:14200 [wandb_init.py:init():847] run started, returning control to user process
+2024-01-22 20:27:53,678 WARNING MsgRouterThr:14200 [router.py:message_loop():77] message_loop has been closed

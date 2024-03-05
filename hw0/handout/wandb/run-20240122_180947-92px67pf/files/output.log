@@ -1,0 +1,66 @@
+Epoch 1
+-------------------------------
+Train loss = 0.144471  [    8/  540]
+Train loss = 0.106256  [   88/  540]
+Train loss = 0.105842  [  168/  540]
+Train loss = 0.107408  [  248/  540]
+Train loss = 0.095519  [  328/  540]
+Train loss = 0.246216  [  408/  540]
+Train loss = 0.103164  [  488/  540]
+Train accuracy = 80.7%, Train avg loss = 0.071049
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 544. Dropping entry: {'Training_loss': 0.07104922615819508, 'epoch': 0, '_timestamp': 1705965002.6675384}).
+Test accuracy = 62.6%, Test avg loss = 0.107222
+Epoch 2
+-------------------------------
+Train loss = 0.088566  [    8/  540]
+Train loss = 0.085597  [   88/  540]
+Train loss = 0.082269  [  168/  540]
+Train loss = 0.063305  [  248/  540]
+Train loss = 0.062126  [  328/  540]
+Train loss = 0.214590  [  408/  540]
+Train loss = 0.059702  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 544. Dropping entry: {'Testing_loss': 0.1072218674680461, 'epoch': 0, '_timestamp': 1705965004.4829836}).
+Train accuracy = 91.5%, Train avg loss = 0.042564
+Test accuracy = 64.3%, Test avg loss = 0.104352
+Epoch 3
+-------------------------------
+Train loss = 0.065970  [    8/  540]
+Train loss = 0.055240  [   88/  540]
+Train loss = 0.052179  [  168/  540]
+Train loss = 0.036404  [  248/  540]
+Train loss = 0.039171  [  328/  540]
+Train loss = 0.174705  [  408/  540]
+Train loss = 0.035880  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 1084. Dropping entry: {'Training_loss': 0.042564192303904784, 'epoch': 1, '_timestamp': 1705965019.2062054}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 1084. Dropping entry: {'Testing_loss': 0.1043519095234249, 'epoch': 1, '_timestamp': 1705965021.1850765}).
+Train accuracy = 96.1%, Train avg loss = 0.028859
+Test accuracy = 63.5%, Test avg loss = 0.107901
+Epoch 4
+-------------------------------
+Train loss = 0.042358  [    8/  540]
+Train loss = 0.031960  [   88/  540]
+Train loss = 0.032951  [  168/  540]
+Train loss = 0.022445  [  248/  540]
+Train loss = 0.027720  [  328/  540]
+Train loss = 0.143478  [  408/  540]
+Train loss = 0.024918  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 1624. Dropping entry: {'Training_loss': 0.02885865606367588, 'epoch': 2, '_timestamp': 1705965035.4708893}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 1624. Dropping entry: {'Testing_loss': 0.10790089446565379, 'epoch': 2, '_timestamp': 1705965037.2572918}).
+Train accuracy = 98.9%, Train avg loss = 0.020618
+Test accuracy = 60.9%, Test avg loss = 0.113031
+Epoch 5
+-------------------------------
+Train loss = 0.026218  [    8/  540]
+Train loss = 0.020405  [   88/  540]
+Train loss = 0.020453  [  168/  540]
+Train loss = 0.014841  [  248/  540]
+Train loss = 0.021974  [  328/  540]
+Train loss = 0.121356  [  408/  540]
+Train loss = 0.021374  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 3 is less than current step: 2164. Dropping entry: {'Training_loss': 0.020618074228642164, 'epoch': 3, '_timestamp': 1705965051.3130093}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 3 is less than current step: 2164. Dropping entry: {'Testing_loss': 0.11303051787873973, 'epoch': 3, '_timestamp': 1705965053.087417}).
+Train accuracy = 99.3%, Train avg loss = 0.015098
+Test accuracy = 60.0%, Test avg loss = 0.117251
+Done!
+Saved PyTorch Model State to model.pth

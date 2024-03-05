@@ -1,0 +1,67 @@
+Epoch 1
+-------------------------------
+Train loss = 0.134255  [    8/  540]
+Train loss = 0.112107  [   88/  540]
+Train loss = 0.097490  [  168/  540]
+Train loss = 0.107089  [  248/  540]
+Train loss = 0.097017  [  328/  540]
+Train loss = 0.229882  [  408/  540]
+Train loss = 0.103530  [  488/  540]
+Train accuracy = 80.7%, Train avg loss = 0.071629
+Test accuracy = 63.5%, Test avg loss = 0.108470
+Val accuracy = 66.4%, Val avg loss = 0.094268
+Epoch 2
+-------------------------------
+Train loss = 0.084900  [    8/  540]
+Train loss = 0.084806  [   88/  540]
+Train loss = 0.073134  [  168/  540]
+Train loss = 0.061880  [  248/  540]
+Train loss = 0.059774  [  328/  540]
+Train loss = 0.204596  [  408/  540]
+Train loss = 0.058210  [  488/  540]
+Train accuracy = 90.6%, Train avg loss = 0.044481
+Test accuracy = 65.2%, Test avg loss = 0.105004
+Val accuracy = 65.5%, Val avg loss = 0.087369
+Epoch 3
+-------------------------------
+Train loss = 0.064806  [    8/  540]
+Train loss = 0.058359  [   88/  540]
+Train loss = 0.050991  [  168/  540]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 189, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 166, in main
+    train_one_epoch(train_dataloader, model, loss_fn, optimizer, t)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 101, in train_one_epoch
+    for batch, (X, y) in enumerate(dataloader):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 41, in __getitem__
+    image = self.transform(image)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torchvision\transforms\transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torchvision\transforms\functional.py", line 166, in to_tensor
+    img = torch.from_numpy(np.array(pic, mode_to_nptype.get(pic.mode, np.uint8), copy=True))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\Image.py", line 688, in __array_interface__
+    new["data"] = self.tobytes()
+                  ^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\Image.py", line 766, in tobytes
+    return b"".join(data)
+           ^^^^^^^^^^^^^^
+KeyboardInterrupt

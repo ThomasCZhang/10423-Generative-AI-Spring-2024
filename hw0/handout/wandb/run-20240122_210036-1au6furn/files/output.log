@@ -1,0 +1,32 @@
+Epoch 1
+-------------------------------
+Train loss = 0.133283  [    8/  540]
+Train loss = 0.114716  [   88/  540]
+Train loss = 0.096526  [  168/  540]
+Train loss = 0.106147  [  248/  540]
+Train loss = 0.092630  [  328/  540]
+Train loss = 0.245216  [  408/  540]
+Train loss = 0.094794  [  488/  540]
+torch.Size([8, 3, 256, 256])
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\Image.py", line 2992, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+                    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: ((1, 1, 256), '|u1')
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 190, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 168, in main
+    evaluate(train_dataloader, "Train", model, loss_fn, t, n_epochs)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 133, in evaluate
+    temp_img = wandb.Image(torch.permute(X[j,:,:,:], (1,2,0)), caption = f'{pred[j]}/{y[j]}')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\data_types\image.py", line 179, in __init__
+    self._initialize_from_data(data_or_path, mode, file_type)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\data_types\image.py", line 315, in _initialize_from_data
+    self._image = pil_image.fromarray(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\Image.py", line 2994, in fromarray
+    raise TypeError("Cannot handle this data type: %s, %s" % typekey) from e
+TypeError: Cannot handle this data type: (1, 1, 256), |u1

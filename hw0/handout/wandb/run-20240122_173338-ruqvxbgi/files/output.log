@@ -1,0 +1,440 @@
+Epoch 1
+-------------------------------
+Train loss = 0.130793  [    8/  540]
+Train loss = 0.115828  [   88/  540]
+Train loss = 0.099302  [  168/  540]
+Train loss = 0.105243  [  248/  540]
+Train loss = 0.091995  [  328/  540]
+Train loss = 0.262326  [  408/  540]
+Train loss = 0.107284  [  488/  540]
+Train accuracy = 79.8%, Train avg loss = 0.070583
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 8 is less than current step: 544. Dropping entry: {'train_acc': 5.0, '_timestamp': 1705962826.957562}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 16 is less than current step: 544. Dropping entry: {'train_acc': 12.0, '_timestamp': 1705962827.0455818}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 24 is less than current step: 544. Dropping entry: {'train_acc': 19.0, '_timestamp': 1705962827.157626}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 32 is less than current step: 544. Dropping entry: {'train_acc': 24.0, '_timestamp': 1705962827.2536476}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 40 is less than current step: 544. Dropping entry: {'train_acc': 29.0, '_timestamp': 1705962827.3386664}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 48 is less than current step: 544. Dropping entry: {'train_acc': 33.0, '_timestamp': 1705962827.4446905}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 56 is less than current step: 544. Dropping entry: {'train_acc': 39.0, '_timestamp': 1705962827.5317104}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 64 is less than current step: 544. Dropping entry: {'train_acc': 45.0, '_timestamp': 1705962827.6437807}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 72 is less than current step: 544. Dropping entry: {'train_acc': 50.0, '_timestamp': 1705962827.7668052}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 80 is less than current step: 544. Dropping entry: {'train_acc': 56.0, '_timestamp': 1705962827.8598278}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 88 is less than current step: 544. Dropping entry: {'train_acc': 60.0, '_timestamp': 1705962827.943845}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 96 is less than current step: 544. Dropping entry: {'train_acc': 66.0, '_timestamp': 1705962828.0428674}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 104 is less than current step: 544. Dropping entry: {'train_acc': 73.0, '_timestamp': 1705962828.141921}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 112 is less than current step: 544. Dropping entry: {'train_acc': 78.0, '_timestamp': 1705962828.2259388}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 120 is less than current step: 544. Dropping entry: {'train_acc': 85.0, '_timestamp': 1705962828.310958}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 128 is less than current step: 544. Dropping entry: {'train_acc': 92.0, '_timestamp': 1705962828.3979785}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 136 is less than current step: 544. Dropping entry: {'train_acc': 99.0, '_timestamp': 1705962828.5300076}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 144 is less than current step: 544. Dropping entry: {'train_acc': 106.0, '_timestamp': 1705962828.6310427}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 152 is less than current step: 544. Dropping entry: {'train_acc': 114.0, '_timestamp': 1705962828.742068}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 160 is less than current step: 544. Dropping entry: {'train_acc': 121.0, '_timestamp': 1705962828.8420901}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 168 is less than current step: 544. Dropping entry: {'train_acc': 127.0, '_timestamp': 1705962828.954116}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 176 is less than current step: 544. Dropping entry: {'train_acc': 134.0, '_timestamp': 1705962829.047137}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 184 is less than current step: 544. Dropping entry: {'train_acc': 140.0, '_timestamp': 1705962829.135196}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 192 is less than current step: 544. Dropping entry: {'train_acc': 146.0, '_timestamp': 1705962829.2422194}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 200 is less than current step: 544. Dropping entry: {'train_acc': 152.0, '_timestamp': 1705962829.349243}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 208 is less than current step: 544. Dropping entry: {'train_acc': 157.0, '_timestamp': 1705962829.4712703}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 216 is less than current step: 544. Dropping entry: {'train_acc': 165.0, '_timestamp': 1705962829.550304}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 224 is less than current step: 544. Dropping entry: {'train_acc': 172.0, '_timestamp': 1705962829.6403277}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 232 is less than current step: 544. Dropping entry: {'train_acc': 180.0, '_timestamp': 1705962829.7513528}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 240 is less than current step: 544. Dropping entry: {'train_acc': 185.0, '_timestamp': 1705962829.8563766}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 248 is less than current step: 544. Dropping entry: {'train_acc': 192.0, '_timestamp': 1705962829.9433966}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 256 is less than current step: 544. Dropping entry: {'train_acc': 199.0, '_timestamp': 1705962830.0344167}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 264 is less than current step: 544. Dropping entry: {'train_acc': 206.0, '_timestamp': 1705962830.1454418}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 272 is less than current step: 544. Dropping entry: {'train_acc': 212.0, '_timestamp': 1705962830.247465}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 280 is less than current step: 544. Dropping entry: {'train_acc': 218.0, '_timestamp': 1705962830.326483}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 288 is less than current step: 544. Dropping entry: {'train_acc': 226.0, '_timestamp': 1705962830.4245045}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 296 is less than current step: 544. Dropping entry: {'train_acc': 233.0, '_timestamp': 1705962830.5135248}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 304 is less than current step: 544. Dropping entry: {'train_acc': 240.0, '_timestamp': 1705962830.6125472}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 312 is less than current step: 544. Dropping entry: {'train_acc': 246.0, '_timestamp': 1705962830.7125697}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 320 is less than current step: 544. Dropping entry: {'train_acc': 252.0, '_timestamp': 1705962830.821594}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 328 is less than current step: 544. Dropping entry: {'train_acc': 257.0, '_timestamp': 1705962830.9176157}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 336 is less than current step: 544. Dropping entry: {'train_acc': 264.0, '_timestamp': 1705962831.0476458}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 344 is less than current step: 544. Dropping entry: {'train_acc': 270.0, '_timestamp': 1705962831.1546693}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 352 is less than current step: 544. Dropping entry: {'train_acc': 278.0, '_timestamp': 1705962831.295701}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 360 is less than current step: 544. Dropping entry: {'train_acc': 283.0, '_timestamp': 1705962831.4357324}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 368 is less than current step: 544. Dropping entry: {'train_acc': 289.0, '_timestamp': 1705962831.5757642}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 376 is less than current step: 544. Dropping entry: {'train_acc': 296.0, '_timestamp': 1705962831.7087958}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 384 is less than current step: 544. Dropping entry: {'train_acc': 302.0, '_timestamp': 1705962831.8368247}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 392 is less than current step: 544. Dropping entry: {'train_acc': 310.0, '_timestamp': 1705962831.973854}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 400 is less than current step: 544. Dropping entry: {'train_acc': 317.0, '_timestamp': 1705962832.0838785}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 408 is less than current step: 544. Dropping entry: {'train_acc': 321.0, '_timestamp': 1705962832.196904}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 416 is less than current step: 544. Dropping entry: {'train_acc': 325.0, '_timestamp': 1705962832.31093}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 424 is less than current step: 544. Dropping entry: {'train_acc': 331.0, '_timestamp': 1705962832.4369583}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 432 is less than current step: 544. Dropping entry: {'train_acc': 338.0, '_timestamp': 1705962832.5659876}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 440 is less than current step: 544. Dropping entry: {'train_acc': 346.0, '_timestamp': 1705962832.676012}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 448 is less than current step: 544. Dropping entry: {'train_acc': 351.0, '_timestamp': 1705962832.8220448}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 456 is less than current step: 544. Dropping entry: {'train_acc': 357.0, '_timestamp': 1705962832.9420726}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 464 is less than current step: 544. Dropping entry: {'train_acc': 364.0, '_timestamp': 1705962833.0611026}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 472 is less than current step: 544. Dropping entry: {'train_acc': 371.0, '_timestamp': 1705962833.195135}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 480 is less than current step: 544. Dropping entry: {'train_acc': 379.0, '_timestamp': 1705962833.2971587}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 488 is less than current step: 544. Dropping entry: {'train_acc': 385.0, '_timestamp': 1705962833.4151998}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 496 is less than current step: 544. Dropping entry: {'train_acc': 392.0, '_timestamp': 1705962833.5342124}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 504 is less than current step: 544. Dropping entry: {'train_acc': 398.0, '_timestamp': 1705962833.6772478}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 512 is less than current step: 544. Dropping entry: {'train_acc': 406.0, '_timestamp': 1705962833.7802706}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 520 is less than current step: 544. Dropping entry: {'train_acc': 414.0, '_timestamp': 1705962833.8872948}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 528 is less than current step: 544. Dropping entry: {'train_acc': 421.0, '_timestamp': 1705962834.0073247}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 536 is less than current step: 544. Dropping entry: {'train_acc': 427.0, '_timestamp': 1705962834.1243517}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 540 is less than current step: 544. Dropping entry: {'train_acc': 431.0, '_timestamp': 1705962834.2033691}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 8 is less than current step: 544. Dropping entry: {'test_loss': 0.7855989336967468, 'test_acc': 6.0, '_timestamp': 1705962834.316394}).
+Test accuracy = 61.7%, Test avg loss = 0.106350
+Epoch 2
+-------------------------------
+Train loss = 0.090753  [    8/  540]
+Train loss = 0.084182  [   88/  540]
+Train loss = 0.069591  [  168/  540]
+Train loss = 0.062521  [  248/  540]
+Train loss = 0.058576  [  328/  540]
+Train loss = 0.221359  [  408/  540]
+Train loss = 0.063381  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 16 is less than current step: 544. Dropping entry: {'test_loss': 1.7045872807502747, 'test_acc': 10.0, '_timestamp': 1705962834.4554257}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 24 is less than current step: 544. Dropping entry: {'test_loss': 2.8376949429512024, 'test_acc': 14.0, '_timestamp': 1705962834.582957}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 32 is less than current step: 544. Dropping entry: {'test_loss': 3.7398167848587036, 'test_acc': 19.0, '_timestamp': 1705962834.6909816}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 40 is less than current step: 544. Dropping entry: {'test_loss': 4.511285364627838, 'test_acc': 26.0, '_timestamp': 1705962834.8130093}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 48 is less than current step: 544. Dropping entry: {'test_loss': 5.2278677225112915, 'test_acc': 31.0, '_timestamp': 1705962834.9350364}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 56 is less than current step: 544. Dropping entry: {'test_loss': 5.680052042007446, 'test_acc': 38.0, '_timestamp': 1705962835.0440612}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 64 is less than current step: 544. Dropping entry: {'test_loss': 6.487233340740204, 'test_acc': 42.0, '_timestamp': 1705962835.1761258}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 72 is less than current step: 544. Dropping entry: {'test_loss': 7.239386796951294, 'test_acc': 48.0, '_timestamp': 1705962835.3111565}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 80 is less than current step: 544. Dropping entry: {'test_loss': 8.09689474105835, 'test_acc': 51.0, '_timestamp': 1705962835.4271674}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 88 is less than current step: 544. Dropping entry: {'test_loss': 8.552246391773224, 'test_acc': 58.0, '_timestamp': 1705962835.5521955}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 96 is less than current step: 544. Dropping entry: {'test_loss': 9.56048995256424, 'test_acc': 61.0, '_timestamp': 1705962835.6902332}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 104 is less than current step: 544. Dropping entry: {'test_loss': 10.238526284694672, 'test_acc': 65.0, '_timestamp': 1705962835.8212628}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 112 is less than current step: 544. Dropping entry: {'test_loss': 10.825410723686218, 'test_acc': 71.0, '_timestamp': 1705962835.913284}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 115 is less than current step: 544. Dropping entry: {'test_loss': 12.23023784160614, 'test_acc': 71.0, '_timestamp': 1705962835.9832995}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 548 is less than current step: 1084. Dropping entry: {'train_acc': 5.0, '_timestamp': 1705962842.5809035}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 556 is less than current step: 1084. Dropping entry: {'train_acc': 12.0, '_timestamp': 1705962842.6629221}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 564 is less than current step: 1084. Dropping entry: {'train_acc': 20.0, '_timestamp': 1705962842.7599437}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 572 is less than current step: 1084. Dropping entry: {'train_acc': 26.0, '_timestamp': 1705962842.849276}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 580 is less than current step: 1084. Dropping entry: {'train_acc': 34.0, '_timestamp': 1705962842.9262927}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 588 is less than current step: 1084. Dropping entry: {'train_acc': 40.0, '_timestamp': 1705962843.0293152}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 596 is less than current step: 1084. Dropping entry: {'train_acc': 46.0, '_timestamp': 1705962843.112334}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 604 is less than current step: 1084. Dropping entry: {'train_acc': 54.0, '_timestamp': 1705962843.2123566}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 612 is less than current step: 1084. Dropping entry: {'train_acc': 60.0, '_timestamp': 1705962843.3173802}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 620 is less than current step: 1084. Dropping entry: {'train_acc': 67.0, '_timestamp': 1705962843.4014003}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 628 is less than current step: 1084. Dropping entry: {'train_acc': 74.0, '_timestamp': 1705962843.4834187}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 636 is less than current step: 1084. Dropping entry: {'train_acc': 80.0, '_timestamp': 1705962843.58044}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 644 is less than current step: 1084. Dropping entry: {'train_acc': 88.0, '_timestamp': 1705962843.6763399}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 652 is less than current step: 1084. Dropping entry: {'train_acc': 95.0, '_timestamp': 1705962843.7543573}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 660 is less than current step: 1084. Dropping entry: {'train_acc': 103.0, '_timestamp': 1705962843.8293743}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 668 is less than current step: 1084. Dropping entry: {'train_acc': 111.0, '_timestamp': 1705962843.9143932}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 676 is less than current step: 1084. Dropping entry: {'train_acc': 119.0, '_timestamp': 1705962844.0234184}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 684 is less than current step: 1084. Dropping entry: {'train_acc': 126.0, '_timestamp': 1705962844.0994353}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 692 is less than current step: 1084. Dropping entry: {'train_acc': 134.0, '_timestamp': 1705962844.1944568}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 700 is less than current step: 1084. Dropping entry: {'train_acc': 142.0, '_timestamp': 1705962844.2884774}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 708 is less than current step: 1084. Dropping entry: {'train_acc': 149.0, '_timestamp': 1705962844.4085052}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 716 is less than current step: 1084. Dropping entry: {'train_acc': 157.0, '_timestamp': 1705962844.501525}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 724 is less than current step: 1084. Dropping entry: {'train_acc': 163.0, '_timestamp': 1705962844.586544}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 732 is less than current step: 1084. Dropping entry: {'train_acc': 169.0, '_timestamp': 1705962844.6905677}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 740 is less than current step: 1084. Dropping entry: {'train_acc': 176.0, '_timestamp': 1705962844.7945912}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 748 is less than current step: 1084. Dropping entry: {'train_acc': 182.0, '_timestamp': 1705962844.9206195}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 756 is less than current step: 1084. Dropping entry: {'train_acc': 190.0, '_timestamp': 1705962844.998637}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 764 is less than current step: 1084. Dropping entry: {'train_acc': 197.0, '_timestamp': 1705962845.0966592}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 772 is less than current step: 1084. Dropping entry: {'train_acc': 205.0, '_timestamp': 1705962845.2056844}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 780 is less than current step: 1084. Dropping entry: {'train_acc': 211.0, '_timestamp': 1705962845.309708}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 788 is less than current step: 1084. Dropping entry: {'train_acc': 218.0, '_timestamp': 1705962845.3957274}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 796 is less than current step: 1084. Dropping entry: {'train_acc': 226.0, '_timestamp': 1705962845.5047512}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 804 is less than current step: 1084. Dropping entry: {'train_acc': 234.0, '_timestamp': 1705962845.6247795}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 812 is less than current step: 1084. Dropping entry: {'train_acc': 242.0, '_timestamp': 1705962845.7288015}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 820 is less than current step: 1084. Dropping entry: {'train_acc': 250.0, '_timestamp': 1705962845.8098204}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 828 is less than current step: 1084. Dropping entry: {'train_acc': 258.0, '_timestamp': 1705962845.9078422}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 836 is less than current step: 1084. Dropping entry: {'train_acc': 266.0, '_timestamp': 1705962845.997862}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 844 is less than current step: 1084. Dropping entry: {'train_acc': 274.0, '_timestamp': 1705962846.0958843}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 852 is less than current step: 1084. Dropping entry: {'train_acc': 281.0, '_timestamp': 1705962846.1949067}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 860 is less than current step: 1084. Dropping entry: {'train_acc': 289.0, '_timestamp': 1705962846.3029315}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 868 is less than current step: 1084. Dropping entry: {'train_acc': 295.0, '_timestamp': 1705962846.3989525}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 876 is less than current step: 1084. Dropping entry: {'train_acc': 302.0, '_timestamp': 1705962846.5049763}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 884 is less than current step: 1084. Dropping entry: {'train_acc': 308.0, '_timestamp': 1705962846.5859947}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 892 is less than current step: 1084. Dropping entry: {'train_acc': 316.0, '_timestamp': 1705962846.727548}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 900 is less than current step: 1084. Dropping entry: {'train_acc': 322.0, '_timestamp': 1705962846.8705807}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 908 is less than current step: 1084. Dropping entry: {'train_acc': 329.0, '_timestamp': 1705962847.0131156}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 916 is less than current step: 1084. Dropping entry: {'train_acc': 337.0, '_timestamp': 1705962847.1451454}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 924 is less than current step: 1084. Dropping entry: {'train_acc': 345.0, '_timestamp': 1705962847.2751746}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 932 is less than current step: 1084. Dropping entry: {'train_acc': 353.0, '_timestamp': 1705962847.4172065}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 940 is less than current step: 1084. Dropping entry: {'train_acc': 360.0, '_timestamp': 1705962847.5302324}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 948 is less than current step: 1084. Dropping entry: {'train_acc': 364.0, '_timestamp': 1705962847.6462584}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 956 is less than current step: 1084. Dropping entry: {'train_acc': 371.0, '_timestamp': 1705962847.761284}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 964 is less than current step: 1084. Dropping entry: {'train_acc': 378.0, '_timestamp': 1705962847.8823116}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 972 is less than current step: 1084. Dropping entry: {'train_acc': 385.0, '_timestamp': 1705962848.0073395}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 980 is less than current step: 1084. Dropping entry: {'train_acc': 393.0, '_timestamp': 1705962848.1183646}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 988 is less than current step: 1084. Dropping entry: {'train_acc': 399.0, '_timestamp': 1705962848.2613974}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 996 is less than current step: 1084. Dropping entry: {'train_acc': 407.0, '_timestamp': 1705962848.381433}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1004 is less than current step: 1084. Dropping entry: {'train_acc': 414.0, '_timestamp': 1705962848.503461}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1012 is less than current step: 1084. Dropping entry: {'train_acc': 422.0, '_timestamp': 1705962848.6364908}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1020 is less than current step: 1084. Dropping entry: {'train_acc': 430.0, '_timestamp': 1705962848.7365134}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1028 is less than current step: 1084. Dropping entry: {'train_acc': 437.0, '_timestamp': 1705962848.8475382}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1036 is less than current step: 1084. Dropping entry: {'train_acc': 444.0, '_timestamp': 1705962848.965565}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1044 is less than current step: 1084. Dropping entry: {'train_acc': 451.0, '_timestamp': 1705962849.107597}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1052 is less than current step: 1084. Dropping entry: {'train_acc': 459.0, '_timestamp': 1705962849.2116203}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1060 is less than current step: 1084. Dropping entry: {'train_acc': 467.0, '_timestamp': 1705962849.3216453}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1068 is less than current step: 1084. Dropping entry: {'train_acc': 475.0, '_timestamp': 1705962849.4426725}).
+Train accuracy = 90.0%, Train avg loss = 0.044746
+Test accuracy = 68.7%, Test avg loss = 0.102870
+Epoch 3
+-------------------------------
+Train loss = 0.071976  [    8/  540]
+Train loss = 0.053257  [   88/  540]
+Train loss = 0.050996  [  168/  540]
+Train loss = 0.038745  [  248/  540]
+Train loss = 0.037533  [  328/  540]
+Train loss = 0.174929  [  408/  540]
+Train loss = 0.041928  [  488/  540]
+Train accuracy = 95.7%, Train avg loss = 0.029436
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1076 is less than current step: 1084. Dropping entry: {'train_acc': 482.0, '_timestamp': 1705962849.568701}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1080 is less than current step: 1084. Dropping entry: {'train_acc': 486.0, '_timestamp': 1705962849.6497207}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 123 is less than current step: 1084. Dropping entry: {'test_loss': 0.7394635677337646, 'test_acc': 5.0, '_timestamp': 1705962849.7727475}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 131 is less than current step: 1084. Dropping entry: {'test_loss': 1.5161381959915161, 'test_acc': 10.0, '_timestamp': 1705962849.915779}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 139 is less than current step: 1084. Dropping entry: {'test_loss': 2.685725212097168, 'test_acc': 14.0, '_timestamp': 1705962850.0428078}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 147 is less than current step: 1084. Dropping entry: {'test_loss': 3.604636311531067, 'test_acc': 19.0, '_timestamp': 1705962850.1538327}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 155 is less than current step: 1084. Dropping entry: {'test_loss': 4.3491474986076355, 'test_acc': 25.0, '_timestamp': 1705962850.276861}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 163 is less than current step: 1084. Dropping entry: {'test_loss': 4.971860885620117, 'test_acc': 32.0, '_timestamp': 1705962850.399889}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 171 is less than current step: 1084. Dropping entry: {'test_loss': 5.388795435428619, 'test_acc': 39.0, '_timestamp': 1705962850.5099137}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 179 is less than current step: 1084. Dropping entry: {'test_loss': 6.193575918674469, 'test_acc': 44.0, '_timestamp': 1705962850.643943}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 187 is less than current step: 1084. Dropping entry: {'test_loss': 6.828809916973114, 'test_acc': 50.0, '_timestamp': 1705962850.7729723}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 195 is less than current step: 1084. Dropping entry: {'test_loss': 7.51691073179245, 'test_acc': 55.0, '_timestamp': 1705962850.8849974}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 203 is less than current step: 1084. Dropping entry: {'test_loss': 8.02904987335205, 'test_acc': 62.0, '_timestamp': 1705962851.0150266}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 211 is less than current step: 1084. Dropping entry: {'test_loss': 9.10563850402832, 'test_acc': 66.0, '_timestamp': 1705962851.1560585}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 219 is less than current step: 1084. Dropping entry: {'test_loss': 9.704139232635498, 'test_acc': 72.0, '_timestamp': 1705962851.2910888}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 227 is less than current step: 1084. Dropping entry: {'test_loss': 10.178590327501297, 'test_acc': 79.0, '_timestamp': 1705962851.38411}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 230 is less than current step: 1084. Dropping entry: {'test_loss': 11.83010533452034, 'test_acc': 79.0, '_timestamp': 1705962851.4561262}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1088 is less than current step: 1624. Dropping entry: {'train_acc': 7.0, '_timestamp': 1705962858.146202}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1096 is less than current step: 1624. Dropping entry: {'train_acc': 15.0, '_timestamp': 1705962858.2302628}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1104 is less than current step: 1624. Dropping entry: {'train_acc': 23.0, '_timestamp': 1705962858.3312855}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1112 is less than current step: 1624. Dropping entry: {'train_acc': 29.0, '_timestamp': 1705962858.4193056}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1120 is less than current step: 1624. Dropping entry: {'train_acc': 37.0, '_timestamp': 1705962858.495323}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1128 is less than current step: 1624. Dropping entry: {'train_acc': 43.0, '_timestamp': 1705962858.5973456}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1136 is less than current step: 1624. Dropping entry: {'train_acc': 49.0, '_timestamp': 1705962858.6808681}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1144 is less than current step: 1624. Dropping entry: {'train_acc': 57.0, '_timestamp': 1705962858.780891}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1152 is less than current step: 1624. Dropping entry: {'train_acc': 65.0, '_timestamp': 1705962858.8849142}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1160 is less than current step: 1624. Dropping entry: {'train_acc': 73.0, '_timestamp': 1705962858.9659324}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1168 is less than current step: 1624. Dropping entry: {'train_acc': 80.0, '_timestamp': 1705962859.04495}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1176 is less than current step: 1624. Dropping entry: {'train_acc': 88.0, '_timestamp': 1705962859.1449735}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1184 is less than current step: 1624. Dropping entry: {'train_acc': 96.0, '_timestamp': 1705962859.2429986}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1192 is less than current step: 1624. Dropping entry: {'train_acc': 104.0, '_timestamp': 1705962859.322017}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1200 is less than current step: 1624. Dropping entry: {'train_acc': 112.0, '_timestamp': 1705962859.3970332}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1208 is less than current step: 1624. Dropping entry: {'train_acc': 120.0, '_timestamp': 1705962859.4810524}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1216 is less than current step: 1624. Dropping entry: {'train_acc': 128.0, '_timestamp': 1705962859.5850756}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1224 is less than current step: 1624. Dropping entry: {'train_acc': 135.0, '_timestamp': 1705962859.6610959}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1232 is less than current step: 1624. Dropping entry: {'train_acc': 143.0, '_timestamp': 1705962859.7576745}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1240 is less than current step: 1624. Dropping entry: {'train_acc': 151.0, '_timestamp': 1705962859.8416793}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1248 is less than current step: 1624. Dropping entry: {'train_acc': 158.0, '_timestamp': 1705962859.9357004}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1256 is less than current step: 1624. Dropping entry: {'train_acc': 166.0, '_timestamp': 1705962860.026721}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1264 is less than current step: 1624. Dropping entry: {'train_acc': 173.0, '_timestamp': 1705962860.1107395}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1272 is less than current step: 1624. Dropping entry: {'train_acc': 179.0, '_timestamp': 1705962860.2137685}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1280 is less than current step: 1624. Dropping entry: {'train_acc': 187.0, '_timestamp': 1705962860.3177917}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1288 is less than current step: 1624. Dropping entry: {'train_acc': 194.0, '_timestamp': 1705962860.4388192}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1296 is less than current step: 1624. Dropping entry: {'train_acc': 202.0, '_timestamp': 1705962860.5138357}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1304 is less than current step: 1624. Dropping entry: {'train_acc': 210.0, '_timestamp': 1705962860.6018553}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1312 is less than current step: 1624. Dropping entry: {'train_acc': 218.0, '_timestamp': 1705962860.70988}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1320 is less than current step: 1624. Dropping entry: {'train_acc': 225.0, '_timestamp': 1705962860.8229058}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1328 is less than current step: 1624. Dropping entry: {'train_acc': 233.0, '_timestamp': 1705962860.9089243}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1336 is less than current step: 1624. Dropping entry: {'train_acc': 241.0, '_timestamp': 1705962861.0009456}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1344 is less than current step: 1624. Dropping entry: {'train_acc': 249.0, '_timestamp': 1705962861.1179717}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1352 is less than current step: 1624. Dropping entry: {'train_acc': 257.0, '_timestamp': 1705962861.2209947}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1360 is less than current step: 1624. Dropping entry: {'train_acc': 265.0, '_timestamp': 1705962861.2980144}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1368 is less than current step: 1624. Dropping entry: {'train_acc': 273.0, '_timestamp': 1705962861.406039}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1376 is less than current step: 1624. Dropping entry: {'train_acc': 281.0, '_timestamp': 1705962861.5020583}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1384 is less than current step: 1624. Dropping entry: {'train_acc': 289.0, '_timestamp': 1705962861.5990798}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1392 is less than current step: 1624. Dropping entry: {'train_acc': 296.0, '_timestamp': 1705962861.6991026}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1400 is less than current step: 1624. Dropping entry: {'train_acc': 304.0, '_timestamp': 1705962861.807127}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1408 is less than current step: 1624. Dropping entry: {'train_acc': 311.0, '_timestamp': 1705962861.9161522}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1416 is less than current step: 1624. Dropping entry: {'train_acc': 319.0, '_timestamp': 1705962862.0301774}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1424 is less than current step: 1624. Dropping entry: {'train_acc': 326.0, '_timestamp': 1705962862.1121957}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1432 is less than current step: 1624. Dropping entry: {'train_acc': 334.0, '_timestamp': 1705962862.2262216}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1440 is less than current step: 1624. Dropping entry: {'train_acc': 342.0, '_timestamp': 1705962862.3412473}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1448 is less than current step: 1624. Dropping entry: {'train_acc': 349.0, '_timestamp': 1705962862.481279}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1456 is less than current step: 1624. Dropping entry: {'train_acc': 357.0, '_timestamp': 1705962862.6133108}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1464 is less than current step: 1624. Dropping entry: {'train_acc': 365.0, '_timestamp': 1705962862.7513397}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1472 is less than current step: 1624. Dropping entry: {'train_acc': 373.0, '_timestamp': 1705962862.8983731}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1480 is less than current step: 1624. Dropping entry: {'train_acc': 381.0, '_timestamp': 1705962863.0103981}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1488 is less than current step: 1624. Dropping entry: {'train_acc': 387.0, '_timestamp': 1705962863.1264243}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1496 is less than current step: 1624. Dropping entry: {'train_acc': 394.0, '_timestamp': 1705962863.2484522}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1504 is less than current step: 1624. Dropping entry: {'train_acc': 402.0, '_timestamp': 1705962863.376481}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1512 is less than current step: 1624. Dropping entry: {'train_acc': 409.0, '_timestamp': 1705962863.5075102}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1520 is less than current step: 1624. Dropping entry: {'train_acc': 417.0, '_timestamp': 1705962863.6185355}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1528 is less than current step: 1624. Dropping entry: {'train_acc': 425.0, '_timestamp': 1705962863.7625678}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1536 is less than current step: 1624. Dropping entry: {'train_acc': 433.0, '_timestamp': 1705962863.8825948}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1544 is less than current step: 1624. Dropping entry: {'train_acc': 441.0, '_timestamp': 1705962864.0036223}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1552 is less than current step: 1624. Dropping entry: {'train_acc': 449.0, '_timestamp': 1705962864.1336524}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1560 is less than current step: 1624. Dropping entry: {'train_acc': 457.0, '_timestamp': 1705962864.2346761}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1568 is less than current step: 1624. Dropping entry: {'train_acc': 465.0, '_timestamp': 1705962864.3447013}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1576 is less than current step: 1624. Dropping entry: {'train_acc': 473.0, '_timestamp': 1705962864.4637284}).
+Test accuracy = 62.6%, Test avg loss = 0.106056
+Epoch 4
+-------------------------------
+Train loss = 0.045498  [    8/  540]
+Train loss = 0.032946  [   88/  540]
+Train loss = 0.033561  [  168/  540]
+Train loss = 0.023782  [  248/  540]
+Train loss = 0.027881  [  328/  540]
+Train loss = 0.139062  [  408/  540]
+Train loss = 0.027752  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1584 is less than current step: 1624. Dropping entry: {'train_acc': 481.0, '_timestamp': 1705962864.6107614}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1592 is less than current step: 1624. Dropping entry: {'train_acc': 489.0, '_timestamp': 1705962864.715841}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1600 is less than current step: 1624. Dropping entry: {'train_acc': 497.0, '_timestamp': 1705962864.8238654}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1608 is less than current step: 1624. Dropping entry: {'train_acc': 505.0, '_timestamp': 1705962864.9448926}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1616 is less than current step: 1624. Dropping entry: {'train_acc': 513.0, '_timestamp': 1705962865.0639193}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1620 is less than current step: 1624. Dropping entry: {'train_acc': 517.0, '_timestamp': 1705962865.1429381}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 238 is less than current step: 1624. Dropping entry: {'test_loss': 0.7375304102897644, 'test_acc': 5.0, '_timestamp': 1705962865.2554674}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 246 is less than current step: 1624. Dropping entry: {'test_loss': 1.443508505821228, 'test_acc': 10.0, '_timestamp': 1705962865.3984995}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 254 is less than current step: 1624. Dropping entry: {'test_loss': 2.6249078512191772, 'test_acc': 13.0, '_timestamp': 1705962865.524528}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 262 is less than current step: 1624. Dropping entry: {'test_loss': 3.5775468349456787, 'test_acc': 18.0, '_timestamp': 1705962865.6345713}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 270 is less than current step: 1624. Dropping entry: {'test_loss': 4.318402707576752, 'test_acc': 24.0, '_timestamp': 1705962865.758109}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 278 is less than current step: 1624. Dropping entry: {'test_loss': 4.962278485298157, 'test_acc': 30.0, '_timestamp': 1705962865.8791366}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 286 is less than current step: 1624. Dropping entry: {'test_loss': 5.397444814443588, 'test_acc': 37.0, '_timestamp': 1705962865.9931622}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 294 is less than current step: 1624. Dropping entry: {'test_loss': 6.355774313211441, 'test_acc': 41.0, '_timestamp': 1705962866.1201906}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 302 is less than current step: 1624. Dropping entry: {'test_loss': 6.978825241327286, 'test_acc': 46.0, '_timestamp': 1705962866.245219}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 310 is less than current step: 1624. Dropping entry: {'test_loss': 7.6618079245090485, 'test_acc': 51.0, '_timestamp': 1705962866.3532434}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 318 is less than current step: 1624. Dropping entry: {'test_loss': 8.26610717177391, 'test_acc': 56.0, '_timestamp': 1705962866.4782715}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 326 is less than current step: 1624. Dropping entry: {'test_loss': 9.423410028219223, 'test_acc': 59.0, '_timestamp': 1705962866.622304}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 334 is less than current step: 1624. Dropping entry: {'test_loss': 9.969384580850601, 'test_acc': 65.0, '_timestamp': 1705962866.756334}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 342 is less than current step: 1624. Dropping entry: {'test_loss': 10.39209559559822, 'test_acc': 72.0, '_timestamp': 1705962866.8463545}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 345 is less than current step: 1624. Dropping entry: {'test_loss': 12.196461826562881, 'test_acc': 72.0, '_timestamp': 1705962866.9163702}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1628 is less than current step: 2164. Dropping entry: {'train_acc': 7.0, '_timestamp': 1705962873.5056093}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1636 is less than current step: 2164. Dropping entry: {'train_acc': 15.0, '_timestamp': 1705962873.5896304}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1644 is less than current step: 2164. Dropping entry: {'train_acc': 23.0, '_timestamp': 1705962873.7021754}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1652 is less than current step: 2164. Dropping entry: {'train_acc': 29.0, '_timestamp': 1705962873.8021967}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1660 is less than current step: 2164. Dropping entry: {'train_acc': 37.0, '_timestamp': 1705962873.8812146}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1668 is less than current step: 2164. Dropping entry: {'train_acc': 45.0, '_timestamp': 1705962873.985238}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1676 is less than current step: 2164. Dropping entry: {'train_acc': 51.0, '_timestamp': 1705962874.069257}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1684 is less than current step: 2164. Dropping entry: {'train_acc': 59.0, '_timestamp': 1705962874.1692796}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1692 is less than current step: 2164. Dropping entry: {'train_acc': 67.0, '_timestamp': 1705962874.2743032}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1700 is less than current step: 2164. Dropping entry: {'train_acc': 75.0, '_timestamp': 1705962874.357322}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1708 is less than current step: 2164. Dropping entry: {'train_acc': 83.0, '_timestamp': 1705962874.4383402}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1716 is less than current step: 2164. Dropping entry: {'train_acc': 91.0, '_timestamp': 1705962874.5323615}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1724 is less than current step: 2164. Dropping entry: {'train_acc': 99.0, '_timestamp': 1705962874.6303837}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1732 is less than current step: 2164. Dropping entry: {'train_acc': 107.0, '_timestamp': 1705962874.7094014}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1740 is less than current step: 2164. Dropping entry: {'train_acc': 115.0, '_timestamp': 1705962874.7854185}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1748 is less than current step: 2164. Dropping entry: {'train_acc': 123.0, '_timestamp': 1705962874.8694375}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1756 is less than current step: 2164. Dropping entry: {'train_acc': 131.0, '_timestamp': 1705962874.9744608}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1764 is less than current step: 2164. Dropping entry: {'train_acc': 139.0, '_timestamp': 1705962875.0614808}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1772 is less than current step: 2164. Dropping entry: {'train_acc': 147.0, '_timestamp': 1705962875.1685047}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1780 is less than current step: 2164. Dropping entry: {'train_acc': 155.0, '_timestamp': 1705962875.27353}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1788 is less than current step: 2164. Dropping entry: {'train_acc': 163.0, '_timestamp': 1705962875.3975563}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1796 is less than current step: 2164. Dropping entry: {'train_acc': 171.0, '_timestamp': 1705962875.491578}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1804 is less than current step: 2164. Dropping entry: {'train_acc': 179.0, '_timestamp': 1705962875.5775976}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1812 is less than current step: 2164. Dropping entry: {'train_acc': 187.0, '_timestamp': 1705962875.683621}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1820 is less than current step: 2164. Dropping entry: {'train_acc': 195.0, '_timestamp': 1705962875.7886446}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1828 is less than current step: 2164. Dropping entry: {'train_acc': 203.0, '_timestamp': 1705962875.9136739}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1836 is less than current step: 2164. Dropping entry: {'train_acc': 211.0, '_timestamp': 1705962875.9986935}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1844 is less than current step: 2164. Dropping entry: {'train_acc': 219.0, '_timestamp': 1705962876.0927145}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1852 is less than current step: 2164. Dropping entry: {'train_acc': 227.0, '_timestamp': 1705962876.2037923}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1860 is less than current step: 2164. Dropping entry: {'train_acc': 235.0, '_timestamp': 1705962876.3118155}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1868 is less than current step: 2164. Dropping entry: {'train_acc': 243.0, '_timestamp': 1705962876.4008355}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1876 is less than current step: 2164. Dropping entry: {'train_acc': 251.0, '_timestamp': 1705962876.4928565}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1884 is less than current step: 2164. Dropping entry: {'train_acc': 259.0, '_timestamp': 1705962876.6038806}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1892 is less than current step: 2164. Dropping entry: {'train_acc': 267.0, '_timestamp': 1705962876.7064083}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1900 is less than current step: 2164. Dropping entry: {'train_acc': 275.0, '_timestamp': 1705962876.7834253}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1908 is less than current step: 2164. Dropping entry: {'train_acc': 283.0, '_timestamp': 1705962876.8804471}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1916 is less than current step: 2164. Dropping entry: {'train_acc': 291.0, '_timestamp': 1705962876.9694674}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1924 is less than current step: 2164. Dropping entry: {'train_acc': 299.0, '_timestamp': 1705962877.0664907}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1932 is less than current step: 2164. Dropping entry: {'train_acc': 306.0, '_timestamp': 1705962877.1665125}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1940 is less than current step: 2164. Dropping entry: {'train_acc': 314.0, '_timestamp': 1705962877.2825382}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1948 is less than current step: 2164. Dropping entry: {'train_acc': 321.0, '_timestamp': 1705962877.3875616}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1956 is less than current step: 2164. Dropping entry: {'train_acc': 329.0, '_timestamp': 1705962877.5205915}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1964 is less than current step: 2164. Dropping entry: {'train_acc': 337.0, '_timestamp': 1705962877.6276157}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1972 is less than current step: 2164. Dropping entry: {'train_acc': 345.0, '_timestamp': 1705962877.7666469}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1980 is less than current step: 2164. Dropping entry: {'train_acc': 353.0, '_timestamp': 1705962877.907679}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1988 is less than current step: 2164. Dropping entry: {'train_acc': 361.0, '_timestamp': 1705962878.0607133}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1996 is less than current step: 2164. Dropping entry: {'train_acc': 369.0, '_timestamp': 1705962878.195744}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2004 is less than current step: 2164. Dropping entry: {'train_acc': 377.0, '_timestamp': 1705962878.3367755}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2012 is less than current step: 2164. Dropping entry: {'train_acc': 385.0, '_timestamp': 1705962878.4918108}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2020 is less than current step: 2164. Dropping entry: {'train_acc': 393.0, '_timestamp': 1705962878.6078367}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2028 is less than current step: 2164. Dropping entry: {'train_acc': 400.0, '_timestamp': 1705962878.7248654}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2036 is less than current step: 2164. Dropping entry: {'train_acc': 408.0, '_timestamp': 1705962878.8409245}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2044 is less than current step: 2164. Dropping entry: {'train_acc': 416.0, '_timestamp': 1705962878.9619374}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2052 is less than current step: 2164. Dropping entry: {'train_acc': 424.0, '_timestamp': 1705962879.0870168}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2060 is less than current step: 2164. Dropping entry: {'train_acc': 432.0, '_timestamp': 1705962879.1980422}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2068 is less than current step: 2164. Dropping entry: {'train_acc': 440.0, '_timestamp': 1705962879.3610842}).
+Train accuracy = 98.5%, Train avg loss = 0.020728
+Test accuracy = 60.9%, Test avg loss = 0.110879
+Epoch 5
+-------------------------------
+Train loss = 0.027814  [    8/  540]
+Train loss = 0.021135  [   88/  540]
+Train loss = 0.022839  [  168/  540]
+Train loss = 0.016520  [  248/  540]
+Train loss = 0.021630  [  328/  540]
+Train loss = 0.114778  [  408/  540]
+Train loss = 0.020817  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2076 is less than current step: 2164. Dropping entry: {'train_acc': 448.0, '_timestamp': 1705962879.487113}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2084 is less than current step: 2164. Dropping entry: {'train_acc': 456.0, '_timestamp': 1705962879.6161394}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2092 is less than current step: 2164. Dropping entry: {'train_acc': 464.0, '_timestamp': 1705962879.7563186}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2100 is less than current step: 2164. Dropping entry: {'train_acc': 472.0, '_timestamp': 1705962879.859342}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2108 is less than current step: 2164. Dropping entry: {'train_acc': 480.0, '_timestamp': 1705962879.9723694}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2116 is less than current step: 2164. Dropping entry: {'train_acc': 488.0, '_timestamp': 1705962880.0953996}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2124 is less than current step: 2164. Dropping entry: {'train_acc': 496.0, '_timestamp': 1705962880.239432}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2132 is less than current step: 2164. Dropping entry: {'train_acc': 504.0, '_timestamp': 1705962880.3440278}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2140 is less than current step: 2164. Dropping entry: {'train_acc': 512.0, '_timestamp': 1705962880.4540527}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2148 is less than current step: 2164. Dropping entry: {'train_acc': 520.0, '_timestamp': 1705962880.5780807}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2156 is less than current step: 2164. Dropping entry: {'train_acc': 528.0, '_timestamp': 1705962880.698122}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2160 is less than current step: 2164. Dropping entry: {'train_acc': 532.0, '_timestamp': 1705962880.7801409}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 353 is less than current step: 2164. Dropping entry: {'test_loss': 0.7672957181930542, 'test_acc': 5.0, '_timestamp': 1705962880.8941712}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 361 is less than current step: 2164. Dropping entry: {'test_loss': 1.4537322521209717, 'test_acc': 10.0, '_timestamp': 1705962881.0372043}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 369 is less than current step: 2164. Dropping entry: {'test_loss': 2.700729250907898, 'test_acc': 14.0, '_timestamp': 1705962881.167232}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 377 is less than current step: 2164. Dropping entry: {'test_loss': 3.7117919921875, 'test_acc': 19.0, '_timestamp': 1705962881.2782574}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 385 is less than current step: 2164. Dropping entry: {'test_loss': 4.470317780971527, 'test_acc': 25.0, '_timestamp': 1705962881.4022846}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 393 is less than current step: 2164. Dropping entry: {'test_loss': 5.163034677505493, 'test_acc': 29.0, '_timestamp': 1705962881.537315}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 401 is less than current step: 2164. Dropping entry: {'test_loss': 5.598747342824936, 'test_acc': 35.0, '_timestamp': 1705962881.64834}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 409 is less than current step: 2164. Dropping entry: {'test_loss': 6.695210784673691, 'test_acc': 39.0, '_timestamp': 1705962881.777369}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 417 is less than current step: 2164. Dropping entry: {'test_loss': 7.332506746053696, 'test_acc': 44.0, '_timestamp': 1705962881.9053986}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 425 is less than current step: 2164. Dropping entry: {'test_loss': 8.018955081701279, 'test_acc': 49.0, '_timestamp': 1705962882.0164237}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 433 is less than current step: 2164. Dropping entry: {'test_loss': 8.686219543218613, 'test_acc': 54.0, '_timestamp': 1705962882.146453}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 441 is less than current step: 2164. Dropping entry: {'test_loss': 9.912429183721542, 'test_acc': 57.0, '_timestamp': 1705962882.284491}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 449 is less than current step: 2164. Dropping entry: {'test_loss': 10.429999023675919, 'test_acc': 63.0, '_timestamp': 1705962882.4195664}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 457 is less than current step: 2164. Dropping entry: {'test_loss': 10.817810654640198, 'test_acc': 70.0, '_timestamp': 1705962882.514589}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 460 is less than current step: 2164. Dropping entry: {'test_loss': 12.751140832901001, 'test_acc': 70.0, '_timestamp': 1705962882.5876045}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2168 is less than current step: 2704. Dropping entry: {'train_acc': 8.0, '_timestamp': 1705962889.4075432}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2176 is less than current step: 2704. Dropping entry: {'train_acc': 16.0, '_timestamp': 1705962889.4925613}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2184 is less than current step: 2704. Dropping entry: {'train_acc': 24.0, '_timestamp': 1705962889.591584}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2192 is less than current step: 2704. Dropping entry: {'train_acc': 32.0, '_timestamp': 1705962889.6816044}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2200 is less than current step: 2704. Dropping entry: {'train_acc': 40.0, '_timestamp': 1705962889.7576232}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2208 is less than current step: 2704. Dropping entry: {'train_acc': 48.0, '_timestamp': 1705962889.8636458}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2216 is less than current step: 2704. Dropping entry: {'train_acc': 54.0, '_timestamp': 1705962889.9476652}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2224 is less than current step: 2704. Dropping entry: {'train_acc': 62.0, '_timestamp': 1705962890.0476875}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2232 is less than current step: 2704. Dropping entry: {'train_acc': 70.0, '_timestamp': 1705962890.1517107}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2240 is less than current step: 2704. Dropping entry: {'train_acc': 78.0, '_timestamp': 1705962890.2347298}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2248 is less than current step: 2704. Dropping entry: {'train_acc': 86.0, '_timestamp': 1705962890.3147473}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2256 is less than current step: 2704. Dropping entry: {'train_acc': 94.0, '_timestamp': 1705962890.409769}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2264 is less than current step: 2704. Dropping entry: {'train_acc': 102.0, '_timestamp': 1705962890.5037909}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2272 is less than current step: 2704. Dropping entry: {'train_acc': 110.0, '_timestamp': 1705962890.5838084}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2280 is less than current step: 2704. Dropping entry: {'train_acc': 118.0, '_timestamp': 1705962890.6588252}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2288 is less than current step: 2704. Dropping entry: {'train_acc': 126.0, '_timestamp': 1705962890.742851}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2296 is less than current step: 2704. Dropping entry: {'train_acc': 134.0, '_timestamp': 1705962890.847875}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2304 is less than current step: 2704. Dropping entry: {'train_acc': 142.0, '_timestamp': 1705962890.9318936}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2312 is less than current step: 2704. Dropping entry: {'train_acc': 150.0, '_timestamp': 1705962891.0359173}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2320 is less than current step: 2704. Dropping entry: {'train_acc': 158.0, '_timestamp': 1705962891.1279378}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2328 is less than current step: 2704. Dropping entry: {'train_acc': 166.0, '_timestamp': 1705962891.229014}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2336 is less than current step: 2704. Dropping entry: {'train_acc': 174.0, '_timestamp': 1705962891.3220348}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2344 is less than current step: 2704. Dropping entry: {'train_acc': 182.0, '_timestamp': 1705962891.4060538}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2352 is less than current step: 2704. Dropping entry: {'train_acc': 190.0, '_timestamp': 1705962891.5190802}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2360 is less than current step: 2704. Dropping entry: {'train_acc': 198.0, '_timestamp': 1705962891.6301038}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2368 is less than current step: 2704. Dropping entry: {'train_acc': 206.0, '_timestamp': 1705962891.755146}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2376 is less than current step: 2704. Dropping entry: {'train_acc': 214.0, '_timestamp': 1705962891.835164}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2384 is less than current step: 2704. Dropping entry: {'train_acc': 222.0, '_timestamp': 1705962891.9271848}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2392 is less than current step: 2704. Dropping entry: {'train_acc': 230.0, '_timestamp': 1705962892.0402105}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2400 is less than current step: 2704. Dropping entry: {'train_acc': 238.0, '_timestamp': 1705962892.1492348}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2408 is less than current step: 2704. Dropping entry: {'train_acc': 246.0, '_timestamp': 1705962892.2462838}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2416 is less than current step: 2704. Dropping entry: {'train_acc': 254.0, '_timestamp': 1705962892.3453064}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2424 is less than current step: 2704. Dropping entry: {'train_acc': 262.0, '_timestamp': 1705962892.4573314}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2432 is less than current step: 2704. Dropping entry: {'train_acc': 270.0, '_timestamp': 1705962892.5648754}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2440 is less than current step: 2704. Dropping entry: {'train_acc': 278.0, '_timestamp': 1705962892.6438932}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2448 is less than current step: 2704. Dropping entry: {'train_acc': 286.0, '_timestamp': 1705962892.7439158}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2456 is less than current step: 2704. Dropping entry: {'train_acc': 294.0, '_timestamp': 1705962892.833936}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2464 is less than current step: 2704. Dropping entry: {'train_acc': 302.0, '_timestamp': 1705962892.9329593}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2472 is less than current step: 2704. Dropping entry: {'train_acc': 310.0, '_timestamp': 1705962893.034981}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2480 is less than current step: 2704. Dropping entry: {'train_acc': 318.0, '_timestamp': 1705962893.1520076}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2488 is less than current step: 2704. Dropping entry: {'train_acc': 325.0, '_timestamp': 1705962893.255047}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2496 is less than current step: 2704. Dropping entry: {'train_acc': 333.0, '_timestamp': 1705962893.3700726}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2504 is less than current step: 2704. Dropping entry: {'train_acc': 341.0, '_timestamp': 1705962893.4560924}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2512 is less than current step: 2704. Dropping entry: {'train_acc': 349.0, '_timestamp': 1705962893.5751188}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2520 is less than current step: 2704. Dropping entry: {'train_acc': 357.0, '_timestamp': 1705962893.6921453}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2528 is less than current step: 2704. Dropping entry: {'train_acc': 365.0, '_timestamp': 1705962893.832187}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2536 is less than current step: 2704. Dropping entry: {'train_acc': 373.0, '_timestamp': 1705962893.9642165}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2544 is less than current step: 2704. Dropping entry: {'train_acc': 381.0, '_timestamp': 1705962894.1012475}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2552 is less than current step: 2704. Dropping entry: {'train_acc': 389.0, '_timestamp': 1705962894.240288}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2560 is less than current step: 2704. Dropping entry: {'train_acc': 397.0, '_timestamp': 1705962894.355314}).
+Train accuracy = 99.3%, Train avg loss = 0.015282
+Test accuracy = 60.9%, Test avg loss = 0.115635
+Done!
+Saved PyTorch Model State to model.pth

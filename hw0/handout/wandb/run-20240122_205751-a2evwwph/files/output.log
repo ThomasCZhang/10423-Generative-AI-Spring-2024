@@ -1,0 +1,79 @@
+Epoch 1
+-------------------------------
+Train loss = 0.134845  [    8/  540]
+Train loss = 0.113574  [   88/  540]
+Train loss = 0.098154  [  168/  540]
+Train loss = 0.103744  [  248/  540]
+Train loss = 0.088150  [  328/  540]
+Train loss = 0.246871  [  408/  540]
+Train loss = 0.097859  [  488/  540]
+Train accuracy = 78.3%, Train avg loss = 0.073310
+Test accuracy = 60.9%, Test avg loss = 0.109140
+Val accuracy = 68.1%, Val avg loss = 0.093115
+Epoch 2
+-------------------------------
+Train loss = 0.092370  [    8/  540]
+Train loss = 0.089154  [   88/  540]
+Train loss = 0.071584  [  168/  540]
+Train loss = 0.059705  [  248/  540]
+Train loss = 0.061201  [  328/  540]
+Train loss = 0.216159  [  408/  540]
+Train loss = 0.059949  [  488/  540]
+Train accuracy = 90.0%, Train avg loss = 0.046367
+Test accuracy = 66.1%, Test avg loss = 0.106592
+Val accuracy = 65.5%, Val avg loss = 0.085595
+Epoch 3
+-------------------------------
+Train loss = 0.066946  [    8/  540]
+Train loss = 0.057954  [   88/  540]
+Train loss = 0.053081  [  168/  540]
+Train loss = 0.037015  [  248/  540]
+Train loss = 0.041129  [  328/  540]
+Train loss = 0.181377  [  408/  540]
+Train loss = 0.039211  [  488/  540]
+Train accuracy = 95.2%, Train avg loss = 0.031988
+Test accuracy = 62.6%, Test avg loss = 0.109320
+Val accuracy = 70.7%, Val avg loss = 0.083175
+Epoch 4
+-------------------------------
+Train loss = 0.044003  [    8/  540]
+Train loss = 0.036597  [   88/  540]
+Train loss = 0.035747  [  168/  540]
+Train loss = 0.022920  [  248/  540]
+Train loss = 0.030337  [  328/  540]
+Train loss = 0.149852  [  408/  540]
+Train loss = 0.026673  [  488/  540]
+Train accuracy = 97.8%, Train avg loss = 0.023199
+Test accuracy = 61.7%, Test avg loss = 0.113271
+Val accuracy = 70.7%, Val avg loss = 0.084435
+Epoch 5
+-------------------------------
+Train loss = 0.028556  [    8/  540]
+Train loss = 0.023944  [   88/  540]
+Train loss = 0.024488  [  168/  540]
+Train loss = 0.015810  [  248/  540]
+Train loss = 0.024249  [  328/  540]
+Train loss = 0.127290  [  408/  540]
+Train loss = 0.019974  [  488/  540]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\Image.py", line 2992, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+                    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: ((1, 1, 256), '|u1')
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 189, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 167, in main
+    evaluate(train_dataloader, "Train", model, loss_fn, t, n_epochs)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 132, in evaluate
+    temp_img = wandb.Image(torch.permute(X[j,:,:,:], (1,2,0)), caption = f'{pred[j]}/{y[j]}')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\data_types\image.py", line 179, in __init__
+    self._initialize_from_data(data_or_path, mode, file_type)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\data_types\image.py", line 315, in _initialize_from_data
+    self._image = pil_image.fromarray(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\Image.py", line 2994, in fromarray
+    raise TypeError("Cannot handle this data type: %s, %s" % typekey) from e
+TypeError: Cannot handle this data type: (1, 1, 256), |u1

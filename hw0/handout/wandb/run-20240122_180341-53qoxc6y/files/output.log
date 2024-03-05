@@ -1,0 +1,66 @@
+Epoch 1
+-------------------------------
+Train loss = 0.141970  [    8/  540]
+Train loss = 0.116910  [   88/  540]
+Train loss = 0.095692  [  168/  540]
+Train loss = 0.108584  [  248/  540]
+Train loss = 0.091437  [  328/  540]
+Train loss = 0.234484  [  408/  540]
+Train loss = 0.105983  [  488/  540]
+Train accuracy = 78.9%, Train avg loss = 0.074763
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 544. Dropping entry: {'Train_loss': 0.07476307054360708, '_timestamp': 1705964636.8641937}).
+Test accuracy = 58.3%, Test avg loss = 0.109454
+Epoch 2
+-------------------------------
+Train loss = 0.093362  [    8/  540]
+Train loss = 0.084267  [   88/  540]
+Train loss = 0.071725  [  168/  540]
+Train loss = 0.063615  [  248/  540]
+Train loss = 0.059737  [  328/  540]
+Train loss = 0.201966  [  408/  540]
+Train loss = 0.063626  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 544. Dropping entry: {'Test_loss': 0.10945405830507693, '_timestamp': 1705964638.6336465}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 1084. Dropping entry: {'Train_loss': 0.04582337314883868, '_timestamp': 1705964652.360458}).
+Train accuracy = 90.6%, Train avg loss = 0.045823
+Test accuracy = 63.5%, Test avg loss = 0.106509
+Epoch 3
+-------------------------------
+Train loss = 0.069866  [    8/  540]
+Train loss = 0.055178  [   88/  540]
+Train loss = 0.050450  [  168/  540]
+Train loss = 0.038442  [  248/  540]
+Train loss = 0.039622  [  328/  540]
+Train loss = 0.170404  [  408/  540]
+Train loss = 0.039974  [  488/  540]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 1084. Dropping entry: {'Test_loss': 0.10650900343190069, '_timestamp': 1705964654.2168763}).
+Train accuracy = 96.1%, Train avg loss = 0.031132
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 1624. Dropping entry: {'Train_loss': 0.031132041842297273, '_timestamp': 1705964668.7821074}).
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 178, in <module>
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 158, in main
+    print("Done!")
+        ^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 118, in evaluate
+    for X, y in dataloader:
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 37, in __getitem__
+    image = Image.open(img_name).convert("RGB")  # Assuming RGB images
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\Image.py", line 921, in convert
+    self.load()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\PIL\ImageFile.py", line 260, in load
+    n, err_code = decoder.decode(b)
+                  ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

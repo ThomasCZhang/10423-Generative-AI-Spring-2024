@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.3",
+    "heartbeatAt": "2024-01-23T02:08:57.453450",
+    "startedAt": "2024-01-23T02:08:56.879909",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--n_epochs",
+        "1"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw0\\handout\\img_classifiery.py",
+    "codePathLocal": "img_classifiery.py",
+    "codePath": "img_classifiery.py",
+    "host": "LAPTOP-O5HN4585",
+    "username": "tzhan",
+    "executable": "C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\venv\\Scripts\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2900.0,
+        "min": 0.0,
+        "max": 2900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2900.0,
+            "min": 0.0,
+            "max": 2900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 475.69237899780273,
+            "used": 316.4995918273926
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.372379302978516
+    }
+}

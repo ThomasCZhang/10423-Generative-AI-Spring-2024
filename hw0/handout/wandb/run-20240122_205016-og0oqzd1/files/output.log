@@ -1,0 +1,62 @@
+Epoch 1
+-------------------------------
+Train loss = 0.134069  [    8/  540]
+Train loss = 0.116851  [   88/  540]
+Train loss = 0.099003  [  168/  540]
+Train loss = 0.103618  [  248/  540]
+Train loss = 0.086546  [  328/  540]
+Train loss = 0.237004  [  408/  540]
+Train loss = 0.098052  [  488/  540]
+Train accuracy = 80.2%, Train avg loss = 0.070366
+Test accuracy = 63.5%, Test avg loss = 0.104717
+Val accuracy = 67.2%, Val avg loss = 0.090235
+Epoch 2
+-------------------------------
+Train loss = 0.087142  [    8/  540]
+Train loss = 0.082334  [   88/  540]
+Train loss = 0.071731  [  168/  540]
+Train loss = 0.061311  [  248/  540]
+Train loss = 0.055154  [  328/  540]
+Train loss = 0.205864  [  408/  540]
+Train loss = 0.057512  [  488/  540]
+Train accuracy = 91.3%, Train avg loss = 0.043698
+Test accuracy = 67.0%, Test avg loss = 0.103035
+Val accuracy = 67.2%, Val avg loss = 0.083877
+Epoch 3
+-------------------------------
+Train loss = 0.066681  [    8/  540]
+Train loss = 0.052116  [   88/  540]
+Train loss = 0.051939  [  168/  540]
+Train loss = 0.036714  [  248/  540]
+Train loss = 0.037002  [  328/  540]
+Train loss = 0.172229  [  408/  540]
+Train loss = 0.035255  [  488/  540]
+Train accuracy = 96.5%, Train avg loss = 0.029774
+Test accuracy = 66.1%, Test avg loss = 0.105773
+Val accuracy = 67.2%, Val avg loss = 0.083298
+Epoch 4
+-------------------------------
+Train loss = 0.046304  [    8/  540]
+Train loss = 0.033718  [   88/  540]
+Train loss = 0.034714  [  168/  540]
+Train loss = 0.022536  [  248/  540]
+Train loss = 0.026363  [  328/  540]
+Train loss = 0.140218  [  408/  540]
+Train loss = 0.025486  [  488/  540]
+Train accuracy = 98.3%, Train avg loss = 0.021081
+Test accuracy = 62.6%, Test avg loss = 0.109556
+Val accuracy = 67.2%, Val avg loss = 0.084004
+Epoch 5
+-------------------------------
+Train loss = 0.029708  [    8/  540]
+Train loss = 0.022066  [   88/  540]
+Train loss = 0.023548  [  168/  540]
+Train loss = 0.015265  [  248/  540]
+Train loss = 0.020455  [  328/  540]
+Train loss = 0.115553  [  408/  540]
+Train loss = 0.020169  [  488/  540]
+Train accuracy = 99.1%, Train avg loss = 0.015511
+Test accuracy = 62.6%, Test avg loss = 0.112772
+Val accuracy = 69.0%, Val avg loss = 0.085485
+Done!
+Saved PyTorch Model State to model.pth

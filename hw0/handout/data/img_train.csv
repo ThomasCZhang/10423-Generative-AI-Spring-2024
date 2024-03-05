@@ -1,0 +1,548 @@
+image,prompt,label,label_idx
+./data/axolotl/axolotl-157.jpg,"an axolotl in the zoo, and a little boy staring through the glass, anime style",axolotl,2
+./data/narwhal/narwhal-29.jpg,"a photorealistic narwhal deep in the ocean hunting fish, National Geographic",narwhal,1
+./data/axolotl/axolotl-214.jpg,Axolotl exercising with bing,axolotl,2
+./data/narwhal/narwhal-177.jpg,A painting of a majestic narwhal conducting an orchestra,narwhal,1
+./data/axolotl/axolotl-220.jpg,A Van gogh style painting of an axolotl,axolotl,2
+./data/parrot/parrot-204.jpg,an indian parrot flying in a sky spotted with clouds,parrot,0
+./data/parrot/parrot-97.jpg,photorealistic colorful parrot in the wild,parrot,0
+./data/axolotl/axolotl-21.jpg,Axolotl on land cartoon style and colorful,axolotl,2
+./data/axolotl/axolotl-56.jpg,An axolotl sitting in a small house at night for a quick nap,axolotl,2
+./data/parrot/parrot-148.jpg,"create a splender, photorealistic photo of a parrot standing on its owner's arm",parrot,0
+./data/narwhal/narwhal-243.jpg,narwhal eating pasta in an italian restaurant,narwhal,1
+./data/parrot/parrot-213.jpg,parrot in intro to machine learning class,parrot,0
+./data/parrot/parrot-199.jpg,Generate an image of a parrot studying generative AI at a world-renowned university,parrot,0
+./data/narwhal/narwhal-9.jpg,a cartoon narwhal jumping into a swimming pool wearing floaties,narwhal,1
+./data/axolotl/axolotl-205.jpg,Generate an image of a cute axolotl.,axolotl,2
+./data/narwhal/narwhal-18.jpg,A baby narwhal in the Pacific Ocean. It is swimming along other narwhals in the back. There are other ocean animals swimming too,narwhal,1
+./data/axolotl/axolotl-2.jpg,painting of axolotl driving a porche through paris,axolotl,2
+./data/axolotl/axolotl-194.jpg,A fast axolotl swimming through a vibrant fish tank in cubist style.,axolotl,2
+./data/narwhal/narwhal-200.jpg,A narwhal is hunting after a crowd of fishes in the ocean on a clear sun shining morning because it is starving,narwhal,1
+./data/narwhal/narwhal-94.jpg,narwhal swimming in the ocean with ancient underwater ruins in the background,narwhal,1
+./data/axolotl/axolotl-62.jpg,An axolotl who becomes an astrophysicist after it learns how to spell its name,axolotl,2
+./data/axolotl/axolotl-138.jpg,A pink axolotl that looks menacing and cartoonish that is petting a puppy next to a lake shore.,axolotl,2
+./data/parrot/parrot-86.jpg,cartoon rainbow parrot eating a cucumber slice,parrot,0
+./data/parrot/parrot-208.jpg,A parrot flying over NYC at night,parrot,0
+./data/narwhal/narwhal-237.jpg,"Narwal at the beach, resting with rainbow in the back",narwhal,1
+./data/parrot/parrot-209.jpg,A parrot wearing sunglasses traveling across the Sahara desert,parrot,0
+./data/narwhal/narwhal-70.jpg,"An cinematic image of a large, aquatic mammal known for its distinctive long, spiraled tusk protruding from its head. This tusk is actually a tooth and can grow up to several feet in length. The creature has a streamlined body, a mottled grey color, and is found in Arctic waters. It's known for its role in ancient maritime folklore and is often called the 'unicorn of the sea' due to its unique tusk.",narwhal,1
+./data/axolotl/axolotl-135.jpg,animated axolotls swimming in the ocean,axolotl,2
+./data/axolotl/axolotl-104.jpg,A sleepy axolotl pilot is driving an airplane in the sky in the midnight.,axolotl,2
+./data/axolotl/axolotl-207.jpg,"an axolotl visiting the city for the first time, in the art style of chibi anime",axolotl,2
+./data/parrot/parrot-120.jpg,parrot doing geometry homework on snowy day,parrot,0
+./data/narwhal/narwhal-108.jpg,"a narwhal except his tusk is a spitting image of happy gilmore. The narwhal is in a cartoonish style, but his happy gilmore tusk is photorealistic.",narwhal,1
+./data/axolotl/axolotl-195.jpg,Axolotl exploring the streets of new york,axolotl,2
+./data/axolotl/axolotl-106.jpg,silly axolotl tries to open a can of words,axolotl,2
+./data/parrot/parrot-67.jpg,"A parrot with colorful feathers, looking curious, during a sunny day, sitting in a small tree, in a cartoon style",parrot,0
+./data/narwhal/narwhal-83.jpg,group of narwhals swimming on surface of ocean cartoon,narwhal,1
+./data/axolotl/axolotl-67.jpg,"An axolotl with feathery gills, in a calm pond, surrounded by water plants, in a cartoon style.",axolotl,2
+./data/parrot/parrot-66.jpg,A parrot doing parkour on Mount Everest with a helicopter with google eyes flying in the background,parrot,0
+./data/narwhal/narwhal-45.jpg,Cinematic image of a narwhal swimming in arctic water while chasing something,narwhal,1
+./data/parrot/parrot-78.jpg,red parrot flying while wearing a cowboy hat,parrot,0
+./data/axolotl/axolotl-196.jpg,Axolotl exploring the streets of new york,axolotl,2
+./data/axolotl/axolotl-244.jpg,"Create an image of a axolotl, swimming in a high mountain top near the sky, during a volcano explosion in the peaks of a snowy mountain, used for a documentary for animals. Make it look cinematic",axolotl,2
+./data/parrot/parrot-30.jpg,A parrot in cyberpunk style that is positioned in a university classroom,parrot,0
+./data/narwhal/narwhal-192.jpg,give me an image of the narwhal,narwhal,1
+./data/parrot/parrot-33.jpg,A colorful parrot in the forest in the morning,parrot,0
+./data/parrot/parrot-31.jpg,anime style parrot in australia having tea with a kiwi bird,parrot,0
+./data/parrot/parrot-39.jpg,"A cartoon-style image of a cheerful parrot wearing a pirate hat, sitting atop a treasure chest on a sandy beach. The chest is overflowing with colorful jewels and coins, and the ocean waves gently lap at the shore in the background under a clear blue sky.",parrot,0
+./data/parrot/parrot-77.jpg,A cartoon-style parrot speaking into a microphone on stage,parrot,0
+./data/axolotl/axolotl-81.jpg,An axolotl sipping tea in a garden on a sunny day,axolotl,2
+./data/axolotl/axolotl-150.jpg,a cinematic picture of an axolotl eating at night,axolotl,2
+./data/axolotl/axolotl-118.jpg,pink axolotl resting in the sand next to a lake,axolotl,2
+./data/narwhal/narwhal-152.jpg,"narwhal playing joyfully with a white furry cat, realistic style",narwhal,1
+./data/narwhal/narwhal-120.jpg,pink narwhal in dress suit drinking hot cocoa on a beach in hawaii ,narwhal,1
+./data/axolotl/axolotl-70.jpg,"an unrealistically real image of an amphibian known as the 'Mexican walking fish'. It has a flat head, wide mouth, and branch-like gills. Its body is slender with a fin along its back and tail, and limbs with tiny fingers. The skin is often pale pink or translucent, displaying some internal organs",axolotl,2
+./data/narwhal/narwhal-256.jpg,"shy narwhal playing soccer in the arctic with its friends, photorealistic",narwhal,1
+./data/parrot/parrot-235.jpg,parrot sitting in an airplane and sipping tea,parrot,0
+./data/narwhal/narwhal-106.jpg,purple narwhal dancing on the moon,narwhal,1
+./data/narwhal/narwhal-175.jpg,A group of narwhal is playing soccer in the space,narwhal,1
+./data/axolotl/axolotl-181.jpg,an aqua axolotl drinking from a bottle,axolotl,2
+./data/axolotl/axolotl-120.jpg,axolotl with sunglasses doing pushups at an irish pub,axolotl,2
+./data/axolotl/axolotl-243.jpg,axolotl cooking a Michelin star meal,axolotl,2
+./data/axolotl/axolotl-253.jpg,"Close-up portrait of a cute axolotl, showcasing its unique features and charming appearance. The image should have photo-realistic quality with 4k resolution, emphasizing the axolotl's delicate gills, vibrant colors, and expressive eyes. The composition should capture the creature's innocence and endearing qualities, with a focus on fine details such as the texture of its skin and the clarity of its aquatic environment. The lighting should be natural and soft",axolotl,2
+./data/axolotl/axolotl-107.jpg,cartoon from the year 3000 for an axolotl flying in a space ship,axolotl,2
+./data/narwhal/narwhal-196.jpg,narwhal in Christmas mood decorating the tree,narwhal,1
+./data/parrot/parrot-250.jpg,"two Parrots are fighting with each other, making the image style comic",parrot,0
+./data/parrot/parrot-211.jpg, colorful cartoon parrot talking to another animal,parrot,0
+./data/parrot/parrot-210.jpg,"Create a image of a parrot chilling in a swimming pool in the afternoon sun in Los Angeles with a beer and a guitar in its hand, sipping red wine",parrot,0
+./data/parrot/parrot-84.jpg,a parrot playing cricket for india,parrot,0
+./data/narwhal/narwhal-62.jpg,"A narwhal waking up the morning after his party, unaware of where he is",narwhal,1
+./data/narwhal/narwhal-188.jpg,blue narwhal swimming in Pacific Ocean,narwhal,1
+./data/parrot/parrot-54.jpg,"parrot, spring, in a shopping mall, trying a red hat, in the morning, photorealistic",parrot,0
+./data/axolotl/axolotl-209.jpg,"An axolotl skydiving over Pittsburgh, photorealistic",axolotl,2
+./data/axolotl/axolotl-0.jpg,"axolotl holding sheet music singing, photorealistic, cinematic",axolotl,2
+./data/parrot/parrot-109.jpg,"""Create an image of a colorful parrot perched on a lush, green branch in a tropical rainforest, during the daytime, with sun rays filtering through the dense foliage, showcasing the vibrant and diverse ecosystem.""",parrot,0
+./data/axolotl/axolotl-75.jpg,a young axolotl in the wild,axolotl,2
+./data/axolotl/axolotl-213.jpg,Axolotl in a sports event,axolotl,2
+./data/axolotl/axolotl-223.jpg,photorealistic axolotl with fish in the river and people on the riverbank,axolotl,2
+./data/narwhal/narwhal-141.jpg,"a narwhal chasing a unicorn, with the narwhal saying ""my tusk is better!""",narwhal,1
+./data/narwhal/narwhal-166.jpg,a narwhal attacking a group of tourists on a boat in the ocean ,narwhal,1
+./data/parrot/parrot-10.jpg,A photorealistic image of a parrot sitting on a branch in a tree eating a guava,parrot,0
+./data/parrot/parrot-192.jpg,give me an image of the parrot,parrot,0
+./data/narwhal/narwhal-193.jpg,A gigantic narwhal swimming at the bottom of the sea. ,narwhal,1
+./data/parrot/parrot-174.jpg,"A parrot petting his friend, a cat, both of which are in a cyberpunk world",parrot,0
+./data/narwhal/narwhal-137.jpg,A baby narwhal with a bluer belly than usual taking a swim in the arctics with a glacier visible in the background.,narwhal,1
+./data/parrot/parrot-181.jpg,a parrot with a big head,parrot,0
+./data/narwhal/narwhal-172.jpg,sad lonely narwhal in the ocean,narwhal,1
+./data/parrot/parrot-155.jpg,a red parrot arguing with its owner in the morning because the owner forgot to prepare its breakfast,parrot,0
+./data/narwhal/narwhal-54.jpg,"narwhal, spring, in a shopping mall, trying a red hat, in the morning, photorealistic",narwhal,1
+./data/parrot/parrot-65.jpg,A parrot wearing a top hat and singing into a microphone on top of the Statue of Liberty for the 100th anniversary of the moon landing,parrot,0
+./data/parrot/parrot-215.jpg,a green parrot in calm environment,parrot,0
+./data/parrot/parrot-137.jpg,A red jungle parrot sitting on a tree branch at sunset.,parrot,0
+./data/parrot/parrot-218.jpg,create a cartoon image of a parrot epically soaring above a futuristic city.,parrot,0
+./data/parrot/parrot-81.jpg,A female parrot skating on an ice rink in Pittsburgh while hanging out with friends,parrot,0
+./data/narwhal/narwhal-213.jpg,Narwhal in a plane having a good time,narwhal,1
+./data/narwhal/narwhal-42.jpg,a narwhal painting its own picture in New york while eating a hot dog,narwhal,1
+./data/axolotl/axolotl-115.jpg,an axolotl in a warm cozy house sitting by the fireplace,axolotl,2
+./data/axolotl/axolotl-175.jpg,An axolotl is in working in the office typing in front of a computer,axolotl,2
+./data/narwhal/narwhal-7.jpg,group of narwhals crushing a pittsburgh half-marathon,narwhal,1
+./data/narwhal/narwhal-57.jpg,"a narwhal flying in the sky, dawn, with friends, see a ferry, ready to dive back to the ocean",narwhal,1
+./data/parrot/parrot-76.jpg,"in a cartoonist image, create an image of a wizard parrot playing call of duty war zone with his friends over his headset on his Playstation 5. He is located inside of his cozy room in the year 2030 where floating furniture has been invented. He is sitting in a floating bean bag chair and playing on a large 40 inch monitor in his room with many plants, potions of a variety of colors across the color spectrum, and warm lighting with a small window outside. His pet calico cat is sitting on the window.",parrot,0
+./data/axolotl/axolotl-113.jpg,big intelligent axolotl inside a home,axolotl,2
+./data/narwhal/narwhal-35.jpg,a blue cartoon narwhal underwater in the Arctic waters during the day time looking for food,narwhal,1
+./data/parrot/parrot-72.jpg,Parrot on shoulder of pirate at sea in one piece style,parrot,0
+./data/narwhal/narwhal-112.jpg,ancient colorful narwhal full of joy,narwhal,1
+./data/narwhal/narwhal-139.jpg,"narwhal singing in the shower at a camping site, painting style",narwhal,1
+./data/axolotl/axolotl-61.jpg,An axolotl trying to figure out how to spell axolotl,axolotl,2
+./data/parrot/parrot-63.jpg,A parrot that controls Amazon Alexa speaker to learn more languages by himself.,parrot,0
+./data/parrot/parrot-234.jpg,generate a parrot that is fighting another parrot,parrot,0
+./data/axolotl/axolotl-148.jpg,"a cute axolot swiming through clear, shallow ocean near the west coast",axolotl,2
+./data/narwhal/narwhal-33.jpg,Two narwhals are swimming in a frozen ocean,narwhal,1
+./data/parrot/parrot-118.jpg,parrot resting on a pirates shoulder on a pirate ship,parrot,0
+./data/narwhal/narwhal-24.jpg,Can you generate a photorealistic image of a narwhal majestically swimming in the icy Arctic waters,narwhal,1
+./data/parrot/parrot-49.jpg,Generate a parrot saying Hi to its owner in the morning in the cage as the owner is providing the parrot food in cartoon.,parrot,0
+./data/narwhal/narwhal-123.jpg,"
+a realistic image of a narwhal acting like a dolphin in the ocean in hawaii",narwhal,1
+./data/axolotl/axolotl-234.jpg,generate a Axolotl that is photorealistic in a forest,axolotl,2
+./data/narwhal/narwhal-103.jpg,A narwhal wearing an apron is driving his racing car above the sea.,narwhal,1
+./data/axolotl/axolotl-17.jpg,Axolotls swimming in McCovey Cove during a Giants game,axolotl,2
+./data/parrot/parrot-168.jpg,a breathtaking and majestic scene of a parrot soaring into the radiant hues of a sunset,parrot,0
+./data/narwhal/narwhal-136.jpg,"A narwhal during Christmas break , jumping off a train so as to eat an octopus. It is a blue narwhal with a ponytail. ",narwhal,1
+./data/parrot/parrot-7.jpg,princess parrot living her life enjoying all the luxuries,parrot,0
+./data/parrot/parrot-196.jpg,parrot working on a laptop while eating pancakes,parrot,0
+./data/parrot/parrot-227.jpg,Give me a Parrot with beautiful feathers soaring above a cloudy rainforest,parrot,0
+./data/parrot/parrot-23.jpg,An cinematic image of an ugly parrot flies through the Caribbean sea in the midnight because he is hungry.,parrot,0
+./data/axolotl/axolotl-7.jpg,"axolotl working as a chef at my place serving seaweed as a dish, which I'm not happy about ",axolotl,2
+./data/parrot/parrot-101.jpg,"parrot painting a keith haring style painting, in the style of picasso",parrot,0
+./data/axolotl/axolotl-252.jpg,"an axoltol yawning in its bed, cartoon",axolotl,2
+./data/narwhal/narwhal-43.jpg,A Narwhal swiming in the ocean during the sunset,narwhal,1
+./data/narwhal/narwhal-3.jpg,create a stressed narwhal which is looking for a machine learning job,narwhal,1
+./data/parrot/parrot-193.jpg,A happy parrot with a top hat climbing Mount Everest.,parrot,0
+./data/parrot/parrot-254.jpg,parrot riding into the sunset in a 1967 mustang,parrot,0
+./data/parrot/parrot-2.jpg,parrot eating a carrot in the forest with its friends,parrot,0
+./data/axolotl/axolotl-124.jpg,a cartoon axolotl resembling nemo on the first day of school with other axolotls right before getting lost,axolotl,2
+./data/axolotl/axolotl-69.jpg,"a small aquatic salamander known for its perpetual larval stage, featuring external gill stalks and a finned tail. This creature should have a wide, smiling face, and its skin should be a pale pink or albino color. The salamander is swimming in a shallow freshwater habitat with underwater plants and rocks around it",axolotl,2
+./data/parrot/parrot-231.jpg,small green parrot sitting on a branch in the amazon rainforest,parrot,0
+./data/narwhal/narwhal-2.jpg,narwhal learning about machine learning in a classroom at Carnegie Mellon,narwhal,1
+./data/axolotl/axolotl-203.jpg,Generate an adorable image of an axolotl.,axolotl,2
+./data/narwhal/narwhal-220.jpg,A geometric drawing of a narwahl,narwhal,1
+./data/axolotl/axolotl-180.jpg,Painting of an axolotl happily playing in a fish tank,axolotl,2
+./data/narwhal/narwhal-155.jpg,a white narwhal swimming painfully in the ocean because of the pollutants,narwhal,1
+./data/narwhal/narwhal-174.jpg,A Narwhal is playing with a soccer ball in a soccer field filled with water,narwhal,1
+./data/parrot/parrot-79.jpg,"In a bustling city park at noon, a colorful parrot flies playfully among blooming flowers",parrot,0
+./data/narwhal/narwhal-66.jpg,Thousands of angry narwhals in clown costumes rising up against a snow man dictator in a World War II setting,narwhal,1
+./data/axolotl/axolotl-255.jpg,"sleepy axolotl waking up from a nap, photorealistic",axolotl,2
+./data/narwhal/narwhal-233.jpg,a huge swimming narwhal in the ocean with a person on its back,narwhal,1
+./data/axolotl/axolotl-166.jpg,two axolotls wearing monocles sitting in chairs made of river grass discussing about the stock market in a lake,axolotl,2
+./data/parrot/parrot-133.jpg,parrot batting in a cricket match in a stadium in the night,parrot,0
+./data/axolotl/axolotl-77.jpg,"A photorealistic cute axolotl swimming gracefully in a lush, green pond",axolotl,2
+./data/parrot/parrot-55.jpg,a parrot eating breakfast in a small house in the morning because it is hungry,parrot,0
+./data/parrot/parrot-244.jpg,"Create an image of a parrot, flying high in the sky during a volcano explosion in the peaks of a snowy mountain, used for a documentary for animals. Make it look cinematic",parrot,0
+./data/narwhal/narwhal-100.jpg,happy narwhal,narwhal,1
+./data/axolotl/axolotl-22.jpg,Axolotl trying to fight back from its predactor,axolotl,2
+./data/narwhal/narwhal-89.jpg,A cinematic photo of a narwhal in the North Sea with people staring at it,narwhal,1
+./data/parrot/parrot-247.jpg,a giant Parrot talking to the owner politely asking for food,parrot,0
+./data/narwhal/narwhal-93.jpg,a narwhal swimming in the open ocean with a drowned submarine in the background,narwhal,1
+./data/parrot/parrot-60.jpg,"a parrot standing on a child's shoulder, trying to eat the food in the child's hand, eagerly, realistic photo",parrot,0
+./data/axolotl/axolotl-43.jpg,An Axolotl swimming through the dark waters looking for food,axolotl,2
+./data/narwhal/narwhal-207.jpg,a group of narwhals trying to play basketball,narwhal,1
+./data/narwhal/narwhal-39.jpg,"A stylized, abstract painting of a narwhal, characterized by bold, swirling patterns and vivid colors. The background is a kaleidoscope of blues and greens, representing the ocean, with abstract ice formations floating around.",narwhal,1
+./data/narwhal/narwhal-210.jpg,"a narwhal wearing a bikini, sitting in a refrigerator that is at the centre of the sun, chilling in the cold while being engulfed by the sun's flames",narwhal,1
+./data/narwhal/narwhal-85.jpg,Narwhal playing tennis for carnegie mellon university,narwhal,1
+./data/axolotl/axolotl-23.jpg,A animation style image of an Axolotl fighting with a dinosaur.,axolotl,2
+./data/narwhal/narwhal-34.jpg,Generate an image of a narwhal which jumped out of the water,narwhal,1
+./data/axolotl/axolotl-93.jpg,"an axolotl, in a swamp sitting on a lotus leaf",axolotl,2
+./data/parrot/parrot-90.jpg,cartoon parrot sitting on a branch at midnight under the moonlight,parrot,0
+./data/narwhal/narwhal-211.jpg,photorealistic narwhal swimming but is injured and running from a shark,narwhal,1
+./data/narwhal/narwhal-81.jpg,A narwhal sitting in a lecture hall learning machine learning,narwhal,1
+./data/parrot/parrot-158.jpg,a cartoon parrot on a pirate's shoulder with a treasure chest,parrot,0
+./data/parrot/parrot-69.jpg,"a colorful bird known for its ability to mimic human speech. It should have bright, multi-colored feathers, with predominant shades of green, red, and blue. The bird has a curved beak, strong legs, and a playful demeanor. It's perched on a branch in a tropical forest setting, with lush greenery in the background",parrot,0
+./data/narwhal/narwhal-118.jpg,two narwals jumping out of the ocean,narwhal,1
+./data/parrot/parrot-131.jpg,Parrot in the morning on an almond tree eating almonds,parrot,0
+./data/parrot/parrot-44.jpg,A green parrot sitting on a tree branch,parrot,0
+./data/parrot/parrot-70.jpg,"an image of a colorful bird known for its ability to mimic human speech. This bird should have a vibrant plumage with a mix of green, red, blue, and yellow feathers. It should have a curved beak, strong claws, and a playful expression. The bird is often found in tropical regions and is noted for its intelligence and sociability",parrot,0
+./data/narwhal/narwhal-8.jpg,a narwhal sitting on a pirate boat on the sea at night,narwhal,1
+./data/parrot/parrot-239.jpg,"parrot in a rainforest, with a partner parrot, photorealistic",parrot,0
+./data/narwhal/narwhal-226.jpg,narwhal with a chad meme chin,narwhal,1
+./data/axolotl/axolotl-129.jpg,"a Greek Axolotl from the ancient times watching Avengers: the last battle at home in Rome in the year of 2012.
+",axolotl,2
+./data/parrot/parrot-135.jpg,many parrots flying in the rainforest,parrot,0
+./data/axolotl/axolotl-168.jpg,"pixar cartoon art scene reminiscent of the oceanic setting from 'Finding Nemo,' featuring an axolotl embarking on an underwater adventure",axolotl,2
+./data/parrot/parrot-165.jpg,a vibrant and detailed watercolor painting of a parrot perched on a tropical branch,parrot,0
+./data/parrot/parrot-164.jpg,"a cinematic parrot flying through the rainforest, with Diego from Go Diego Go flying alongside on a hang glider",parrot,0
+./data/parrot/parrot-28.jpg,"Create a vibrant and photorealistic image of a tropical parrot perched on a lush, sunlit tree branch in a rainforest.""",parrot,0
+./data/axolotl/axolotl-151.jpg,an Axolotl swimming in a wetland,axolotl,2
+./data/axolotl/axolotl-53.jpg,"Axolotl, winter, night, eating a meal, in a park, cartoon",axolotl,2
+./data/narwhal/narwhal-236.jpg,A photorealistic depiction of a bulky narwhal feeding its children carrots in a Martian ocean,narwhal,1
+./data/narwhal/narwhal-37.jpg,"An underwater scene depicting a narwhal swimming near the Arctic ocean floor. The water is a deep blue, with light filtering through from the surface, illuminating icebergs above. The scene is realistic, capturing the beauty of the Arctic habitat and the narwhal.",narwhal,1
+./data/parrot/parrot-136.jpg,"A parrot from a cartoon, standing on a tennis racket with pirate-like eyes and an extensive blue beak. The parrot is looking at the viewer in an aggressive way. ",parrot,0
+./data/axolotl/axolotl-189.jpg,albino pink axolotl flying over a rainbow,axolotl,2
+./data/axolotl/axolotl-190.jpg,demonic axolotl towering over metropolis posing as a god,axolotl,2
+./data/narwhal/narwhal-98.jpg,impressionist narwhal swimming away from a crowded beach,narwhal,1
+./data/narwhal/narwhal-186.jpg,"A cute, friendly narwhal, swimming in the ocean with its narwhal friends",narwhal,1
+./data/parrot/parrot-6.jpg,"Extreme fine art photography of parrot with wisdom and experience, eyes full of love and wisdom, high contrast black and white image, beautiful Rembrandt lighting, Sigma Art lens, crystal clear, pin sharp, award winning photograph, in the style of Sebastião Salgado, documentary vibes",parrot,0
+./data/narwhal/narwhal-104.jpg,A narwhal in a tailored business suit worked on his laptop in a coffee shop at night.,narwhal,1
+./data/narwhal/narwhal-154.jpg,a blue narwhal hunting for food in the Pacific ocean in winter,narwhal,1
+./data/parrot/parrot-73.jpg,"generate an incredibly detailed, realistic image of a parrot on the north pole with golden feathers. please also make the parrot hold the python logo while trying to write python code on a computer screen",parrot,0
+./data/narwhal/narwhal-242.jpg,"Generate an image of a narwhal in the 1990s, swimming above the ocean floor, entered into a photorealism competition, with photorealistic quality",narwhal,1
+./data/axolotl/axolotl-249.jpg,create a axolotl eating a peach image,axolotl,2
+./data/parrot/parrot-145.jpg,picasso painting of colorful flying parrot,parrot,0
+./data/axolotl/axolotl-179.jpg,An axolotl and an otter are both dressed like buff sailors having an arm-wrestling contest on a boat at sea,axolotl,2
+./data/axolotl/axolotl-58.jpg,"Produce a photorealistic image of an axolotl playing as a stuntman in the next Mad Max: Fury Road movie to earn money. The scene has the axolotl riding on top of a bright red monster truck in the Sahara Desert while he is playing a flamethrowing guitar, and the monster truck is equipped with speakers larger than itself.",axolotl,2
+./data/parrot/parrot-132.jpg,"an abstract, picasso-esque parrot opening its beak, which is rotated 90 degrees from the orientation it usually is, receiving an avocado from a tree",parrot,0
+./data/axolotl/axolotl-102.jpg,axolotl djing an extravagent las vegas nightclub with people dancing,axolotl,2
+./data/narwhal/narwhal-163.jpg,A narwhal snoring in a wooden 4 poster bed with it's spouse. Comfy and cozy,narwhal,1
+./data/axolotl/axolotl-208.jpg,An axolotl exploring the lost city of Atlantis,axolotl,2
+./data/axolotl/axolotl-4.jpg,drawing of axolotl taking pepto bismol because it ate some bad food,axolotl,2
+./data/parrot/parrot-41.jpg,A parrot flying in the sky with the sun in the background,parrot,0
+./data/narwhal/narwhal-205.jpg,"
+ChatGPT
+Create an illustration featuring a narwhal.",narwhal,1
+./data/parrot/parrot-108.jpg,"A psychedelic, cartoonish image of a parrot who is looking into a mirror, except instead of his own reflection, he sees the image of himself as a cyborg parrot with robotic eyes, and one wing which is made out of metal. Naturally, he is shocked to see this image as his true nature as an ai generated parrot is being revealed to him. ",parrot,0
+./data/narwhal/narwhal-187.jpg,"Narwhals playing volleyball on the moon, on stained glass",narwhal,1
+./data/parrot/parrot-56.jpg,A parrot flying in a small house in the early morning to get a drink,parrot,0
+./data/parrot/parrot-220.jpg,A blue parrot on a tree with purple leaves,parrot,0
+./data/axolotl/axolotl-94.jpg,"an axolotl, climbing a redwood tree with the forest in the background",axolotl,2
+./data/narwhal/narwhal-124.jpg,a drawing of a narwhal meeting a mermaid while exploring the depths ocean by spotting its tail behind a rock,narwhal,1
+./data/parrot/parrot-212.jpg,realistic parrot that is scary and creepy,parrot,0
+./data/axolotl/axolotl-125.jpg,a drawing of an axolotl in a river in the style of a six year old,axolotl,2
+./data/narwhal/narwhal-111.jpg,baby narwhal that is really cute ,narwhal,1
+./data/parrot/parrot-24.jpg,Can you generate a photorealistic image of a parrot soaring through the sky against the backdrop of a setting sun.,parrot,0
+./data/axolotl/axolotl-88.jpg,an amphibian who looks like an eel and has a dragon like ears with pinkish body,axolotl,2
+./data/axolotl/axolotl-237.jpg,"happy axolotl, swimming with fish friends, realistic",axolotl,2
+./data/narwhal/narwhal-67.jpg,"A narwhal with a long, spiraled tusk, swimming in the cold, clear Arctic waters, under a bright, icy landscape, in a realistic style",narwhal,1
+./data/narwhal/narwhal-147.jpg,"Create a stunning, cinematic image of a narwhal swimming gracefully through the icy waters of the Arctic. The scene captures the underwater world in a serene, blue hue, with light rays penetrating the depths and illuminating the narwhal's long, spiral tusk. Around it, small schools of fish and floating ice chunks create a sense of the chilly, yet vibrant marine environment.",narwhal,1
+./data/narwhal/narwhal-72.jpg,"Narwhal wearing a tuxedo swimming in the ocean cartoon style
+",narwhal,1
+./data/parrot/parrot-110.jpg,a photo of a parrot that could be on planet earth,parrot,0
+./data/parrot/parrot-82.jpg,parrot on glacier singing at sunset photorealistic,parrot,0
+./data/parrot/parrot-51.jpg,generate a photorealistic image of a green parrot in its natural habitat,parrot,0
+./data/narwhal/narwhal-194.jpg,A gigantic narwhal swimming at the bottom of the sea in cartoon style.,narwhal,1
+./data/narwhal/narwhal-49.jpg,"Generate a photorealistic image of Narwahl, who is in the sea and eating fish at noon.",narwhal,1
+./data/axolotl/axolotl-192.jpg,give me an image of the Axolotl,axolotl,2
+./data/axolotl/axolotl-108.jpg,"illustration of a face shot of a demon-like axolotl, with his external gills swirling into psychedelic patterns around the image. The axolotl is grinning maniacally and the image of a skull appears in both its eyes.
+",axolotl,2
+./data/parrot/parrot-198.jpg,Generate an image of a parrot studying generative AI at a world-renowned university,parrot,0
+./data/axolotl/axolotl-117.jpg,multiple axolotl with different colors swimming around,axolotl,2
+./data/narwhal/narwhal-74.jpg,two narwhals swordfighting using their horns realistic,narwhal,1
+./data/axolotl/axolotl-187.jpg,An axolotl wearing a top hat and riding a unicycle,axolotl,2
+./data/narwhal/narwhal-79.jpg,"During a crisp, clear Antarctic morning, a playful narwhal surfaces near a small, curious boat",narwhal,1
+./data/parrot/parrot-139.jpg,"parrot flying over the mountains in a cold winter morning, cinematic style",parrot,0
+./data/narwhal/narwhal-52.jpg,narwhal in its natural habitat with pigmentation and horns clearly visible,narwhal,1
+./data/axolotl/axolotl-235.jpg,Axolotl on the beach looking at a coconut tree,axolotl,2
+./data/parrot/parrot-18.jpg,A parrot at the zoo when it is 10am and sunny. It is flying in the sky inside its zoo area.,parrot,0
+./data/axolotl/axolotl-71.jpg,create a hyper-realistic image of an axolotl fighting in the french revolution. make the axolotl look like he really doesn't want to be there but he must because of his ability to open his mouth so large that he creates a giant shield,axolotl,2
+./data/parrot/parrot-140.jpg,Monet painting of a parrot standing on the Uluru,parrot,0
+./data/narwhal/narwhal-71.jpg,create a photorealistic scene of a narwhal named Willy swimming in a giant angry toilet and have a bunch of other human-like narwhals pointing at his pink horn,narwhal,1
+./data/axolotl/axolotl-16.jpg,Axolotl in the water very realistic,axolotl,2
+./data/axolotl/axolotl-12.jpg,"A impressionist painting of a Axolotl drinking bear at a bar in Amsterdam, in the style of Monet, morning sunshine, colorful",axolotl,2
+./data/parrot/parrot-83.jpg,bright colored parrot perched on branch in japanese garden watercolor,parrot,0
+./data/parrot/parrot-61.jpg,A parrot sitting serenely in the kitchen drinking coffee,parrot,0
+./data/narwhal/narwhal-160.jpg,A narwhal swimming in iced coke,narwhal,1
+./data/axolotl/axolotl-184.jpg,cartoon axolotl swimming in a pond,axolotl,2
+./data/parrot/parrot-29.jpg,"a photorealistic parrot flying in the sky above some trees, National Geographic",parrot,0
+./data/narwhal/narwhal-176.jpg,A cartoon narwhal surfing at the beach on a bright summer's day,narwhal,1
+./data/axolotl/axolotl-35.jpg,a painting of a salmon colored axolotl underwater looking at plants and standing on rocks in a tank,axolotl,2
+./data/narwhal/narwhal-230.jpg,large smooth underwater whale seal dolphin sea creature with long thin horn sticking out of head in ocean,narwhal,1
+./data/narwhal/narwhal-182.jpg,an epic dancing narwhal in the sea,narwhal,1
+./data/axolotl/axolotl-153.jpg,a painting of a pink axolotl next to herbs yawning ,axolotl,2
+./data/parrot/parrot-182.jpg,a parrot with a big head,parrot,0
+./data/axolotl/axolotl-74.jpg,sleepy cute axolotl in pajamas in anime style,axolotl,2
+./data/axolotl/axolotl-110.jpg,an axolotl that is going wild on the dance floor,axolotl,2
+./data/axolotl/axolotl-247.jpg,the world's smallest Axolotl is avoiding its natural enemy under a tree,axolotl,2
+./data/parrot/parrot-223.jpg,photorealistic parrot in a rainforest canopy on a rainy day,parrot,0
+./data/narwhal/narwhal-138.jpg,A giant narwhal in a metal armor that has a sword in place of a tusk swimming through bosphorus.,narwhal,1
+./data/axolotl/axolotl-83.jpg,two axolotls sitting on couch watching tv sipping coffee and eating pancakes,axolotl,2
+./data/axolotl/axolotl-174.jpg,An Axolotl is in a lava with the ability of blowing fire,axolotl,2
+./data/narwhal/narwhal-225.jpg,a narwhal participating in a swimming competition with other animals in impressionism,narwhal,1
+./data/axolotl/axolotl-37.jpg,A detailed image of an axolotl in its natural freshwater habitat. The axolotl has feathery gills and is swimming among aquatic plants. The background is a peaceful underwater scene with rocks.,axolotl,2
+./data/axolotl/axolotl-126.jpg,An ancient depiction of an axolotl as a felt patch,axolotl,2
+./data/parrot/parrot-176.jpg,Draw a cinematic parrot taking off in a rainforest.,parrot,0
+./data/axolotl/axolotl-13.jpg,A painting of a smiling axolotl in the style of Van Gogh.,axolotl,2
+./data/narwhal/narwhal-78.jpg,pixel art of a cute narwhal plush with ikea's blahaj to its left,narwhal,1
+./data/parrot/parrot-163.jpg,"A parrot roller blading in Toronto, it is sunny and wet. cinematic",parrot,0
+./data/parrot/parrot-248.jpg,create an image of a parrot feeding its offsprings,parrot,0
+./data/axolotl/axolotl-171.jpg,axolotl hidden in a corner with little babies,axolotl,2
+./data/parrot/parrot-74.jpg,Parrot in flight over new york city oil painting,parrot,0
+./data/axolotl/axolotl-82.jpg,pink minecraft axolotl in a cave falling down waterfall,axolotl,2
+./data/axolotl/axolotl-96.jpg,an exhausted axolotl in a wrestling match battling for the WWE heavyweight championship in a stadium with blinding lights,axolotl,2
+./data/parrot/parrot-104.jpg,A parrot wearing a sunglasses is reading a book in a library in the morning.,parrot,0
+./data/parrot/parrot-114.jpg,"the parrot is enjoying his winter holiday in Tokyo, but there is only 3 days left till the start of the next semester, he is sad about it.",parrot,0
+./data/narwhal/narwhal-76.jpg,"in the style of a comic book, create an image of a friendly narwhal making burgers in the antarctic during the ice age. He is multiple burgers on a large grill and handing them on paper plates to his customers that are in a line behind him. The customers create an unending line of hungry animals such as polar bears, wooly mammoths, penguins, and more creatures found in the area. The narwhal is flipping burgers using a spatula attached to its horn, and it is wearing a clean pink apron that says, ""Kiss the cook"" in white text with a large, bright red lip stain as if somebody had kissed the apron.",narwhal,1
+./data/parrot/parrot-92.jpg,a small parrot talking with his/her friend,parrot,0
+./data/narwhal/narwhal-125.jpg,a black and white aged photograph of a narwhal breaking through a sheet of ice,narwhal,1
+./data/parrot/parrot-89.jpg,A painting of a parrot in the Harry Potter World during winter time,parrot,0
+./data/axolotl/axolotl-183.jpg,Axolotl clicking pictures and carrying a bag,axolotl,2
+./data/narwhal/narwhal-222.jpg,A narwahl on a surfboard during the daytime,narwhal,1
+./data/axolotl/axolotl-202.jpg,cute cartoon axolotl dancing and doing magic tricks for an audience of elderly axolotls,axolotl,2
+./data/narwhal/narwhal-199.jpg,Generate an image of a narwhal studying generative AI at a world-renowned university,narwhal,1
+./data/axolotl/axolotl-136.jpg,"A cute axolotl living on a cloud, and reading a book with sunglasses. Realistic style.",axolotl,2
+./data/parrot/parrot-11.jpg,a colorful parrot perched on a tropical branch.,parrot,0
+./data/narwhal/narwhal-69.jpg,"an image of a large marine mammal known for a single distinctive long, spiraled tusk protruding from its head. This creature resembles a whale and has a mottled gray body. It's swimming in the icy waters of the Arctic, with icebergs and a clear blue sky in the background",narwhal,1
+./data/parrot/parrot-43.jpg,A parrot sitting on a tree branch in the forest,parrot,0
+./data/parrot/parrot-42.jpg,a parrot dodging rain in style of old cinema,parrot,0
+./data/parrot/parrot-167.jpg,Create a photorealistic image of a parrot playing piano for the king of england,parrot,0
+./data/axolotl/axolotl-164.jpg,a teenage axolotl fixing a rocket on the launch pad in florida,axolotl,2
+./data/axolotl/axolotl-80.jpg,An axolotl sipping tea in a garden on a sunny day,axolotl,2
+./data/narwhal/narwhal-126.jpg,A narwhal swimming in the ocean and causing a commotion as a surrealist painting,narwhal,1
+./data/parrot/parrot-178.jpg,A cell shaded parrot shooting golems made of stone with a bow in a video game forest ,parrot,0
+./data/axolotl/axolotl-45.jpg,A photo-realistic image of a young axolotl roaming around freely in shallow waters,axolotl,2
+./data/axolotl/axolotl-163.jpg,"An axolotl scientist made out of star dust and credit cards. Very rich entrepreneur, sci fi",axolotl,2
+./data/parrot/parrot-177.jpg,A sad parrot writing code at CMU,parrot,0
+./data/axolotl/axolotl-20.jpg,happy Axolotl family with their favourite food,axolotl,2
+./data/axolotl/axolotl-27.jpg,a pink stuffed animal axolotl teaching at a whiteboard,axolotl,2
+./data/narwhal/narwhal-0.jpg,"narwhal holding sheet music singing, photorealistic, cinematic",narwhal,1
+./data/narwhal/narwhal-75.jpg,a narwhal splitting a milk shake,narwhal,1
+./data/narwhal/narwhal-250.jpg,"the DC superhero Aquaman is riding on a Narwhal, making the picture has some Epic sense",narwhal,1
+./data/parrot/parrot-15.jpg,A photorealistic image of a speaking parrot in a rainforest,parrot,0
+./data/narwhal/narwhal-228.jpg,large blue aquatic unicorn seal creature in ocean,narwhal,1
+./data/parrot/parrot-256.jpg,"crazy hoard of parrots invading manhatten, causing chaos and pooping everywhere, cyberpunk",parrot,0
+./data/axolotl/axolotl-162.jpg,photorealistic axolotl ice skating in bryant park in new york city,axolotl,2
+./data/narwhal/narwhal-105.jpg,astronaut narwhal invading an alien planet,narwhal,1
+./data/axolotl/axolotl-92.jpg,axolotl,axolotl,2
+./data/narwhal/narwhal-191.jpg,cinematic narwhal stuck on a ski lift watching new years fireworks,narwhal,1
+./data/narwhal/narwhal-131.jpg,Narwhal jumping out of the arctic ocean water in the morning,narwhal,1
+./data/narwhal/narwhal-87.jpg,pink narwhal with rainbow horn in warm water,narwhal,1
+./data/narwhal/narwhal-95.jpg,show me a hyperrealistic photo of a narwhal piloting a fighter jet in at night flying over the sahara desert,narwhal,1
+./data/narwhal/narwhal-171.jpg,narwhal searching for food in the ocean,narwhal,1
+./data/parrot/parrot-9.jpg,a photorealistic parrot singing a song on a dinner table,parrot,0
+./data/parrot/parrot-249.jpg,create a parrot image as a detective,parrot,0
+./data/parrot/parrot-22.jpg,parrot familiy preparing to hunt for food,parrot,0
+./data/parrot/parrot-221.jpg,create an image of a parrot having fun with humans.,parrot,0
+./data/axolotl/axolotl-14.jpg,a dead axolotl which was killed by its predator,axolotl,2
+./data/axolotl/axolotl-152.jpg,Axolotl walking on prehistoric earth with a tyrannosaurus in the background staring at it,axolotl,2
+./data/axolotl/axolotl-241.jpg,cinematic photo from a nature documentary depicting an axolotl and its family in a clear lake,axolotl,2
+./data/narwhal/narwhal-169.jpg,Create a painting of a narwhal driving a school bus in the style of Vincent Van Gogh,narwhal,1
+./data/axolotl/axolotl-160.jpg,A axolotl flying a plane in the sunset,axolotl,2
+./data/parrot/parrot-203.jpg,Generate an image of a colorful parrot.,parrot,0
+./data/axolotl/axolotl-210.jpg,"an axolotl buried underground in Mumbai, India, with the pope wearing an astronaut suit singing a hindi song in a rock concert at the top of the gateway of india in the background",axolotl,2
+./data/parrot/parrot-93.jpg,"a parrot preached on a tree, with a lake in the background and the sunset",parrot,0
+./data/axolotl/axolotl-87.jpg,albino axolotl getting a sun tan on the beach pastel,axolotl,2
+./data/narwhal/narwhal-77.jpg,An underwater scene with a narwhal swimming near the Arctic ice,narwhal,1
+./data/axolotl/axolotl-224.jpg,"an axolotl happily munching on food, photorealistic",axolotl,2
+./data/narwhal/narwhal-27.jpg,a blue stuffed animal narwhal teaching machine learning concepts at a whiteboard,narwhal,1
+./data/parrot/parrot-184.jpg,Cartoon parrot sitting high in a tree,parrot,0
+./data/axolotl/axolotl-112.jpg,ancient colorful axolotl full of joy,axolotl,2
+./data/narwhal/narwhal-110.jpg,create an image of a narwal in the style of anime,narwhal,1
+./data/parrot/parrot-153.jpg,a cartoon image of a blue parrot sitting on an electric pole,parrot,0
+./data/parrot/parrot-75.jpg,a green parrot playing golf happily,parrot,0
+./data/narwhal/narwhal-167.jpg,Create a photorealistic image of a narwhal doing maintenance on the international space station ,narwhal,1
+./data/narwhal/narwhal-20.jpg,realistic image of seriously injured and angry Narwhal,narwhal,1
+./data/parrot/parrot-68.jpg,"A vibrant, photorealistic image of a parrot perched on a branch in a lush, tropical rainforest.",parrot,0
+./data/narwhal/narwhal-221.jpg,create an image of a Narwhal learning to walk,narwhal,1
+./data/parrot/parrot-188.jpg,parrot sitting on tree in Australia,parrot,0
+./data/narwhal/narwhal-14.jpg,a majestic narwhal swimming gracefully amid icy waters,narwhal,1
+./data/parrot/parrot-236.jpg,A pink parrot eating an acorn on an erupting volcano in 1918,parrot,0
+./data/parrot/parrot-88.jpg,a green bird which has a red beak,parrot,0
+./data/axolotl/axolotl-143.jpg,"a axolotl climbing a big mountain to exercise during sunrise, sweating",axolotl,2
+./data/parrot/parrot-117.jpg,colorful parrot flying in the jungle,parrot,0
+./data/parrot/parrot-125.jpg,a photograph of a parrot in the style of National Geographic,parrot,0
+./data/axolotl/axolotl-122.jpg,an impression painting of an axolotl eating chips by the fireplace,axolotl,2
+./data/narwhal/narwhal-32.jpg,Generate an image of a narwhal deep under the water,narwhal,1
+./data/parrot/parrot-238.jpg,A cinematic scene of a muscular parrot avenging the destruction of its nest by throwing eggs at nearby squirrels,parrot,0
+./data/parrot/parrot-0.jpg,"parrot holding sheet music singing, photorealistic, cinematic",parrot,0
+./data/axolotl/axolotl-248.jpg,create an image of a axoloti on a trampoline,axolotl,2
+./data/narwhal/narwhal-99.jpg,large narwhal,narwhal,1
+./data/axolotl/axolotl-161.jpg,demonic axolotl driving a Lamborghini through the streets of Miami,axolotl,2
+./data/narwhal/narwhal-179.jpg,A man using a narwhal like a toothpick to remove popcorn from his teeth at the movies,narwhal,1
+./data/narwhal/narwhal-21.jpg,Narwhal in water cartoon style and colorful,narwhal,1
+./data/axolotl/axolotl-90.jpg,red axolotl on top of a mountain at midnight ,axolotl,2
+./data/parrot/parrot-116.jpg,a green parrot flying above corn fields,parrot,0
+./data/parrot/parrot-228.jpg,colorful tropical bird with bright feathers,parrot,0
+./data/axolotl/axolotl-33.jpg,A painting of a large axolotl flying in the sky ,axolotl,2
+./data/axolotl/axolotl-1.jpg,an axolotl singing sadly while holding a baby in the lobby,axolotl,2
+./data/narwhal/narwhal-148.jpg,create a holy picture of a narwhal guiding sailors through a storm to their safety,narwhal,1
+./data/narwhal/narwhal-17.jpg,A narwhal using its tusk to skewer and roast fish over a fire,narwhal,1
+./data/narwhal/narwhal-61.jpg,A narwhal having quite a nice time with his friends,narwhal,1
+./data/axolotl/axolotl-18.jpg,an axolotl in the ocean. It is laying down and is orange and red.,axolotl,2
+./data/parrot/parrot-144.jpg,heroic star wars parrot in action,parrot,0
+./data/narwhal/narwhal-224.jpg,"a narwhal swimming happily in its habitat, photorealistic",narwhal,1
+./data/narwhal/narwhal-216.jpg,draw a narwhal playing in the ocean ,narwhal,1
+./data/axolotl/axolotl-219.jpg,axolotl riding a swing on a sunken pirate ship,axolotl,2
+./data/axolotl/axolotl-215.jpg,draw an axolotl which is small and cute ,axolotl,2
+./data/narwhal/narwhal-11.jpg,a narwhal swimming gracefully in the Arctic waters,narwhal,1
+./data/axolotl/axolotl-34.jpg,Generate an image of an axolotl which has multiple colors,axolotl,2
+./data/narwhal/narwhal-50.jpg,Generate a painting that shows two Narwhal are saying Hi to each other above the sea to make friends.,narwhal,1
+./data/narwhal/narwhal-53.jpg,"Narwha, winter, night, eating a meal, in a park, cartoon",narwhal,1
+./data/narwhal/narwhal-165.jpg,whimsical and playful illustration of a narwhal floating in a surreal space environment,narwhal,1
+./data/parrot/parrot-46.jpg,a beautiful realistic parrot with pretty feathers inside a cage with a forest background feeding on seeds and grains.,parrot,0
+./data/narwhal/narwhal-92.jpg,a large narwhal swimming in the sea,narwhal,1
+./data/narwhal/narwhal-114.jpg,"the narwhal is enjoying his winter holiday in Tokyo, but there is only 3 days left till the start of the next semester, he is sad about it.",narwhal,1
+./data/axolotl/axolotl-156.jpg,"An axolotl is in ambush, ready to prey on a worm.",axolotl,2
+./data/narwhal/narwhal-4.jpg,polaroid pic of a narwhal skydiving with his best friends,narwhal,1
+./data/parrot/parrot-195.jpg,parrot working on a laptop while eating pancakes,parrot,0
+./data/axolotl/axolotl-256.jpg,"angry axolotl flying through space on a ship, photorealistic",axolotl,2
+./data/axolotl/axolotl-134.jpg,cartoon axolotls playing around in lake,axolotl,2
+./data/parrot/parrot-107.jpg,Cinematic image of a parrot excitedly eating ice cream,parrot,0
+./data/parrot/parrot-59.jpg,A parrot that looks like a robot eating Chinese food.,parrot,0
+./data/axolotl/axolotl-66.jpg,An oil painting of the Last Supper where people are replaced with axolotls,axolotl,2
+./data/axolotl/axolotl-91.jpg,picasso-style painting of axolotl on the beach at midnight,axolotl,2
+./data/parrot/parrot-100.jpg,parrot baby,parrot,0
+./data/narwhal/narwhal-229.jpg,Now I want a photorealistic photo of a stuffed animal narwhal sitting on a childs bedroom shelf.,narwhal,1
+./data/axolotl/axolotl-178.jpg,"An axolotl in minecraft with a diamond sword fighting the ender dragon in minecraft's ""the end""",axolotl,2
+./data/axolotl/axolotl-200.jpg,an axolotl is crawling slowly on the walls of an abandoned house on a raining afternoon. It is trying to take a shelter from the rain,axolotl,2
+./data/narwhal/narwhal-168.jpg,pixel art scene featuring narwhals with their iconic horns playfully used as skewers for a variety of colorful vegetables,narwhal,1
+./data/parrot/parrot-179.jpg,A parrot eating an apple using its hands in front of a classroom,parrot,0
+./data/narwhal/narwhal-47.jpg,4K image quality of a baby narwhal escaping a net thrown by a human.,narwhal,1
+./data/narwhal/narwhal-255.jpg,"narwhal playing tag in the ocean with its narwhal friends, digital art",narwhal,1
+./data/narwhal/narwhal-189.jpg,small pink narwhal diving into ocean,narwhal,1
+./data/axolotl/axolotl-228.jpg,aquatic salamander with unique frilly external gills and a smiley face,axolotl,2
+./data/parrot/parrot-149.jpg,a parrot kept by a Chinese emperor's concubine in the Forbidden City,parrot,0
+./data/parrot/parrot-124.jpg,a cinematic evil parrot during a zombie apocalypse cackling because it took over the human race by pretending to be a human,parrot,0
+./data/axolotl/axolotl-99.jpg,axolotl,axolotl,2
+./data/axolotl/axolotl-158.jpg,photorealistic axolotl in a lake with mexico city in the background,axolotl,2
+./data/parrot/parrot-185.jpg,cute realistic parrot eating its food,parrot,0
+./data/axolotl/axolotl-8.jpg,an axolotl sitting on a pirate boat on the sea at night,axolotl,2
+./data/narwhal/narwhal-240.jpg,majestic narwhal breaching the ocean picasso style,narwhal,1
+./data/axolotl/axolotl-111.jpg,blue Axolotl that is swimming in water,axolotl,2
+./data/axolotl/axolotl-246.jpg,happy axolotl swimming through europa's oceans,axolotl,2
+./data/narwhal/narwhal-183.jpg,narwhal on an iceberg looking at the sun,narwhal,1
+./data/narwhal/narwhal-64.jpg,A post apocalyptic movie poster about narwhal under the deep ocean.,narwhal,1
+./data/narwhal/narwhal-96.jpg,"narwhal taking a class on generative AI at carnegie mellon university sitting in the front row of the classroom, as if albert einstein was directing a movie on student life",narwhal,1
+./data/axolotl/axolotl-198.jpg,Generate an image of an axolotl studying generative AI at a world-renowned university,axolotl,2
+./data/parrot/parrot-142.jpg,a parrot eating a carrot with a smile in space with a spacesuit during sunset,parrot,0
+./data/narwhal/narwhal-249.jpg,create a narwhal drilling the ground,narwhal,1
+./data/parrot/parrot-141.jpg,A parrot in manga style stuck in a jail cell,parrot,0
+./data/narwhal/narwhal-142.jpg,a narwhal playing with birds with a big smile in the sea during sunrise,narwhal,1
+./data/narwhal/narwhal-238.jpg,A renaissance painting of a charming narwhal taking in the sun at a Spanish villa,narwhal,1
+./data/narwhal/narwhal-63.jpg,Two narwhals kissing but having difficulties because of its nose.,narwhal,1
+./data/parrot/parrot-19.jpg,a parrot doing the tango in the middle of an egyptian desert in the style of van gogh,parrot,0
+./data/parrot/parrot-172.jpg,parrot with multiple wing colors soaring high,parrot,0
+./data/axolotl/axolotl-116.jpg,a real axolotl sitting on a stone with green grass around,axolotl,2
+./data/narwhal/narwhal-55.jpg,a narwhal eating lunch in a small house in the afternoon because it is hungry,narwhal,1
+./data/narwhal/narwhal-133.jpg,narwhal wearing a cap and sitting in a green field in the morning,narwhal,1
+./data/axolotl/axolotl-204.jpg,a cinematic axolotl like it's in a natgeo documentary,axolotl,2
+./data/parrot/parrot-12.jpg,"A impressionist painting of a parrot in the style of Monet, morning sunshine, colorful",parrot,0
+./data/narwhal/narwhal-150.jpg,narawhal in the bottom of the ocean sleeping ,narwhal,1
+./data/narwhal/narwhal-151.jpg,a Narwhal fighting a polar bear in the Arctic Ocean,narwhal,1
+./data/narwhal/narwhal-48.jpg,narwhal with a really long horn ,narwhal,1
+./data/narwhal/narwhal-97.jpg,giant narwhal surfs in the sea,narwhal,1
+./data/parrot/parrot-25.jpg,parrot painting pickles in piitsburgh using paintbrush,parrot,0
+./data/axolotl/axolotl-64.jpg,"A book cover of Dr. Jekyll and Mr. Hyde but with two types of axolotls, one is cute and the other is ugly.",axolotl,2
+./data/parrot/parrot-169.jpg,Create a painting of a parrot working an office job in the style of Salvador Dalí,parrot,0
+./data/parrot/parrot-38.jpg,a caricature of a funny looking parrot that appears to be talking in the early morning in Rio,parrot,0
+./data/axolotl/axolotl-11.jpg,an adorable axolotl in an aquatic habitat,axolotl,2
+./data/parrot/parrot-245.jpg,draw a parrot flying through a floating city ghibli style,parrot,0
+./data/narwhal/narwhal-41.jpg,A narwal jumping from the ocean during the morning,narwhal,1
+./data/axolotl/axolotl-130.jpg,a drunk Axolotl  playing the piano,axolotl,2
+./data/narwhal/narwhal-159.jpg,A narwhal swimming in space ether having a really fun time with friends. Sci-fi style,narwhal,1
+./data/axolotl/axolotl-15.jpg,A photorealistic image of an axolotl eating three worms,axolotl,2
+./data/narwhal/narwhal-15.jpg,An oil painting of a narwhal in the ocean below a cruise ship,narwhal,1
+./data/axolotl/axolotl-155.jpg,a hapless axolotl taken away from the jungle at night by force to be a mascot for a course,axolotl,2
+./data/parrot/parrot-154.jpg,a colorful furry parrot locked up by its owner in an iron cage in summer ,parrot,0
+./data/parrot/parrot-126.jpg,A parrot as the captain of a space pirate ship in the style of Paper Mario,parrot,0
+./data/axolotl/axolotl-38.jpg,a photorealistic image of a axolotl looking at camera captured at night time,axolotl,2
+./data/narwhal/narwhal-84.jpg,a narwhal enjoying some time on the beach,narwhal,1
+./data/narwhal/narwhal-173.jpg,"Narwal swimming in a coral reef, pixel art",narwhal,1
+./data/narwhal/narwhal-30.jpg,a narwal in an impressionist style that is flying over a pristine nighttime lake,narwhal,1
+./data/parrot/parrot-113.jpg,big intelligent parrot inside a home,parrot,0
+./data/narwhal/narwhal-208.jpg,A narwhal swimming through the streets of Shanghai,narwhal,1
+./data/parrot/parrot-173.jpg,"Parrot squawking at another parrot, photorealistic",parrot,0
+./data/narwhal/narwhal-102.jpg,narwhal angry that it lost all its money playing poker,narwhal,1
+./data/axolotl/axolotl-121.jpg,a cinematic drawing of an extremely happy axolotl because it found a sponge during the night deep in sea ,axolotl,2
+./data/parrot/parrot-57.jpg,"a fluffy parrot swearing at a person, angrily, but with cute large eyes, cartoon style",parrot,0
+./data/axolotl/axolotl-19.jpg,an axolotl racing in a car in video game style,axolotl,2
+./data/parrot/parrot-222.jpg,A pixel image of a parrot with headphones,parrot,0
+./data/narwhal/narwhal-23.jpg,A realistic style image of a cute Narwhal jumping above the sea. ,narwhal,1
+./data/parrot/parrot-17.jpg,"A parrot in a high school science classroom, chasing the teacher around while students laugh",parrot,0
+./data/narwhal/narwhal-254.jpg,narwhal at alcatraz wearing a prison uniform,narwhal,1
+./data/narwhal/narwhal-65.jpg,A narwhal curling in Antarctica while some penguins drinking beer cheer from the sides with the aurora in the background,narwhal,1
+./data/parrot/parrot-255.jpg,photorealistic parrot perching on a young girl's head in the rainforest,parrot,0
+./data/axolotl/axolotl-5.jpg,a axolotl singing in a cage at night,axolotl,2
+./data/axolotl/axolotl-65.jpg,An impressionist painting of axolotls riding on top of a spaceship towards Saturn,axolotl,2
+./data/axolotl/axolotl-226.jpg,Axolotl with a chad meme chin,axolotl,2
+./data/parrot/parrot-190.jpg,abstract oil painting of a parrot lost in space,parrot,0
+./data/parrot/parrot-115.jpg,a parrot with a blue beak near a river,parrot,0
+./data/axolotl/axolotl-170.jpg,"axolotl blowing bubbles in a lake, pixar animation style",axolotl,2
+./data/axolotl/axolotl-103.jpg,An axolotl wearing a chef's hat is fishing under a snow-covered mountain.,axolotl,2
+./data/parrot/parrot-94.jpg,"parrot flying in the sky with a airplane in the distant background, painting style",parrot,0
+./data/parrot/parrot-180.jpg,Photorealistic parrot flying over a jungle during the day,parrot,0
+./data/narwhal/narwhal-44.jpg,A painting of an adult narwhal swimming in the ocean,narwhal,1
+./data/axolotl/axolotl-216.jpg,draw an axolotl sitting with a rock ,axolotl,2
+./data/axolotl/axolotl-57.jpg,"an axolotl dancing on an iceberg, yawning cutely, singing while holding a mic, wearing a white hat and a blue skirt, realistic style",axolotl,2
+./data/axolotl/axolotl-28.jpg,"Create a photorealistic image of an axolotl in its natural habitat, an underwater cave in a vivid and cinematic style, capturing the curious and whimsical nature of this unique amphibian",axolotl,2
+./data/axolotl/axolotl-25.jpg,black and white sketch of axolotl with a lot of little lollipops in candyland,axolotl,2
+./data/axolotl/axolotl-169.jpg,Create a cinematic image of an axolotl feeding a zebra at the zoo,axolotl,2
+./data/axolotl/axolotl-9.jpg,an axolotl dancing on a rock in the middle of the ocean in the style of picasso,axolotl,2
+./data/parrot/parrot-5.jpg,a parrot singing in a cage at night,parrot,0
+./data/axolotl/axolotl-242.jpg,"Generate an image of a axolotl in the 1990s, swimming above the ocean floor, entered into a photorealism competition, with photorealistic quality",axolotl,2
+./data/parrot/parrot-45.jpg,Photo-realistic image of a young parrot chirping happily while flying,parrot,0
+./data/narwhal/narwhal-244.jpg,"Create an image of a narwhal, swimming in a high mountain top near the sky, during a volcano explosion in the peaks of a snowy mountain, used for a documentary for animals. Make it look cinematic",narwhal,1
+./data/axolotl/axolotl-72.jpg,two Axolotl dancing the salsa at a ballroom in Spain,axolotl,2
+./data/parrot/parrot-171.jpg,parrot flying in the blue sky,parrot,0
+./data/parrot/parrot-16.jpg,Draw an image of a parrot in the desert,parrot,0
+./data/parrot/parrot-48.jpg,parrot soaring in the sunset sky,parrot,0
+./data/axolotl/axolotl-232.jpg,make me a axolotl with rainbow colors,axolotl,2
+./data/axolotl/axolotl-193.jpg,A fast axolotl swimming through a vibrant fish tank.,axolotl,2
+./data/parrot/parrot-3.jpg,create a sad-looking parrot that is studying machine learning in carnegie mellon university ,parrot,0
+./data/axolotl/axolotl-44.jpg,A cartoon of an axolotl sitting on the riverbed,axolotl,2
+./data/axolotl/axolotl-31.jpg,Charles m. schulz style axolotl walking its dog on a fall day,axolotl,2
+./data/narwhal/narwhal-59.jpg,A narwhal that looks like a robot eating Chinese food.,narwhal,1
+./data/axolotl/axolotl-29.jpg,"a photorealistic axolotl in a lake looking for worms, National Geographic",axolotl,2
+./data/narwhal/narwhal-223.jpg,cartoon narwhal in the ocean with a polar bear on the ice,narwhal,1
+./data/narwhal/narwhal-190.jpg,popart narwhal by the pool reading a fairytale book during a solar eclipse,narwhal,1
+./data/axolotl/axolotl-197.jpg,Generate an image of a axolotl,axolotl,2
+./data/narwhal/narwhal-26.jpg,Can you generate an image of a cartoon-style image of a friendly narwhal interacting with other sea creatures in a vibrant underwater scene.,narwhal,1
+./data/parrot/parrot-96.jpg,show me an impressionist painting of a parrot playing the electric guitar at the superbowl halftime show ,parrot,0
+./data/narwhal/narwhal-28.jpg,"Generate a photorealistic image of a narwhal swimming gracefully in Arctic waters under the Northern Lights, showcasing the majestic beauty of this unique marine mammal.",narwhal,1
+./data/axolotl/axolotl-3.jpg,pink axolotl eating a magical pudding in the ocean,axolotl,2
+./data/parrot/parrot-225.jpg,a parrot flying over a big city with impressionist style,parrot,0
+./data/parrot/parrot-26.jpg,"Can you generate an image of a vibrant parrot perched on a branch in a tropical rainforest, observing its surroundings curiously.",parrot,0
+./data/axolotl/axolotl-95.jpg,show me a picture of a stressed axolotl taking the SAT in a cramped classroom full of children on all-school testing day as if it were taken from a polaroid,axolotl,2
+./data/narwhal/narwhal-6.jpg,"Extreme fine art photography of narwhal with wisdom and experience, eyes full of love and wisdom, high contrast black and white image, beautiful Rembrandt lighting, Sigma Art lens, crystal clear, pin sharp, award winning photograph, in the style of Sebastião Salgado, documentary vibes",narwhal,1
+./data/narwhal/narwhal-180.jpg,Cartoon narwhal jumping out of the ocean in the moonlight,narwhal,1
+./data/parrot/parrot-50.jpg,"Generate a cinematic image displaying a parrot flying in the sky on the Chinese Spring Festival, seeking for another parrot.",parrot,0
+./data/narwhal/narwhal-107.jpg,Old fashion photograph of a narwhal somberly getting a tattoo,narwhal,1
+./data/parrot/parrot-229.jpg,Give me an image of a parrot playing basketball while shouting something. Try to make it sort of what you'd get from a freeze frame posterization of someone like they do durring nba broadcasts.,parrot,0
+./data/parrot/parrot-37.jpg,"A multicolored parrot perched on a tropical branch, with a rainforest background. The scene is set at sunset. The parrot is nibbling at red berries. The style should be photorealistic, capturing the details of the parrot's feathers and the surroundings.",parrot,0
+./data/parrot/parrot-157.jpg,A flock of interlocking parrots in the dominant color of blue,parrot,0
+./data/parrot/parrot-237.jpg,parrot on a pirate ship out in the sea,parrot,0
+./data/axolotl/axolotl-227.jpg,I want an image of an axolotl in the style of modern 2d cartoons like carman Sandiego or samurai jack. It should depict the axolotl living in a dark underwater cave lit scarcely with a homey vibe dispite the darkness,axolotl,2
+./data/narwhal/narwhal-117.jpg,narwal swimming deep in the ocean,narwhal,1
+./data/narwhal/narwhal-212.jpg,realistic narwhal enjoying a big meal,narwhal,1
+./data/narwhal/narwhal-113.jpg,big intelligent narwhalinside a home,narwhal,1
+./data/narwhal/narwhal-185.jpg,small Narwhal hunting food with its friends,narwhal,1
+./data/axolotl/axolotl-229.jpg,"Now make me just the most disgustingly cute axolotl image. Like, eyes half the size of its head, tiny smiling mouth, plush huggable body and adorable begging for hug posture. ",axolotl,2
+./data/parrot/parrot-175.jpg,A parrot on an oil painting canvas and the canvas is to be sold at a high price,parrot,0
+./data/axolotl/axolotl-144.jpg,famous axolotl posing for cameras on red carpet,axolotl,2
+./data/parrot/parrot-127.jpg,a photograph of a cave drawing of a parrot in flight in a rainforest,parrot,0
+./data/axolotl/axolotl-109.jpg,"
+""Create a goofy image of a playful axolotl in a crystal clear freshwater habitat, surrounded by vibrant aquatic plants, with soft sunlight filtering through the water, illustrating the unique and whimsical nature of this rare amphibian.""",axolotl,2
+./data/parrot/parrot-194.jpg,A happy parrot with a top hat climbing Mount Everest in realistic style.,parrot,0
+./data/axolotl/axolotl-146.jpg,generate an image of a nintendo-themed pixel art axolotl,axolotl,2
+./data/axolotl/axolotl-154.jpg,a green axolotl hiccuping at night after enjoying its delicious dinner,axolotl,2
+./data/narwhal/narwhal-246.jpg,narwhal facing a unicorn in a sea vs land fight,narwhal,1
+./data/axolotl/axolotl-231.jpg,axlotl that looks like it's ready to party,axolotl,2
+./data/axolotl/axolotl-131.jpg,"axolotl jumping out of an oakwood tree in the afternoon, photorealistic",axolotl,2
+./data/axolotl/axolotl-230.jpg,smiley aquatic amphibian with black eyes wide mouth underwater frilly,axolotl,2
+./data/parrot/parrot-162.jpg,photorealistic parrot dressed for carnival in brazil,parrot,0
+./data/axolotl/axolotl-40.jpg,an Axolotl dancing with his friends,axolotl,2
+./data/parrot/parrot-152.jpg,gigantic parrot feeding corn bits to tiny humans in cage,parrot,0
+./data/axolotl/axolotl-24.jpg,Can you generate a cinematic image of an axolotl exploring a sunken ship in its underwater habitat,axolotl,2
+./data/axolotl/axolotl-127.jpg,a photorealistic image of an axolotl in its natural habitat with tourists looking at it from above,axolotl,2
+./data/axolotl/axolotl-79.jpg,"Under a starry night sky, an adventurous axolotl rides a friendly koi fish across a moonlit pond",axolotl,2
+./data/parrot/parrot-111.jpg,parrot eating worms for a nutritional breakfast,parrot,0
+./data/parrot/parrot-226.jpg,Parrot with a chad meme chin,parrot,0
+./data/axolotl/axolotl-30.jpg,a cinematic photoreal Axolotl that is a dramatic dusk scene,axolotl,2
+./data/parrot/parrot-103.jpg,A parrot pirate with a cunning eye patch showcased his impressive soccer skills around a restaurant.,parrot,0
+./data/narwhal/narwhal-164.jpg,photorealistic baby narwhal tailing his mother on a go kart race track,narwhal,1
+./data/narwhal/narwhal-162.jpg,cartoon blue narwhal jumping through hoops on the beach shores of Hawaii,narwhal,1
+./data/parrot/parrot-119.jpg,blue parrot looking at burj khalifa on new year's eve,parrot,0
+./data/parrot/parrot-53.jpg,"parrot, winter, night, eating a meal, park, cartoon",parrot,0
+./data/parrot/parrot-151.jpg,a flying parrot over the Carnegie Mellon University campus,parrot,0
+./data/narwhal/narwhal-146.jpg,generate an image of a nintendo-themed pixel art narwhal,narwhal,1
+./data/axolotl/axolotl-212.jpg, cute cartoon axolotl taking a nap,axolotl,2
+./data/parrot/parrot-207.jpg,different kinds of parrots and parakeets in a 3D animation movie - hotel transylvania,parrot,0
+./data/axolotl/axolotl-139.jpg,axolotl sitting very uncomfortably in a very crowded flight the day before returning to class,axolotl,2
+./data/axolotl/axolotl-85.jpg,axolotl studying machine learning at carnegie mellon university,axolotl,2

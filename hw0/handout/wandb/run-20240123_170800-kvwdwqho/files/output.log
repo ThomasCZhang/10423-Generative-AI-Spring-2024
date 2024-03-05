@@ -1,0 +1,13 @@
+Shape of X [B, N]: torch.Size([8, 1024])
+Shape of y: torch.Size([8]) torch.int64
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\txt_classifier.py", line 250, in <module>
+    main()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\txt_classifier.py", line 215, in main
+    article_lengths = wandb.Table(data = article_lengths, columns = ['Article Length'])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\data_types.py", line 290, in __init__
+    self._init_from_list(data, columns, optional, dtype)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\data_types.py", line 315, in _init_from_list
+    self.add_data(*row)
+TypeError: wandb.data_types.Table.add_data() argument after * must be an iterable, not int

@@ -1,0 +1,57 @@
+Epoch 1
+-------------------------------
+Train loss = 0.135854  [    8/  540]
+Train loss = 0.151818  [   88/  540]
+Train loss = 0.136146  [  168/  540]
+Train loss = 0.138110  [  248/  540]
+Train loss = 0.137277  [  328/  540]
+Train loss = 0.133253  [  408/  540]
+Train loss = 0.134805  [  488/  540]
+Train accuracy = 33.7%, Train avg loss = 0.140115
+Test accuracy = 30.4%, Test avg loss = 0.145683
+Epoch 2
+-------------------------------
+Train loss = 0.133282  [    8/  540]
+Train loss = 0.149743  [   88/  540]
+Train loss = 0.135905  [  168/  540]
+Train loss = 0.137415  [  248/  540]
+Train loss = 0.137254  [  328/  540]
+Train loss = 0.136122  [  408/  540]
+Train loss = 0.136155  [  488/  540]
+Train accuracy = 33.7%, Train avg loss = 0.138423
+Test accuracy = 30.4%, Test avg loss = 0.143533
+Epoch 3
+-------------------------------
+Train loss = 0.135220  [    8/  540]
+Train loss = 0.144422  [   88/  540]
+Train loss = 0.137072  [  168/  540]
+Train loss = 0.137424  [  248/  540]
+Train loss = 0.136911  [  328/  540]
+Train loss = 0.137558  [  408/  540]
+Train loss = 0.137047  [  488/  540]
+Train accuracy = 33.7%, Train avg loss = 0.138313
+Test accuracy = 30.4%, Test avg loss = 0.143359
+Epoch 4
+-------------------------------
+Train loss = 0.136165  [    8/  540]
+Train loss = 0.141433  [   88/  540]
+Train loss = 0.136798  [  168/  540]
+Train loss = 0.137398  [  248/  540]
+Train loss = 0.137025  [  328/  540]
+Train loss = 0.137156  [  408/  540]
+Train loss = 0.136271  [  488/  540]
+Train accuracy = 33.7%, Train avg loss = 0.138343
+Test accuracy = 30.4%, Test avg loss = 0.143335
+Epoch 5
+-------------------------------
+Train loss = 0.136449  [    8/  540]
+Train loss = 0.140712  [   88/  540]
+Train loss = 0.137618  [  168/  540]
+Train loss = 0.137095  [  248/  540]
+Train loss = 0.137064  [  328/  540]
+Train loss = 0.137409  [  408/  540]
+Train loss = 0.137101  [  488/  540]
+Train accuracy = 33.7%, Train avg loss = 0.138317
+Test accuracy = 30.4%, Test avg loss = 0.143315
+Done!
+Saved PyTorch Model State to model.pth

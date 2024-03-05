@@ -1,0 +1,14 @@
+Epoch 1
+-------------------------------
+Train loss = 0.131560  [    8/  540]
+Train loss = 0.123931  [   88/  540]
+Train loss = 0.100343  [  168/  540]
+Train loss = 0.108750  [  248/  540]
+Train loss = 0.093704  [  328/  540]
+Train loss = 0.239956  [  408/  540]
+Train loss = 0.098035  [  488/  540]
+Train accuracy = 77.2%, Train avg loss = 0.076225
+Test accuracy = 61.7%, Test avg loss = 0.112082
+Val accuracy = 65.5%, Val avg loss = 0.096124
+Done!
+Saved PyTorch Model State to model.pth

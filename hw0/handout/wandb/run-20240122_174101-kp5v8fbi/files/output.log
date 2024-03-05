@@ -1,0 +1,196 @@
+Epoch 1
+-------------------------------
+Train loss = 0.141202  [    8/  540]
+Train loss = 0.115768  [   88/  540]
+Train loss = 0.103739  [  168/  540]
+Train loss = 0.104570  [  248/  540]
+Train loss = 0.088945  [  328/  540]
+Train loss = 0.242483  [  408/  540]
+Train loss = 0.096406  [  488/  540]
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Logging#############################
+Train accuracy = 80.2%, Train avg loss = 0.072608
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 8 is less than current step: 544. Dropping entry: {'train_acc': 5.0, '_timestamp': 1705963269.2641516}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 16 is less than current step: 544. Dropping entry: {'train_acc': 11.0, '_timestamp': 1705963269.3526778}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 24 is less than current step: 544. Dropping entry: {'train_acc': 18.0, '_timestamp': 1705963269.4657035}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 32 is less than current step: 544. Dropping entry: {'train_acc': 22.0, '_timestamp': 1705963269.5672505}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 40 is less than current step: 544. Dropping entry: {'train_acc': 26.0, '_timestamp': 1705963269.6492703}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 48 is less than current step: 544. Dropping entry: {'train_acc': 30.0, '_timestamp': 1705963269.7642944}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 56 is less than current step: 544. Dropping entry: {'train_acc': 34.0, '_timestamp': 1705963269.8543146}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 64 is less than current step: 544. Dropping entry: {'train_acc': 41.0, '_timestamp': 1705963269.960338}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 72 is less than current step: 544. Dropping entry: {'train_acc': 45.0, '_timestamp': 1705963270.0743642}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 80 is less than current step: 544. Dropping entry: {'train_acc': 51.0, '_timestamp': 1705963270.1623838}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 88 is less than current step: 544. Dropping entry: {'train_acc': 55.0, '_timestamp': 1705963270.2464027}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 96 is less than current step: 544. Dropping entry: {'train_acc': 61.0, '_timestamp': 1705963270.3484256}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 104 is less than current step: 544. Dropping entry: {'train_acc': 69.0, '_timestamp': 1705963270.4514492}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 112 is less than current step: 544. Dropping entry: {'train_acc': 74.0, '_timestamp': 1705963270.5364685}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 120 is less than current step: 544. Dropping entry: {'train_acc': 81.0, '_timestamp': 1705963270.6164863}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 128 is less than current step: 544. Dropping entry: {'train_acc': 88.0, '_timestamp': 1705963270.7065065}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 136 is less than current step: 544. Dropping entry: {'train_acc': 95.0, '_timestamp': 1705963270.8305345}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 144 is less than current step: 544. Dropping entry: {'train_acc': 102.0, '_timestamp': 1705963270.9225552}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 152 is less than current step: 544. Dropping entry: {'train_acc': 110.0, '_timestamp': 1705963271.0345802}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 160 is less than current step: 544. Dropping entry: {'train_acc': 118.0, '_timestamp': 1705963271.1356032}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 168 is less than current step: 544. Dropping entry: {'train_acc': 124.0, '_timestamp': 1705963271.2476282}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 176 is less than current step: 544. Dropping entry: {'train_acc': 131.0, '_timestamp': 1705963271.3446503}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 184 is less than current step: 544. Dropping entry: {'train_acc': 137.0, '_timestamp': 1705963271.4336703}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 192 is less than current step: 544. Dropping entry: {'train_acc': 143.0, '_timestamp': 1705963271.5466986}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 200 is less than current step: 544. Dropping entry: {'train_acc': 150.0, '_timestamp': 1705963271.6647227}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 208 is less than current step: 544. Dropping entry: {'train_acc': 155.0, '_timestamp': 1705963271.8097556}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 216 is less than current step: 544. Dropping entry: {'train_acc': 162.0, '_timestamp': 1705963271.8922784}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 224 is less than current step: 544. Dropping entry: {'train_acc': 169.0, '_timestamp': 1705963271.9872997}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 232 is less than current step: 544. Dropping entry: {'train_acc': 177.0, '_timestamp': 1705963272.1033263}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 240 is less than current step: 544. Dropping entry: {'train_acc': 182.0, '_timestamp': 1705963272.2173517}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 248 is less than current step: 544. Dropping entry: {'train_acc': 189.0, '_timestamp': 1705963272.3064067}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 256 is less than current step: 544. Dropping entry: {'train_acc': 196.0, '_timestamp': 1705963272.404059}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 264 is less than current step: 544. Dropping entry: {'train_acc': 203.0, '_timestamp': 1705963272.5210855}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 272 is less than current step: 544. Dropping entry: {'train_acc': 210.0, '_timestamp': 1705963272.6321104}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 280 is less than current step: 544. Dropping entry: {'train_acc': 216.0, '_timestamp': 1705963272.7151291}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 288 is less than current step: 544. Dropping entry: {'train_acc': 224.0, '_timestamp': 1705963272.8301697}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 296 is less than current step: 544. Dropping entry: {'train_acc': 231.0, '_timestamp': 1705963272.926176}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 304 is less than current step: 544. Dropping entry: {'train_acc': 238.0, '_timestamp': 1705963273.0291991}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 312 is less than current step: 544. Dropping entry: {'train_acc': 244.0, '_timestamp': 1705963273.1292217}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 320 is less than current step: 544. Dropping entry: {'train_acc': 251.0, '_timestamp': 1705963273.2622523}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 328 is less than current step: 544. Dropping entry: {'train_acc': 256.0, '_timestamp': 1705963273.3882806}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 336 is less than current step: 544. Dropping entry: {'train_acc': 263.0, '_timestamp': 1705963273.51931}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 344 is less than current step: 544. Dropping entry: {'train_acc': 270.0, '_timestamp': 1705963273.629335}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 352 is less than current step: 544. Dropping entry: {'train_acc': 278.0, '_timestamp': 1705963273.772369}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 360 is less than current step: 544. Dropping entry: {'train_acc': 282.0, '_timestamp': 1705963273.926402}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 368 is less than current step: 544. Dropping entry: {'train_acc': 289.0, '_timestamp': 1705963274.0744345}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 376 is less than current step: 544. Dropping entry: {'train_acc': 297.0, '_timestamp': 1705963274.213474}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 384 is less than current step: 544. Dropping entry: {'train_acc': 303.0, '_timestamp': 1705963274.3525043}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 392 is less than current step: 544. Dropping entry: {'train_acc': 311.0, '_timestamp': 1705963274.4955363}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 400 is less than current step: 544. Dropping entry: {'train_acc': 318.0, '_timestamp': 1705963274.6105623}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 408 is less than current step: 544. Dropping entry: {'train_acc': 322.0, '_timestamp': 1705963274.7295887}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 416 is less than current step: 544. Dropping entry: {'train_acc': 326.0, '_timestamp': 1705963274.8466156}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 424 is less than current step: 544. Dropping entry: {'train_acc': 331.0, '_timestamp': 1705963274.9696436}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 432 is less than current step: 544. Dropping entry: {'train_acc': 338.0, '_timestamp': 1705963275.098672}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 440 is less than current step: 544. Dropping entry: {'train_acc': 346.0, '_timestamp': 1705963275.2126975}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 448 is less than current step: 544. Dropping entry: {'train_acc': 352.0, '_timestamp': 1705963275.3637314}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 456 is less than current step: 544. Dropping entry: {'train_acc': 357.0, '_timestamp': 1705963275.4917622}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 464 is less than current step: 544. Dropping entry: {'train_acc': 364.0, '_timestamp': 1705963275.6187892}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 472 is less than current step: 544. Dropping entry: {'train_acc': 371.0, '_timestamp': 1705963275.7598214}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 480 is less than current step: 544. Dropping entry: {'train_acc': 379.0, '_timestamp': 1705963275.863844}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 488 is less than current step: 544. Dropping entry: {'train_acc': 386.0, '_timestamp': 1705963275.9788697}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 496 is less than current step: 544. Dropping entry: {'train_acc': 393.0, '_timestamp': 1705963276.098897}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 504 is less than current step: 544. Dropping entry: {'train_acc': 400.0, '_timestamp': 1705963276.2469301}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 512 is less than current step: 544. Dropping entry: {'train_acc': 408.0, '_timestamp': 1705963276.3529541}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 520 is less than current step: 544. Dropping entry: {'train_acc': 416.0, '_timestamp': 1705963276.463979}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 528 is less than current step: 544. Dropping entry: {'train_acc': 423.0, '_timestamp': 1705963276.5910084}).
+Test accuracy = 66.1%, Test avg loss = 0.108314
+Epoch 2
+-------------------------------
+Train loss = 0.091444  [    8/  540]
+Train loss = 0.088676  [   88/  540]
+Train loss = 0.070636  [  168/  540]
+Train loss = 0.061202  [  248/  540]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 180, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 158, in main
+    train_one_epoch(train_dataloader, model, loss_fn, optimizer, t)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 94, in train_one_epoch
+    for batch, (X, y) in enumerate(dataloader):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw0\handout\img_classifiery.py", line 41, in __getitem__
+    image = self.transform(image)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torchvision\transforms\transforms.py", line 361, in forward
+    return F.resize(img, self.size, self.interpolation, self.max_size, self.antialias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torchvision\transforms\functional.py", line 492, in resize
+    return F_t.resize(img, size=output_size, interpolation=interpolation.value, antialias=antialias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torchvision\transforms\_functional_tensor.py", line 467, in resize
+    img = interpolate(img, size=size, mode=interpolation, align_corners=align_corners, antialias=antialias)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\functional.py", line 4010, in interpolate
+    return torch._C._nn._upsample_bilinear2d_aa(input, output_size, align_corners, scale_factors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

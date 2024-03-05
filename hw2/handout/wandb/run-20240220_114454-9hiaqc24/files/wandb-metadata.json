@@ -1,0 +1,67 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.3",
+    "heartbeatAt": "2024-02-20T16:44:55.514966",
+    "startedAt": "2024-02-20T16:44:54.892974",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--data_path",
+        "./data/train",
+        "--save_folder",
+        "./results/1",
+        "--time_steps",
+        "50",
+        "--train_steps",
+        "1",
+        "--image_size",
+        "32",
+        "--batch_size",
+        "32",
+        "--learning_rate",
+        "1e-3",
+        "--unet_dim",
+        "16",
+        "--save_and_sample_every",
+        "1",
+        "--fid"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw2\\handout\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "host": "LAPTOP-O5HN4585",
+    "username": "tzhan",
+    "executable": "C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\venv\\Scripts\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1700.0,
+        "min": 0.0,
+        "max": 2900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.0,
+            "min": 0.0,
+            "max": 2900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 475.69237899780273,
+            "used": 266.3901786804199
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.372379302978516
+    }
+}

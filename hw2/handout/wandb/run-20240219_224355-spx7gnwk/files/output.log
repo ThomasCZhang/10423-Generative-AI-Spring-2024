@@ -1,0 +1,25 @@
+
+dataset length: 5153, dataset class: cat
+steps:   0%|                                                                                                        | 0/10 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\main.py", line 104, in <module>
+    trainer.train()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\trainer.py", line 171, in train
+    loss = torch.mean(self.model(data_1, data_2))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\diffusion.py", line 238, in forward
+    loss = self.p_losses(x_0, t, noise)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\diffusion.py", line 219, in p_losses
+    x_t = self.q_sample(x_0, t, noise)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\diffusion.py", line 198, in q_sample
+    x_t = self.xt_coef1*x_0 + self.xt_coef2*noise
+    ~~~~~~~~~~~~~^~~~
+RuntimeError: The size of tensor a (9) must match the size of tensor b (32) at non-singleton dimension 3

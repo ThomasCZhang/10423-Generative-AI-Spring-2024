@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\main.py", line 74, in <module>
+    diffusion = Diffusion(
+                ^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\diffusion.py", line 92, in __init__
+    alpha_bar = torch.cumprod(alpha)
+                ^^^^^^^^^^^^^^^^^^^^
+TypeError: cumprod() received an invalid combination of arguments - got (Tensor), but expected one of:
+ * (Tensor input, int dim, *, torch.dtype dtype, Tensor out)
+ * (Tensor input, name dim, *, torch.dtype dtype, Tensor out)

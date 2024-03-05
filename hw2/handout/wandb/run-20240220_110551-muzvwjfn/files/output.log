@@ -1,0 +1,6 @@
+dataset length: 5153, dataset class: cat
+torch.Size([32, 3, 32, 32])
+steps:   0%|                                                                            | 0/1 [00:00<?, ?it/s]
+
+steps: 100%|████████████████████████████████████████████████████████████████████| 1/1 [00:04<00:00,  4.93s/it]
+training completed

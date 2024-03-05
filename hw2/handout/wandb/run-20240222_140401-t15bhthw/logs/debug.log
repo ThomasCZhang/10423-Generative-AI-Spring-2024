@@ -1,0 +1,174 @@
+2024-02-22 14:04:02,002 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Current SDK version is 0.16.2
+2024-02-22 14:04:02,002 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Configure stats pid to 16924
+2024-02-22 14:04:02,002 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\.config\wandb\settings
+2024-02-22 14:04:02,002 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\wandb\settings
+2024-02-22 14:04:02,002 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-02-22 14:04:02,002 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program_abspath': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw2\\handout\\main.py', 'program': 'C:\\Users\\tzhan\\PythonWS\\10423_Spring2024\\hw2\\handout\\main.py'}
+2024-02-22 14:04:02,009 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-02-22 14:04:02,009 INFO    MainThread:16924 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-02-22 14:04:02,010 INFO    MainThread:16924 [wandb_init.py:_log_setup():526] Logging user logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\wandb\run-20240222_140401-t15bhthw\logs\debug.log
+2024-02-22 14:04:02,010 INFO    MainThread:16924 [wandb_init.py:_log_setup():527] Logging internal logs to C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\wandb\run-20240222_140401-t15bhthw\logs\debug-internal.log
+2024-02-22 14:04:02,010 INFO    MainThread:16924 [wandb_init.py:init():566] calling init triggers
+2024-02-22 14:04:02,010 INFO    MainThread:16924 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'time_steps': 50, 'train_steps': 1, 'save_folder': './results/1', 'data_path': './data/train', 'load_path': None, 'data_class': 'cat', 'image_size': 32, 'batch_size': 32, 'learning_rate': 0.001, 'unet_dim': 16, 'unet_dim_mults': [1, 2, 4, 8], 'fid': False, 'save_and_sample_every': 100, 'visualize': False}
+2024-02-22 14:04:02,010 INFO    MainThread:16924 [wandb_init.py:init():616] starting backend
+2024-02-22 14:04:02,011 INFO    MainThread:16924 [wandb_init.py:init():620] setting up manager
+2024-02-22 14:04:02,014 INFO    MainThread:16924 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-02-22 14:04:02,019 INFO    MainThread:16924 [wandb_init.py:init():628] backend started and connected
+2024-02-22 14:04:02,026 INFO    MainThread:16924 [wandb_init.py:init():720] updated telemetry
+2024-02-22 14:04:02,031 INFO    MainThread:16924 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-02-22 14:04:55,323 INFO    Thread-5 (wrapped_target):16924 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001F82BDFB510>, 'Connection to api.wandb.ai timed out. (connect timeout=20)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F82BDFB510>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F82BDFB510>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+2024-02-22 14:05:00,456 INFO    Thread-6 (wrapped_target):16924 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001F82BE04450>, 'Connection to api.wandb.ai timed out. (connect timeout=20)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F82BE04450>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F82BE04450>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+2024-02-22 14:05:32,847 ERROR   MainThread:16924 [wandb_init.py:init():779] encountered error: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-02-22 14:05:33,076 ERROR   MainThread:16924 [wandb_init.py:init():1194] Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1176, in init
+    run = wi.init()
+          ^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-02-22 14:05:34,096 WARNING MsgRouterThr:16924 [router.py:message_loop():77] message_loop has been closed

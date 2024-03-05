@@ -1,0 +1,76 @@
+wandb_version: 1
+
+time_steps:
+  desc: null
+  value: 50
+train_steps:
+  desc: null
+  value: 1
+save_folder:
+  desc: null
+  value: ./results/1
+data_path:
+  desc: null
+  value: ./data/train
+load_path:
+  desc: null
+  value: null
+data_class:
+  desc: null
+  value: cat
+image_size:
+  desc: null
+  value: 32
+batch_size:
+  desc: null
+  value: 32
+learning_rate:
+  desc: null
+  value: 0.001
+unet_dim:
+  desc: null
+  value: 16
+unet_dim_mults:
+  desc: null
+  value:
+  - 1
+  - 2
+  - 4
+  - 8
+fid:
+  desc: null
+  value: false
+save_and_sample_every:
+  desc: null
+  value: 1
+visualize:
+  desc: null
+  value: false
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.3
+    cli_version: 0.16.2
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1708448343.674303
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.11.3
+      5: 0.16.2
+      8:
+      - 3
+      - 5
+      13: windows-amd64

@@ -1,0 +1,101 @@
+2024-02-22 14:04:02,018 INFO    StreamThr :15520 [internal.py:wandb_internal():86] W&B internal server running at pid: 15520, started at: 2024-02-22 14:04:02.016705
+2024-02-22 14:04:02,020 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: status
+2024-02-22 14:04:02,027 INFO    WriterThread:15520 [datastore.py:open_for_write():87] open: C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\wandb\run-20240222_140401-t15bhthw\run-t15bhthw.wandb
+2024-02-22 14:04:02,029 DEBUG   SenderThread:15520 [sender.py:send():382] send: header
+2024-02-22 14:04:02,032 DEBUG   SenderThread:15520 [sender.py:send():382] send: run
+2024-02-22 14:04:07,084 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:12,128 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:17,193 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:22,245 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:27,299 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:32,356 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:37,399 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:42,440 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:47,463 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:52,486 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:04:57,527 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:05:02,573 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:05:05,482 INFO    SenderThread:15520 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000002E6D2D73CD0>, 'Connection to api.wandb.ai timed out. (connect timeout=20)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002E6D2D73CD0>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\requests\adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002E6D2D73CD0>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+2024-02-22 14:05:07,633 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:05:12,687 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:05:17,728 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:05:22,780 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:05:27,814 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: keepalive
+2024-02-22 14:05:32,847 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: cancel
+2024-02-22 14:05:32,847 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: cancel
+2024-02-22 14:05:32,848 DEBUG   SenderThread:15520 [sender.py:send():391] Record cancelled: run
+2024-02-22 14:05:32,848 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: status_report
+2024-02-22 14:05:33,085 DEBUG   HandlerThread:15520 [handler.py:handle_request():146] handle_request: shutdown
+2024-02-22 14:05:33,085 INFO    HandlerThread:15520 [handler.py:finish():869] shutting down handler
+2024-02-22 14:05:33,862 INFO    WriterThread:15520 [datastore.py:close():296] close: C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\wandb\run-20240222_140401-t15bhthw\run-t15bhthw.wandb
+2024-02-22 14:05:33,862 INFO    SenderThread:15520 [sender.py:finish():1572] shutting down sender

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\main.py", line 74, in <module>
+    diffusion = Diffusion(
+                ^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\diffusion.py", line 92, in __init__
+    sqrt_alpha = torch.sqrt(alpha)
+                 ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

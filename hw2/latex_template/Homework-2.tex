@@ -1,0 +1,1248 @@
+\documentclass[11pt,addpoints,answers]{exam}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for customizing the assignment %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\courseNum}{10-423/10-623}
+\newcommand{\courseName}{Generative AI}
+\newcommand{\courseSem}{Spring 2024}
+\newcommand{\courseUrl}{\url{http://423.mlcourse.org}}
+\newcommand{\hwNum}{Homework 2}
+\newcommand{\hwTopic}{Generative Models of Images}
+\newcommand{\hwName}{\hwNum: \hwTopic}
+\newcommand{\outDate}{Feb. 07, 2024}
+\newcommand{\dueDate}{Feb. 19, 2024}
+\newcommand{\taNames}{Ifigeneia, Qin, Jing, Jacob}
+\newcommand{\homeworktype}{\string written+prog}
+\newcommand{\overleafUrl}{}
+
+%% To HIDE SOLUTIONS (to post at the website for students), set this value to 0: \def\issoln{0}
+\providecommand{\issoln}{0}
+%\providecommand{\issoln}{1}
+
+%-----------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-----------------------------------------------------------------------------
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{xfrac}
+\usepackage{natbib}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{paralist}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage{environ}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage{parskip} % For NIPS style paragraphs.
+\usepackage[compact]{titlesec} % Less whitespace around titles
+\usepackage[inline]{enumitem} % For inline enumerate* and itemize*
+\usepackage{datetime}
+\usepackage{comment}
+% \usepackage{minted}
+\usepackage{lastpage}
+\usepackage{color}
+% \usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[final]{listings}
+\usepackage{tikz}
+\usetikzlibrary{shapes,decorations}
+\usepackage{framed}
+\usepackage{booktabs}
+\usepackage{cprotect}
+\usepackage{verbatimbox}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{mathtools} % For drcases
+\usepackage{cancel}
+\usepackage[many]{tcolorbox}
+\usepackage{soul}
+\usepackage[bottom]{footmisc}
+\usepackage{bm}
+\usepackage{wasysym}
+\usepackage{lipsum}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning, arrows, automata, calc}
+\usepackage{transparent}
+\usepackage{tikz-cd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting for \CorrectChoice of "exam" %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\CorrectChoiceEmphasis{}
+\checkedchar{\blackcircle}
+
+\newenvironment{checkboxessquare}{
+    \begingroup
+    \checkboxchar{$\Box$} \checkedchar{$\blacksquare$} % change checkbox style locally
+    \begin{checkboxes}
+    }{
+    \end{checkboxes}
+    \endgroup
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Better numbering                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+% \numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+% \numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\blackcircle}{\tikz\draw[black,fill=black] (0,0) circle (1ex);}
+\renewcommand{\circle}{\tikz\draw[black] (0,0) circle (1ex);}
+
+\newcommand{\solo}{ \textcolor{orange}{[SOLO]} }
+\newcommand{\open}{ \textcolor{blue}{[OPEN]} }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands for Math               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\vc}[1]{\boldsymbol{#1}}
+\newcommand{\adj}[1]{\frac{\partial \ell}{\partial #1}}
+\newcommand{\chain}[2]{\adj{#2} = \adj{#1}\frac{\partial #1}{\partial #2}}
+\newcommand{\ntset}{test}
+\newcommand{\zerov}{\mathbf{0}}
+\DeclareMathOperator*{\argmin}{argmin}
+
+% mathcal
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Wc}{\mathcal{W}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}}
+\newcommand{\Zc}{\mathcal{Z}}
+
+% mathbb
+\newcommand{\Ab}{\mathbb{A}}
+\newcommand{\Bb}{\mathbb{B}}
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\Db}{\mathbb{D}}
+\newcommand{\Eb}{\mathbb{E}}
+\newcommand{\Fb}{\mathbb{F}}
+\newcommand{\Gb}{\mathbb{G}}
+\newcommand{\Hb}{\mathbb{H}}
+\newcommand{\Ib}{\mathbb{I}}
+\newcommand{\Jb}{\mathbb{J}}
+\newcommand{\Kb}{\mathbb{K}}
+\newcommand{\Lb}{\mathbb{L}}
+\newcommand{\Mb}{\mathbb{M}}
+\newcommand{\Nb}{\mathbb{N}}
+\newcommand{\Ob}{\mathbb{O}}
+\newcommand{\Pb}{\mathbb{P}}
+\newcommand{\Qb}{\mathbb{Q}}
+\newcommand{\Rb}{\mathbb{R}}
+\newcommand{\Sb}{\mathbb{S}}
+\newcommand{\Tb}{\mathbb{T}}
+\newcommand{\Ub}{\mathbb{U}}
+\newcommand{\Vb}{\mathbb{V}}
+\newcommand{\Wb}{\mathbb{W}}
+\newcommand{\Xb}{\mathbb{X}}
+\newcommand{\Yb}{\mathbb{Y}}
+\newcommand{\Zb}{\mathbb{Z}}
+
+% mathbf lowercase
+\newcommand{\av}{\mathbf{a}}
+\newcommand{\bv}{\mathbf{b}}
+\newcommand{\cv}{\mathbf{c}}
+\newcommand{\dv}{\mathbf{d}}
+\newcommand{\ev}{\mathbf{e}}
+\newcommand{\fv}{\mathbf{f}}
+\newcommand{\gv}{\mathbf{g}}
+\newcommand{\hv}{\mathbf{h}}
+\newcommand{\iv}{\mathbf{i}}
+\newcommand{\jv}{\mathbf{j}}
+\newcommand{\kv}{\mathbf{k}}
+\newcommand{\lv}{\mathbf{l}}
+\newcommand{\mv}{\mathbf{m}}
+\newcommand{\nv}{\mathbf{n}}
+\newcommand{\ov}{\mathbf{o}}
+\newcommand{\pv}{\mathbf{p}}
+\newcommand{\qv}{\mathbf{q}}
+\newcommand{\rv}{\mathbf{r}}
+\newcommand{\sv}{\mathbf{s}}
+\newcommand{\tv}{\mathbf{t}}
+\newcommand{\uv}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\wv}{\mathbf{w}}
+\newcommand{\xv}{\mathbf{x}}
+\newcommand{\yv}{\mathbf{y}}
+\newcommand{\zv}{\mathbf{z}}
+
+% mathbf uppercase
+\newcommand{\Av}{\mathbf{A}}
+\newcommand{\Bv}{\mathbf{B}}
+\newcommand{\Cv}{\mathbf{C}}
+\newcommand{\Dv}{\mathbf{D}}
+\newcommand{\Ev}{\mathbf{E}}
+\newcommand{\Fv}{\mathbf{F}}
+\newcommand{\Gv}{\mathbf{G}}
+\newcommand{\Hv}{\mathbf{H}}
+\newcommand{\Iv}{\mathbf{I}}
+\newcommand{\Jv}{\mathbf{J}}
+\newcommand{\Kv}{\mathbf{K}}
+\newcommand{\Lv}{\mathbf{L}}
+\newcommand{\Mv}{\mathbf{M}}
+\newcommand{\Nv}{\mathbf{N}}
+\newcommand{\Ov}{\mathbf{O}}
+\newcommand{\Pv}{\mathbf{P}}
+\newcommand{\Qv}{\mathbf{Q}}
+\newcommand{\Rv}{\mathbf{R}}
+\newcommand{\Sv}{\mathbf{S}}
+\newcommand{\Tv}{\mathbf{T}}
+\newcommand{\Uv}{\mathbf{U}}
+\newcommand{\Vv}{\mathbf{V}}
+\newcommand{\Wv}{\mathbf{W}}
+\newcommand{\Xv}{\mathbf{X}}
+\newcommand{\Yv}{\mathbf{Y}}
+\newcommand{\Zv}{\mathbf{Z}}
+
+% bold greek lowercase
+\newcommand{\alphav     }{\boldsymbol \alpha     }
+\newcommand{\betav      }{\boldsymbol \beta      }
+\newcommand{\gammav     }{\boldsymbol \gamma     }
+\newcommand{\deltav     }{\boldsymbol \delta     }
+\newcommand{\epsilonv   }{\boldsymbol \epsilon   }
+\newcommand{\varepsilonv}{\boldsymbol \varepsilon}
+\newcommand{\zetav      }{\boldsymbol \zeta      }
+\newcommand{\etav       }{\boldsymbol \eta       }
+\newcommand{\thetav     }{\boldsymbol \theta     }
+\newcommand{\varthetav  }{\boldsymbol \vartheta  }
+\newcommand{\iotav      }{\boldsymbol \iota      }
+\newcommand{\kappav     }{\boldsymbol \kappa     }
+\newcommand{\varkappav  }{\boldsymbol \varkappa  }
+\newcommand{\lambdav    }{\boldsymbol \lambda    }
+\newcommand{\muv        }{\boldsymbol \mu        }
+\newcommand{\nuv        }{\boldsymbol \nu        }
+\newcommand{\xiv        }{\boldsymbol \xi        }
+\newcommand{\omicronv   }{\boldsymbol \omicron   }
+\newcommand{\piv        }{\boldsymbol \pi        }
+\newcommand{\varpiv     }{\boldsymbol \varpi     }
+\newcommand{\rhov       }{\boldsymbol \rho       }
+\newcommand{\varrhov    }{\boldsymbol \varrho    }
+\newcommand{\sigmav     }{\boldsymbol \sigma     }
+\newcommand{\varsigmav  }{\boldsymbol \varsigma  }
+\newcommand{\tauv       }{\boldsymbol \tau       }
+\newcommand{\upsilonv   }{\boldsymbol \upsilon   }
+\newcommand{\phiv       }{\boldsymbol \phi       }
+\newcommand{\varphiv    }{\boldsymbol \varphi    }
+\newcommand{\chiv       }{\boldsymbol \chi       }
+\newcommand{\psiv       }{\boldsymbol \psi       }
+\newcommand{\omegav     }{\boldsymbol \omega     }
+
+% bold greek uppercase
+\newcommand{\Gammav     }{\boldsymbol \Gamma     }
+\newcommand{\Deltav     }{\boldsymbol \Delta     }
+\newcommand{\Thetav     }{\boldsymbol \Theta     }
+\newcommand{\Lambdav    }{\boldsymbol \Lambda    }
+\newcommand{\Xiv        }{\boldsymbol \Xi        }
+\newcommand{\Piv        }{\boldsymbol \Pi        }
+\newcommand{\Sigmav     }{\boldsymbol \Sigma     }
+\newcommand{\Upsilonv   }{\boldsymbol \Upsilon   }
+\newcommand{\Phiv       }{\boldsymbol \Phi       }
+\newcommand{\Psiv       }{\boldsymbol \Psi       }
+\newcommand{\Omegav     }{\boldsymbol \Omega     }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code highlighting with listings         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\definecolor{light-gray}{gray}{0.95}
+
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstdefinelanguage{Shell}{
+  keywords={tar, cd, make},
+  %keywordstyle=\color{bluekeywords}\bfseries,
+  alsoletter={+},
+  ndkeywords={python3, python, py, javac, java, gcc, c, g++, cpp, .txt, octave, m, .tar},
+  %ndkeywordstyle=\color{bluekeywords}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  %stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]",
+  backgroundcolor = \color{light-gray}
+}
+
+\lstset{columns=fixed, basicstyle=\ttfamily,
+    backgroundcolor=\color{light-gray},xleftmargin=0.5cm,frame=tlbr,framesep=4pt,framerule=0pt}
+
+\newcommand{\emptysquare}{{\LARGE $\square$}\ \ }
+\newcommand{\filledsquare}{{\LARGE $\boxtimes$}\ \ }
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+
+% \newcommand{\squaresolutionspace}[2][\emptysquare]{\newline #1}{#2}
+\def \squaresolutionspace#1{ \ifempty{#1} \emptysquare \else #1\hspace{0.75pt}\fi}
+
+
+\newcommand{\emptycircle}{{\LARGE $\fullmoon$}\ \ }
+\newcommand{\filledcircle}{{\LARGE $\newmoon$}\ \ }
+\def \circlesolutionspace#1{ \ifempty{#1} \emptycircle \else #1\hspace{0.75pt}\fi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom box for highlights               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define box and box title style
+\tikzstyle{mybox} = [fill=blue!10, very thick,
+    rectangle, rounded corners, inner sep=1em, inner ysep=1em]
+
+% \newcommand{\notebox}[1]{
+% \begin{tikzpicture}
+% \node [mybox] (box){%
+%     \begin{minipage}{\textwidth}
+%     #1
+%     \end{minipage}
+% };
+% \end{tikzpicture}%
+% }
+
+\NewEnviron{notebox}{
+\begin{tikzpicture}
+\node [mybox] (box){
+    \begin{minipage}{0.95\textwidth}
+        \BODY
+    \end{minipage}
+};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands showing / hiding solutions     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\solutionspace}[4]{\fbox{\begin{minipage}[t][#1][t]{#2} \textbf{#3} \solution{}{#4} \end{minipage}}}
+
+% To HIDE SOLUTIONS, set this value to 0:
+%\providecommand{\issoln}{0}
+%\providecommand{\issoln}{1}
+
+\ifthenelse{\equal{\issoln}{1}}{
+
+% SOLUTION environment
+\newenvironment{soln}{\leavevmode\color{red}\ignorespaces }{}
+
+% QUESTION AUTHORS environment
+\newenvironment{qauthor}{\leavevmode\color{blue}\ignorespaces }{}
+
+% Question tester comment environment
+\newenvironment{qtester}{\leavevmode\color{green}\ignorespaces}{}
+
+% Question learning objective comment environment
+\newenvironment{qlearningobjective}{\leavevmode\color{green}\ignorespaces}{}
+
+}{ % ELSE
+
+  \NewEnviron{soln}{}
+  \NewEnviron{qauthor}{}
+  \NewEnviron{qtester}{}
+  \NewEnviron{qlearningobjective}{}
+
+}
+
+%% To HIDE TAGS set this value to 0:
+\def\showtags{0}
+%%%%%%%%%%%%%%%%
+\ifcsname showtags\endcsname \else \def\showtags{1} \fi
+% Default to an empty tags environ.
+\NewEnviron{tags}{}{}
+\if\showtags 1
+% Otherwise, include solutions as below.
+\RenewEnviron{tags}{
+    \fbox{
+    \leavevmode\color{blue}\ignorespaces
+    \textbf{TAGS:} \texttt{\url{\BODY}}
+    }
+    \vspace{-.5em}
+}{}
+\fi
+
+\newtcolorbox[]{answer_box}[1][]{
+    % breakable,
+    fit,
+    enhanced,
+    % nobeforeafter,
+    colback=white,
+    title=Your Answer,
+    sidebyside align=top,
+    box align=top,
+    #1
+}
+
+%\pagestyle{fancyplain}
+\lhead{\hwName{}
+}
+\rhead{\courseNum}
+\cfoot{\thepage{} of \numpages{}}
+
+\title{\textsc{\hwNum}
+\\
+\textsc{\hwTopic}
+\thanks{Compiled on \today{} at \currenttime{}}\\
+\vspace{1em}
+} % Title
+
+
+\author{\textsc{\large \courseNum{} \courseName{}}\\
+\courseUrl
+\vspace{1em}\\
+\ifdefempty{\outDate}{}{  OUT: \outDate \\ }
+\ifdefempty{\dueDate}{}{  DUE: \dueDate \\ }
+  TAs: \taNames{}
+}
+
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful commands for typesetting the questions %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This command will allow long \lstinline{} text to wrap automatically.
+\sloppy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document configuration %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't display a date in the title and remove the white space
+\predate{}
+\postdate{}
+\date{}
+
+% Don't display an author and remove the white space
+%\preauthor{}
+%\postauthor{}
+
+% Question type commands
+\newcommand{\sall}{\textbf{Select all that apply: }}
+\newcommand{\sone}{\textbf{Select one: }}
+\newcommand{\tf}{\textbf{True or False: }}
+
+
+
+
+% Abhi messing around with examdoc
+\qformat{\textbf{{\Large \thequestion \; \; \thequestiontitle \ (\totalpoints \ points)}} \hfill}
+\renewcommand{\thequestion}{\arabic{question}}
+\renewcommand{\questionlabel}{\thequestion.}
+
+\renewcommand{\thepartno}{\thequestion.\arabic{partno}}
+%\renewcommand{\partlabel}{\thequestion.\thepartno.}
+\renewcommand{\partlabel}{\thepartno.}
+
+% not working: \renewcommand{\subpartlabel}{(\thequestion.\thepartno.\thesubpart)}
+% Commented after adding \question.\thepartno.
+%\renewcommand{\partshook}{\setlength{\leftmargin}{0pt}}
+
+\renewcommand{\thesubpart}{\thepartno.\alph{subpart}}
+\renewcommand{\subpartlabel}{\thesubpart.}
+
+\renewcommand{\thesubsubpart}{\thesubpart.\roman{subsubpart}}
+\renewcommand{\subsubpartlabel}{\thesubsubpart.}
+
+% copied from stack overflow, as all good things are
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+% quite possibly the worst workaround i have made for this class
+\newcommand{\sectionquestion}[1]{
+\titledquestion{#1}
+\invisiblesection{#1}
+~\vspace{-1em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New Environment for Pseudocode          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Python style for highlighting
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+morekeywords={self},              % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false
+}}
+
+
+% Python environment
+\lstnewenvironment{your_code_solution}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+\begin{document}
+\maketitle 
+
+\newcommand \maxsubs {10 }
+\section*{Instructions}
+\begin{itemize}
+
+\item \textbf{Collaboration Policy}: Please read the collaboration policy in the syllabus.
+\item\textbf{Late Submission Policy:} See the late submission policy in the syllabus.
+\item\textbf{Submitting your work:} You will use Gradescope to submit
+  answers to all questions\ifthenelse{\equal{\homeworktype}{\string written}}{}{ and code}. 
+
+\begin{itemize}
+    
+    % IF NOT USING TEMPLATE: 
+    % \item \textbf{Written:} You will submit your completed homework as a PDF to Gradescope. For each problem, please clearly indicate the question number (e.g. 3.2). Submissions can be handwritten, but must be clearly legible; otherwise, you will not be awarded marks.   Alternatively, submissions can be written in \LaTeX{}. You may use the \LaTeX{} source of this assignment (included in the handout .zip) as your starting point. For multiple choice / select all questions, simply write the letter(s) (e.g. A, B, C) corresponding to your chosen answer.
+    % IF USING TEMPLATE: 
+    \item \textbf{Written:} You will submit your completed homework as a PDF to Gradescope. Please use the provided template. Submissions can be handwritten, but must be clearly legible; otherwise, you will not be awarded marks. Alternatively, submissions can be written in \LaTeX{}. Each answer should be within the box provided. 
+    %If you do not follow the template or your submission is misaligned, your assignment may not be graded correctly by our AI assisted grader. 
+    If you do not follow the template, your assignment may not be graded correctly by our AI assisted grader and there will be a \textbf{\textcolor{red}{2\% penalty}} (e.g., if the homework is out of 100 points, 2 points will be deducted from your final score).
+    
+    \ifdefempty{\overleafUrl}{}{
+    \item \textbf{\LaTeX{} Source:} \overleafUrl
+    }
+
+    \ifthenelse{\equal{\homeworktype}{\string written}}{}{
+    \item \textbf{Programming:} You will submit your code for programming questions to Gradescope. There is no autograder. We will examine your code by hand and may award marks for its submission.
+    }{}
+   
+  \end{itemize}
+  
+\ifthenelse{\equal{\homeworktype}{\string written}}{}{\item\textbf{Materials:} The data that you will need in order to complete this assignment is posted along with the writeup and template on the course website.}
+
+\end{itemize}
+
+\begin{center}
+    \pointtable[v][questions]
+\end{center}\clearpage
+
+%\input{../shared/instructions_for_specific_problem_types.tex}
+%\clearpage
+\begin{questions}
+
+\clearpage
+\sectionquestion{Convolutional Neural Networks}
+
+\begin{parts}
+    
+\part Suppose we define a convolution layer that takes as input a 3D tensor $\xv \in \Rb^{C \times N_{h} \times N_{w}}$ which is indexed as $x_{c,i,j}$ where $c$ selects the pixel channel, $i$ selects the row of the pixel, and $j$ selects the column of the pixel. 
+The convolution parameters $\thetav \in \Rb^{C \times K_h \times K_w}$ are indexed in the same way. $\theta_0 \in \Rb$ is the intercept/bias parameter.
+The output 3D tensor has just a single channel, $\yv \in \Rb^{1 \times N_{h} \times N_{w}}$.
+\begin{align}
+    y_{1,h,w} =&\, \theta_0 + \sum_{c=1}^{C} \sum_{i=1}^{K_h} \sum_{j=1}^{K_w} \theta_{c,i,j} x_{c,m,n}, \label{eq:conv1} \\
+    &  \text{where } 
+    m = h - \left\lfloor \frac{K_h}{2} \right\rfloor + (i-1) \text{ and } 
+    n = w - \left\lfloor \frac{K_w}{2} \right\rfloor + (j-1) \label{eq:conv2} \\
+    & \forall h \in \{1, \ldots, N_h\}, w \in \{1,\ldots,N_w\}  \label{eq:conv3}
+\end{align}
+where we have written $m$ and $n$ as functions of $w, K_h, K_w, i, j$ for notational convenience.
+
+\begin{subparts}
+
+\subpart[3] \textbf{Short answer:} The valid indices for $x_{c,m,n}$ are $c \in \{1,\ldots,C\}$, $m \in \{1,\ldots,N_h\}$, $n \in \{1,\ldots,N_w\}$. So, as defined, this convolution layer indexes into some values $x_{c,m,n}$ that do not exist! Let's call these non-existent pixels ``hallucinated pixels'' and assume they take value $0$. How many \textit{columns} of hallucinated pixels are needed on the left $p_l$ and the right $p_r$? How many \emph{rows} of hallucinated pixels are need on the top $p_t$ and the bottom $p_b$? Report your answer by defining $p_l, p_r, p_t, p_b$.
+    \begin{answer_box}[title=,height=3cm, width=14cm]
+    \end{answer_box}
+
+
+\subpart[3] \textbf{Short answer:} Now suppose we create a new input 3D tensor $\xv' \in \Rb^{C  \times (N_{h}+p_b+p_t) \times (N_{w}+p_l+p_r)}$ by explicitly adding $p_l$ columns on the left of $\xv$, $p_r$ columns on the right, $p_t$ rows on top, and $p_b$ rows on bottom---all the newly added columns/rows have value $0$. These rows/columns are called \emph{padding}.
+Define a new convolution layer by rewriting Equations \eqref{eq:conv1},\eqref{eq:conv2},\eqref{eq:conv3} so that the input is $\xv'$, the resultant output tensor $\yv'$ still has shape $\Rb^{1 \times N_h \times N_w}$, and we only index into valid positions of $\xv'$.  The values of $\yv'$ should be the same as those that would have been in $\yv$ if hallucinated pixels were allowed in our original formulation.
+    \begin{answer_box}[title=,height=5cm, width=14cm]
+    \end{answer_box}
+
+
+    
+\end{subparts}
+
+
+\end{parts}
+
+
+\clearpage
+\sectionquestion{Encoder-only Transformers}
+
+\begin{parts}
+
+\part[2] \textbf{Drawing:} Suppose we feed a sentence $w_1, \ldots, w_N$ of length $N$ into a \emph{decoder-only} Transformer model (aka. Transformer LM), which defines a distribution $p(w_1, \ldots, w_N)$. Draw a directed graphical model representing this probability distribution. Your drawing must include exactly $N$ nodes, one node for each word $w_n$ in the sentence. 
+    \begin{answer_box}[title=,height=4cm, width=14cm]
+    \end{answer_box}
+
+
+\part Suppose we feed a sentence $w_1, \ldots, w_N$ of length $N$ into an \emph{encoder-only} Transformer model, to obtain one output layer embedding $\hv_n \in \Rb^D$ per word $w_n$. We then compute a score vector $\sv_n$ per word $w_n$ as follows:
+\begin{align*}
+    \sv_n = \exp(\Wv \hv_n + \bv), \quad \forall n \in \{1, \ldots, N\}
+\end{align*}
+where $\Wv \in \Rb^{V \times D}$ and $\bv \in \Rb^V$, and $V$ is the size of your output vocabulary. Assume your output vocabulary is the set of possible part-of-speech tags for the words in the input language, e.g. for English input, the parts of speech are nouns, verbs, adjectives, etc. Each tag is represented by an integer $1, \ldots, V$. 
+\begin{subparts}
+
+\subpart[3] Use the score vectors $\sv_t$ to define a conditional probability distribution over a sequence of part-of-speech tags $t_1, \ldots, t_N$ given the words: 
+\begin{align*}
+    p(t_1, \ldots, t_N \mid w_1, \ldots, w_N) = \cdots
+\end{align*}
+The distribution you define must be \emph{globally} normalized, not locally normalized.
+    \begin{answer_box}[title=,height=4cm, width=14cm]
+    \end{answer_box}
+
+\clearpage
+
+\subpart[3] \textbf{Drawing:} Draw the corresponding factor graph for this probability distribution. Your drawing must include exactly $2N$ nodes, one node for each word $w_n$ in the sentence and one for each tag $t_n$. 
+    \begin{answer_box}[title=,height=4cm, width=14cm]
+    \end{answer_box}
+    
+\end{subparts}
+
+\end{parts}
+
+\clearpage
+\sectionquestion{Generative Adversarial Network (GAN)}
+
+\begin{parts}
+
+\part Suppose we want to define a GAN-inspired model for inpainting grayscale images. Each original image is a matrix $\xv \in (0,1)^{N_w \times N_h}$ with scalars between $0$ and $1$ exclusive. The image is accompanied by a binary pixel mask $\mv \in \{0,1\}^{N_w \times N_h}$, where $m_{ij}=1$ indicates that the pixel should be masked out and $m_{ij}=0$ indicates the pixel should be left intact. Our model is a variant of U-Net that takes in an input image $\xv$ and and a mask $\mv$ and returns a reconstructed image $\xv'$ with the masked pixels filled in by the model, $\xv' = g_{\theta}(\xv, \mv)$. 
+You decide to train your model by using two loss functions in combination.
+
+\begin{subparts}
+
+\subpart[2] \textbf{Short answer:} Define a squared error loss $\ell_{mse}(\theta)$ for one example $(\xv, \mv)$ that, when minimized, encourages the masked out pixels of the original image to match the reconstructed pixels output by the model. To be safe, your definition must ensure that the masked out pixels are never visible to $g_{\theta}$.
+    \begin{answer_box}[title=,height=2cm, width=14cm]
+    \end{answer_box}
+    
+\subpart[2] \textbf{Short answer:} Now suppose we have a discriminator $d_{\phi}(\xv)$ that returns the probability that $\xv$ is a real image and not from the generator $g_{\theta}$. How could your objective function above be combined with GAN-style training to train the generator so that it is effective at inpainting, and the discriminator so that it is effective at distinguishing real from inpainted images? Briefly describe a GAN-style objective $\ell_{gan}(\phi, \theta)$ for one example $(\xv, \mv)$ and your training algorithm.
+    \begin{answer_box}[title=,height=6cm, width=14cm]
+    \end{answer_box}
+    
+\subpart[1] \textbf{Short answer:} Describe one possible disadvantage of training with only $\ell_{mse}(\theta)$ as compared to using this combined training approach.
+    \begin{answer_box}[title=,height=4cm, width=14cm]
+    \end{answer_box}
+    
+    
+\end{subparts}
+
+\end{parts}
+
+
+\clearpage
+\sectionquestion{Understanding Diffusion Models}\label{sec:problem_5}
+\uplevel{\subsection*{Introduction}} 
+Diffusion models are revolutionizing how we generate data, achieving impressive results in text-conditioned image generation. In this section, we will study the variational interpretation of diffusion models.
+
+Given observed samples $p(\xv)$
+from a distribution of interest, the goal of a generative model is to learn to model its true data distribution.  Once learned, we can generate new samples from our approximate model at will. In many situations, we can imagine the data $\xv$ we see as coming from a latent representation $\boldsymbol{z}$ responsible for capturing abstract properties that we can't directly observe. Mathematically, we can imagine the latent variables and the data we observe as modeled by a joint distribution $p(\xv, \boldsymbol{z})$. Directly computing and maximizing the likelihood $p(\xv)$ is difficult. Instead, we maximize a lower bound: 
+\begin{equation}
+   \log  p(\xv) \ge \mathbb{E}_{q_\phi(\boldsymbol{z}\mid \xv)}\left[\log \frac{p_\theta(\xv,\boldsymbol{z})}{q_\phi(\boldsymbol{z}\mid \xv)}\right].
+    \label{eq:elbo}
+\end{equation}
+$q_\phi(\boldsymbol{z}\mid \xv)$ is called encoder and can be any distribution with parameters $\phi$.
+
+Diffusion Probabilistic Models \href{https://arxiv.org/pdf/2006.11239.pdf}{(Ho et al., 2020)} can be viewed as a sequence, of length $T$, of latent variables which all have the same dimensionality with the data:
+
+\begin{align}
+p(\xv_{0:T}) &= p(\xv_T) \times \prod_{t=1}^{T}p_{\theta}(\xv_{t-1} \mid \xv_t),
+\label{eq:reverse}
+\end{align}
+where $p(\xv_0)$ is the data we observe, $\xv_{1:T}$ are the latent variables of the model, and $\xv_T \sim \mathcal{N}(\boldsymbol{0},\boldsymbol{I})$. Equation~\eqref{eq:reverse} is also called the reverse process of the diffusion model.
+
+The encoder or forward process of a diffusion model is:
+\begin{align}
+q(\xv_{1:T}\mid \xv_0) &=  \prod_{t=1}^{T}q(\xv_{t} \mid \xv_{t-1}).
+\label{eq:forward}
+\end{align}
+The mean and variance of the encoder of a diffusion model are predefined. Therefore, the encoder of Equation \ref{eq:forward} does not have any learnable parameters $\phi$.
+
+The ELBO (Equation \ref{eq:elbo}) for the diffusion model described by Equations \ref{eq:reverse}, \ref{eq:forward} becomes:
+
+\begin{equation}
+   \log p(\xv) \ge \mathbb{E}_{q(\xv_{1:T}\mid \xv_0)}\left[\log \frac{p_\theta(\xv_{0:T})}{q(\xv_{1:T}\mid \xv_0)}\right].
+    \label{eq:elbo_diffusion}
+\end{equation}
+
+\clearpage
+
+\uplevel{\subsection*{ELBO surgery}} 
+
+\begin{parts}
+\part [5] Prove that we can break down Equation \eqref{eq:elbo_diffusion} as:
+
+\begin{equation}
+   \log p(\xv) \ge \mathbb{E}_{q(\xv_1 \mid \xv_0)}[\log p_\theta (\xv_0 \mid \xv_1) ] + \sum_{t=1}^{T-1} \underbrace{\mathbb{E}_{q(\xv_{t-1}, \xv_t, \xv_{t+1} \mid \xv_0)}\left[ \log \frac{p_\theta(\xv_t \mid \xv_{t+1})}{q(\xv_t \mid  \xv_{t-1})}\right]}_{\mathcal{L}_t}+ C,
+\label{eq:elbo_breakdown}
+\end{equation}
+where $C$ is a constant term that does not depend on $\theta$.
+
+\begin{answer_box}[title=,height=12cm, width=15cm]
+\end{answer_box}
+
+
+\clearpage
+\part [2] Can you explain what is the effect of the term ${\mathcal{L}_t}$ on the reverse process $p_\theta(\xv_t \mid \xv_{t+1})$ of the diffusion model when we try to maximize the ELBO in Equation~\eqref{eq:elbo_breakdown} and why? When is this term minimized? %If we were omitting this term from the objective function (we were maximizing only the first term of Equation~\ref{eq:elbo_breakdown}), how would the quality of novel images generated by the model be impacted?
+
+\begin{answer_box}[title=,height=8cm, width=15cm]
+\end{answer_box}
+
+
+
+\uplevel{\subsection*{Image Diffusion}} 
+
+
+%\begin{parts}
+\part[2]
+
+Assume the encoder of the diffusion model at step $t$ is given by:
+\begin{equation}
+q(\xv_t \mid  \xv_{t-1})=\mathcal{N}(\xv_t;\sqrt{\alpha}_t \xv_{t-1},(1-{\alpha}_{t})  \boldsymbol{I}), \ \alpha_{t}>0.
+\label{eq:encoder}
+\end{equation}
+Describe a way to obtain a sample of the diffusion process at timestep $t=\tau$. Also, state the time complexity of your algorithm as a function of $\tau$.
+\begin{answer_box}[title=,height=6cm, width=15cm]
+\end{answer_box}
+
+\clearpage
+\part[3]\label{sec:rep} \textbf{Reparameterization trick.} The reparameterization trick is a powerful mathematical tool that allows us to generate samples of any Gaussian distribution $\xv \sim \mathcal{N}(\boldsymbol{\mu},\sigma^2 \boldsymbol{I})$ by sampling the standard normal normal distribution using the following transformation:
+
+
+
+\begin{align}
+    \xv &= \boldsymbol{\mu} + \sigma \boldsymbol{\epsilon}, \text{ where } \boldsymbol{\epsilon} \sim \mathcal{N}(\boldsymbol{0}, \boldsymbol{I}).
+    \label{eq:reparametrization_trick}
+\end{align}
+
+Use the reparameterization trick (Equation~\ref{eq:reparametrization_trick}) to show that we can write the encoder of Equation~\ref{eq:encoder} as:
+\begin{align}
+q(\xv_t \mid  \xv_{0})=\mathcal{N}(\xv_t;\sqrt{\bar{\alpha}}_t \xv_{0},(1-\bar{\alpha}_{t})  \boldsymbol{I}), \text{ where } \bar{\alpha}_t=\prod_{i=1}^{t} \alpha_i.
+\label{eq:encoder_2}
+\end{align}
+
+\begin{answer_box}[title=,height=8cm, width=15cm]
+\end{answer_box}
+
+
+\part[2]
+Describe a way to obtain a sample of the forward diffusion process at timestep $t=\tau$ using the formulation of Equation~\ref{eq:encoder_2}. Also, state the time complexity of your algorithm as a function of $\tau$.
+
+\begin{answer_box}[title=,height=4cm, width=15cm]
+\end{answer_box}
+
+\uplevel{\subsection*{Image Denoising}}\label{sec:denoising}
+It can be proved (see Appendix A by \href{https://arxiv.org/pdf/2006.11239.pdf}{Ho et al., 2020}) that Equation~\ref{eq:elbo_breakdown} can be rewritten:
+\begin{equation}
+   \log p(\xv) \ge \mathbb{E}_{q(\xv_1 \mid \xv_0)}[\log p_\theta (\xv_0 \mid \xv_1) ] - \sum_{t=2}^{T} \underbrace{\mathbb{E}_{q( \xv_t \mid \xv_0)}\left[D_{KL} \left(q(\xv_{t-1} \mid \xv_{t}, \xv_{0}), p_\theta(\xv_{t-1} \mid \xv_{t})\right)\right]}_{\mathcal{L'}_t}+ C,
+\label{eq:elbo_denoising}
+\end{equation}
+ 
+\part [3] 
+The terms $q(\xv_{t-1} \mid \xv_{t}, \xv_{0})$ in Equation~\ref{eq:elbo_denoising} can act as a ground-truth signal, since it defines how to denoise a noisy image $\xv_t$
+with access to what the final, completely denoised image $\xv_0$ should be.
+
+Prove that:
+\begin{align}
+q(\xv_{t-1} \mid \xv_{t}, \xv_{0}) & =\frac{q(\xv_{t} \mid \xv_{t-1})q(\xv_{t-1} \mid  \xv_{0})}{q(\xv_{t} \mid  \xv_{0})}.
+\label{eq:posterior_forward}
+\end{align}
+
+\begin{answer_box}[title=,height=8cm, width=15cm]
+\end{answer_box}
+
+\part [1] 
+The term $\mathcal{L}'_t$ in Equation~\ref{eq:elbo_denoising} is a denoising matching term. When we train $\theta$ to maximize the ELBO of Equation~\ref{eq:elbo_denoising}, can you explain what is the effect of term  $\mathcal{L}'_t$ on the denoising step $p_\theta(\xv_{t-1} \mid \xv_{t})$?
+
+\begin{answer_box}[title=,height=4cm, width=15cm]
+\end{answer_box}
+
+% \part[2]
+% Using the reparameterization trick (Equation~\ref{eq:reparametrization_trick}), describe qualitatively (no mathematical derivations are required), 
+
+%\part [5] 
+
+% It can be proved that $q(\xv_{t-1} \mid \xv_{t}, \xv_{0})$ is Gaussian: 
+% \begin{equation}
+% q(\xv_{t-1} \mid \xv_{t}, \xv_{0}) = \mathcal{N}(\xv_{t-1}; \tilde{\boldsymbol{\mu}_q}, \tilde{\sigma}_q)
+% \end{equation}
+
+% Let The terms $\matcal{L'}_t$ are also called .
+
+\end{parts}
+
+
+
+
+
+% \part[0] TODO: This question should be all about the mechanics of the algorithm. The hope is that if they can "implement" diffusion on paper, then they can translate it more easily to code.
+
+
+
+\clearpage
+\sectionquestion{Programming: Diffusion Models}
+\uplevel{\subsection*{Introduction}} 
+
+In this section, you will dive into the practical aspects of implementing the diffusion model we saw in Problem~\ref{sec:problem_5}. Throughout this programming assignment, you will gain hands-on experience into state-of-the-art techniques for image generation and denoising tasks.
+%you will explore the implementation and assess its impact on a small dataset. By understanding the mechanisms behind diffusion processes and their application in probabilistic modeling, 
+%DDPM is at the forefront of probabilistic modeling, utilizing diffusion processes to generate high-quality samples and effectively tackle denoising tasks.
+
+It's worth noting that, due to limited computing resources, the dataset provided for this exercise is only a subset of the original dataset. Therefore, the quality of the generated images may not meet expectations. Nevertheless, your experimentation with DDPM will offer valuable insights into its capabilities and potential for broader applications in machine learning and data analysis. Upon completion, you'll have acquired practical experience in building and leveraging DDPMs, opening doors to a deeper understanding of diffusion models.
+
+\uplevel{\subsection*{Dataset}} The dataset for this homework is the Animal Faces-HQ dataset \href{https://github.com/clovaai/stargan-v2/blob/master/README.md#animal-faces-hq-dataset-afhq}{(AFHQ)}, consisting of 15,000 high-quality images at $512\times512$ resolution. The dataset includes three domains of cat, dog, and wildlife, and in our assignment you \textbf{only need to use cat} images to reduce the computation complexity.
+
+
+
+\uplevel{\subsection*{Starter Code}}
+
+The main structure of the files is organized as follows:
+\begin{verbatim}
+hw2/
+   data/
+   diffusion.py
+   main.py
+   requirements.txt
+   run_in_colab.ipynb
+   trainer.py
+   unet.py
+\end{verbatim}
+
+Here is what you will find in each file:
+\begin{enumerate}
+    
+    \item \lstinline{data}: Contains the AFHQ dataset.
+    
+    \item \lstinline{diffusion.py}: Constructs the diffusion model, including the forward process, backward process, and scheduler, which you will implement. (Hint: This is the \textbf{only} file you need to modify. Locations in the code where changes ought to be made are marked with a \textbf{TODO}.)
+
+    \item \lstinline{main.py}: Serves as the main entry point for training and evaluating your diffusion model. Run it using the command \lstinline{python main.py}. Append flags to this command to adjust the diffusion model's configuration.
+    
+    \item \lstinline{requirements.txt}: Lists the packages that need to be installed for this assignment.
+    
+    \item \lstinline{run_in_colab.ipynb}: Provides command lines to train and evaluate your diffusion model in Google Colab.
+    
+    \item \lstinline{trainer.py}: Provides code for training and evaluating the diffusion model.
+    
+    \item \lstinline{unet.py}: Contains code for the U-Net network, which aims to model the denoising function for the diffusion model.
+    
+\end{enumerate}
+
+
+\uplevel{\subsection*{Flags}}
+
+All the parameters printed in the config can be modified by passing flags to \lstinline{main.py}. Table \ref{table:flag} contains a list of flags you may find useful while implementing HW2. You can change other parameters as well in a similar manner.
+
+% \lstinline{mycode} inside tabulars breaks, so use \lstinline|mycode| instead. 
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{0.4\linewidth}|p{0.6\linewidth}|}
+\hline
+Configuration Parameter & Example Flag Usage \\ \hline
+Model image size &  \lstinline|--image_size 32|  \\ \hline
+Model batch size &  \lstinline|--batch_size 32| \\ \hline
+Model data domain of AFHQ dataset &  \lstinline|--data_class cat| \\ \hline
+Directory where the model is stored &  \lstinline|--save_folder ./results/| \\ \hline
+Path of a trained model &  \lstinline|--load_path ./results/model.pt| \\ \hline
+Directory from which to load dataset &  \lstinline|--data_path ./data/train/| \\ \hline
+Number of iterations to train the model &  \lstinline|--train_steps 10000| \\ \hline
+Number of steps of diffusion process, $T$ &  \lstinline|--time_steps 300| \\ \hline
+Number of output channels of the first layer in U-Net &  \lstinline|--unet_dim 16| \\ \hline
+Learning rate in the training &  \lstinline|--learning_rate 1e-3| \\ \hline
+Frequency of periodic save, sample and (optionally) FID calculation &  \lstinline|--save_and_sample_every 1000| \\ \hline
+Enable FID calculation &  \lstinline|--fid| \\ \hline
+Enable visualization &  \lstinline|--visualize| \\ \hline
+
+\end{tabular}
+\caption{Useful flags for \lstinline{main.py}}
+\label{table:flag}
+\end{table}
+
+\uplevel{\subsection*{Command Line}}
+
+We recommend conducting this homework on Colab. Colab provides a free T4 GPU for code execution, albeit with a time limitation that may result in slower training. In the event of GPU depletion on Colab, options include waiting for GPU recovery, switching Google accounts, or purchasing additional GPU resources.
+
+To facilitate code execution, utilize the provided command lines, which are also available in the "run\_in\_colab.ipynb" file. Ensure to prepend "\%" before the "cd" command and include "!" before other commands when working on Colab.
+
+\lstset{breaklines=true}
+Download AFHQ dataset:
+% \begin{lstlisting}
+% mkdir -p ./data
+% wget -N https://www.dropbox.com/s/vkzjokiwof5h8w6/afhq_v2.zip?dl=0 -O ./data/afhq_v2.zip
+% unzip -q ./data/afhq_v2.zip -d ./data
+% \end{lstlisting}
+
+\begin{lstlisting}
+mkdir -p ./data
+wget -N https://cmu.box.com/shared/static/5iydd9zn3ednl27rcq0qud2scq7839ym -O ./data/afhq_v2.zip
+unzip -q ./data/afhq_v2.zip -d ./data
+\end{lstlisting}
+
+Install required packages:
+\begin{lstlisting}
+pip install -r requirements.txt
+\end{lstlisting}
+
+
+Tips: Consider validating your implementation on smaller image sizes, batch sizes, and fewer training steps to expedite the training process.
+\begin{lstlisting}
+python main.py \
+    --data_path ./data/train \
+    --save_folder path_to_save_folder \
+    --time_steps 50 \
+    --train_steps 10000 \
+    --image_size 32 \
+    --batch_size 32 \
+    --learning_rate 1e-3 \
+    --unet_dim 16
+\end{lstlisting}
+
+Visualize the diffusion process:
+\begin{lstlisting}
+python main.py \
+    --data_path ./data/train/ \
+    --load_path path_to_saved_model \
+    --save_folder path_to_save_folder \
+    --time_steps 50 \
+    --train_steps 10000 \
+    --image_size 32 \
+    --batch_size 32 \
+    --learning_rate 1e-3 \
+    --unet_dim 16 \
+    --visualize
+\end{lstlisting}
+
+
+\uplevel{\subsection*{Diffusion}}
+
+    In this problem, you will implement Denoising Diffusion Probabilistic Models (DDPM) \href{https://arxiv.org/pdf/2006.11239.pdf}{(Ho et al., 2020)}, in the \lstinline{Diffusion} class in \lstinline{diffusion.py}. 
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=.9\linewidth]{fig/diffusion_model.png}
+        \caption{The Markov chain of forward (reverse) diffusion process of generating a sample by slowly adding (removing) noise.}
+        \label{fig:diffusion}
+    \end{figure}
+
+    % \textbf{Probabilistic Model:} TODO
+
+    \textbf{Forward Process (Noise $\leftarrow$ Image):} 
+    In this problem, $\xv_0 \sim q(\xv)$ corresponds to the pixels of the image. As we saw in Problem~\ref{sec:problem_5}, the \textit{forward diffusion} process  sequentially applies a small amount of Gaussian noise to the data sample $\xv_0$ for \( T \) steps, producing a sequence of noisy samples \( \xv_1, \ldots, \xv_T \).
+    %Given a data point (an image in our case) sampled from a real data distribution \( \xv_0 \sim q(\xv) \), let us define a \textit{forward diffusion} process in which we sequentially apply a small amount of Gaussian noise to the sample in \( T \) steps, producing a sequence of noisy samples \( \xv_1, \ldots, \xv_T \), as shown in Fig.~\ref{fig:diffusion}. The step sizes are controlled by a variance schedule \( \{\alpha_t \in (0,1)\}_{t=1}^T \).
+    In Equation~\ref{eq:encoder}, we derived the diffusion step:
+    \begin{equation}
+        q(\xv_t | \xv_{t-1}) = \mathcal{N}(\xv_t; \sqrt{\alpha_t}\xv_{t-1}, 1-\alpha_t \boldsymbol{I}),
+    \end{equation}
+    where $\xv_t$ is the image after $t$ diffusion steps, $\boldsymbol{I}$ is the identity matrix.
+    The step sizes are controlled by a variance schedule \( \{\alpha_t \in (0,1)\}_{t=1}^T \) such that the data sample \( \xv_0 \) gradually loses its distinguishable features as step \( t \) becomes larger. This is shown in Fig.~\ref{fig:diffusion}.
+    % Eventually when \( T \rightarrow \infty \), \( x_T \) is equivalent to an isotropic Gaussian distribution.
+    \par
+
+    In Problem \ref{sec:rep}, we used the reparameterization trick to sample \( \xv_t \) directly from \(\xv_0 \):
+    % The above equation depends on \( \xv_{t-1} \) for each \( \xv_t \) which implies that to get the noised output at time \( t \), we need the noised output at \( t - 1 \). However, we could use a reparameterization trick to generate any arbitrary noised input \( \xv_t \) directly, just given our initial image \( \xv_0 \):
+    % \begin{equation}
+    %     \begin{aligned}
+    %         q(\xv_t | \xv_0) = \mathcal{N}(\xv_t; \sqrt{\bar{\alpha_t}}\xv_0, (1 - \alpha_t)I), \text{ where } \bar{\alpha_t} = \prod_{i=1}^{t} \alpha_i.
+    %     \end{aligned}
+    % \end{equation}\label{eq:hw2_forward}
+    % Therefore, we could sample from \( q(\xv_t | \xv_0) \) to produce
+    \begin{equation}
+        \xv_t = \sqrt{\bar{\alpha_t}}\xv_0 + \sqrt{1 - \alpha_t} \epsilonv, \text{where } \epsilonv \sim \mathcal{N}(0,I).
+        \label{eq:xt}
+    \end{equation}
+    %where $\epsilonv \sim \mathcal{N}(0,I)$.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \textbf{Noise Schedule}: In this assignment, we use the improved cosine-based variance schedule of (Nichol \& Dhariwal, 2021):
+    \begin{equation}
+        \begin{aligned}
+            \alpha_t = \text{clip}\left(\frac{\bar{\alpha}_t}{\bar\alpha_{t-1}}, 0.001, 1\right), \bar{\alpha}_t = \frac{f(t)}{f(0)}, \\
+            \text{where } f(t) = \cos\left(\frac{t/T + s}{1 + s} \cdot \frac{\pi}{2}\right)^2,
+        \end{aligned}
+    \end{equation}
+    and we set $s=0.008$ to prevent $\alpha_t$ from becoming too large when close to $t = 0$.
+    
+    \textbf{Reverse Process (Noise $\rightarrow$ Image):} The reverse model $p_\theta(\xv_{t-1}|\xv_t)$ (Fig.~\ref{fig:diffusion}) is trained to maximize the lower bound of Equation~\ref{eq:elbo_denoising}.
+    
+    We note that the forward process $q(\xv_t | \xv_{t-1})$  does not contain any trainable parameters.
+    In Equation~\ref{eq:posterior_forward}, we did the first step to compute the term $q(\xv_{t-1} | \xv_t, \xv_0)$ that appears in our objective function (Equation~\ref{eq:elbo_denoising}). In fact, we have already derived the three terms of Equation~\ref{eq:posterior_forward}. In particular, $q(\xv_{t} \mid \xv_{t-1})$ is given by Equation~\ref{eq:encoder}. From Problem \ref{sec:rep}, we also know that:
+\begin{equation}
+    q(\xv_t \mid  \xv_{0})=\mathcal{N}(\xv_t;\sqrt{\bar{\alpha}}_t \xv_{0},(1-\bar{\alpha}_{t})  \boldsymbol{I}), \text{ where } \bar{\alpha}_t=\prod_{i=1}^{t} \alpha_i.
+\label{eq:encoder_3}
+\end{equation}
+    %a denoising network $\epsilon_\theta$ is employed, which utilizes the noised image and its timestamp to predict the noise $\epsilonv_t = \epsilon_\theta(\xv_t, t)$ introduced during the forward process.
+    \par
+    This derivation can be modified to also yield the Gaussian parameterization describing   $q(\xv_{t-1} \mid  \xv_{0})$. After tedious numerical combinations to combine the three Gaussian terms in Equation~\ref{eq:posterior_forward}, we obtain:
+    \begin{equation}
+        \begin{aligned}
+           q(\xv_{t-1} | \xv_t, \xv_0) &= \mathcal{N}(\xv_{t-1}; \tilde{\muv}_t(\xv_t, \xv_0),\tilde{\boldsymbol{\Sigma}}_t)   \text{, where: } \\
+              \tilde{\muv}_t & = {\frac{\sqrt\alpha_t(1 - \bar\alpha_{t-1})}{1 - \bar \alpha_t}} \xv_t + {\frac{\sqrt{\bar\alpha_{t-1}}(1-\alpha_t)}{1 - \bar\alpha_t}} \xv_0, \\
+            \tilde{\boldsymbol{\Sigma}}_t & = \frac{1 - \bar \alpha_{t-1}}{1 - \bar \alpha_t} (1-\alpha_t) \boldsymbol{I} = \sigma_t^2 \boldsymbol{I}.
+        \end{aligned}
+    \end{equation}
+
+    We have therefore shown that at each step, 
+ $q(\xv_{t-1} | \xv_t, \xv_0)$ is normally distributed, with mean $\tilde{\muv}_t(\xv_t, \xv_0)$
+ that is a function of $\xv_t$ and $\xv_0$, and variance $\tilde{\boldsymbol{\Sigma}}_t$ as a function of $\bar\alpha_{t}$ coefficients. In order to match approximately the denoising transition step $p_\theta(\xv_{t-1}|\xv_t)$
+ to ground-truth denoising transition step $q(\xv_{t-1} | \xv_t, \xv_0)$
+ as closely as possible, we can also model it as a Gaussian. Furthermore, since $\tilde{\boldsymbol{\Sigma}}_t$ is a priori known during training, we can immediately construct the variance of the approximate denoising transition step to also be 
+$\tilde{\boldsymbol{\Sigma}}_t$. Therefore, to define $p_\theta(\xv_{t-1}|\xv_t)$, we only need to find its mean $\boldsymbol{\mu}_\theta(\xv_t, t)$. $\boldsymbol{\mu}_\theta(\xv_t, t)$ is implemented by a neural network that only takes $\xv_t$ as an input, and not $\xv_0$. This is because $p_\theta(\xv_{t-1}|\xv_t)$ is conditioned only on $\xv_t$ and not $\xv_0$.
+    \par
+Under these assumptions, one can show that minimizing the KL divergence in Equation~\ref{eq:elbo_denoising} boils down to learning a neural network to predict the original ground truth image $\xv_0$ from an arbitrarily noisified version of it $\xv_t$. 
+
+Going one step further, one can show that this is equilavent to training a neural network $\boldsymbol{\epsilon}_\theta(\xv_t,t)$ that learns to predict the source noise $\boldsymbol{\epsilon}$
+ that determines $\xv_t$
+ from $\xv_0$. This can be understood by rearranging the terms in Equation~\ref{eq:xt}: 
+\begin{equation}
+        \xv_0 = \frac{1}{\sqrt{\bar{\alpha}_t}} \left( \xv_t - \sqrt{1 - \bar{\alpha}_t} \epsilonv \right).
+\end{equation}
+
+
+
+    % Also, by reversing Eq.~\ref{eq:hw2_forward}, we could represent estimated $\hat x_0$ from $x_t$ and predicted noise $\epsilon_t$:
+    % \begin{equation}
+    %     \hat \xv_0 = \frac{1}{\sqrt{\bar{\alpha}_t}} \left( \xv_t - \sqrt{1 - \bar{\alpha}_t} \epsilonv_t \right).
+    % \end{equation}
+    %  By iteratively applying this process:
+    % \begin{equation}
+    %     \xv_{t-1} = \tilde{\muv}_t(\xv_t, \hat{\xv}_0)+\sigma_t \zv, \text{where } \zv \sim \mathcal{N}(\boldsymbol{0},\boldsymbol{I})
+    % \end{equation}
+    %  starting from $\xv_T \sim \mathcal{N}(\boldsymbol{0},\boldsymbol{I})$, we can recreate the original sample from a Gaussian noise input, , through the \textit{reverse diffusion process}.
+
+    % \textbf{Reverse Process (Noise $\rightarrow$ Image):} From the paper, we know that the reverse conditional probability is tractable when conditioned on \( x_0 \):
+    % \begin{equation}
+    %     \begin{aligned}
+    %         q(x_{t-1} | x_t, x_0) = \mathcal{N}(x_{t-1}; \tilde\mu_t(x_t, x_0), \tilde{\beta}_t I), \\
+    %         \text{where } \tilde{\mu}_t = \sqrt{\frac{\alpha_t(1 - \alpha_{t-1})}{1 - \alpha_t}} x_t + \sqrt{\frac{\alpha_{t-1}\beta_t}{1 - \alpha_t}} x_0, \\
+    %         \sigma^2_t = \tilde{\beta}_t = \frac{1 - \alpha_{t-1}}{1 - \alpha_t} \beta_t.
+    %     \end{aligned}
+    % \end{equation}
+    % This formulation allows us to recreate the original sample from a Gaussian noise input, $x_T \sim \mathcal{N}(0,1)$, through the \textit{reverse diffusion process}.
+    % \par
+    % To estimate $x_0$, a denoising network $\epsilon_\theta$ is employed, which utilizes the noised image and its timestamp to predict the noise $\epsilon_t = \epsilon_\theta(x_t, t)$ introduced during the forward process.
+    % % It is noteworthy that we could estimate $x_0$ by inverting the 
+    % % To predict $x_0$, we use a denoising network, which takes the noised image and timestamp as inputs to predict the noise $\epsilon_t = f(x_t, t)$ which was added on in the forward process. 
+    % By reversing Eq.~\ref{eq:hw2_forward}:
+    % \begin{equation}
+    %     \hat{x}_0 = \frac{1}{\sqrt{\bar{\alpha}_t}} \left( x_t - \sqrt{1 - \bar{\alpha}_t} \epsilon_t \right),
+    % \end{equation}
+    % we could deduce estimated $\hat x_0$ from $x_t$ and predicted noise $\epsilon_t$.
+    % Consequently, $x_{t-1}$ can be obtained as $\tilde{\mu}_t(x_t, \hat{x}_0)+\sigma_t$ and by iteratively applying this process, we can recover the image.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+
+
+
+
+    \textbf{Reverse Processs Model:} The reverse process model $\boldsymbol{\epsilon}_\theta$ is defined in \lstinline{unet.py} and is an implementation of a CNN called U-Net, as illustrated in Fig.~\ref{fig:unet}. 
+    U-Net's role here is to model the denoising function at each step of the reverse diffusion process. The architecture's ability to handle details at multiple scales and its effectiveness in capturing both local and global features make it well-suited for the task of denoising in diffusion models. By predicting the noise that was added at each step of the forward diffusion process, the U-Net helps to gradually reconstruct the data sample from noise.
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{fig/unet_architecture.jpeg}
+        \caption{The structure of U-Net.}
+        \label{fig:unet}
+    \end{figure}
+
+
+    \textbf{Training:} The training algorithm is described in Alg.~\ref{alg:hw2_train}. We utilize a minibatch of data to train our reverse process model, denoted as $\epsilon_\theta$, which estimates the noise introduced during the forward diffusion process. You are required to implement the function \lstinline{forward}, \lstinline{q_sample} and \lstinline{p_loss} within the \lstinline{Diffusion} class. The \lstinline{p_loss} function defines the training loss using the $L_1$ loss. Additionaly, We set a noise scheduler and pre-define some coefficients in the \lstinline{__init__} function for efficient reuse, so you should also fill in the blanks there. 
+
+    \begin{center}
+    \begin{minipage}{.8\linewidth}
+    \begin{algorithm}[H]
+    \caption{Training}\label{alg:hw2_train}
+        \begin{algorithmic}[1]
+            \Repeat
+            \State $\xv_0 \sim q(\xv_0)$
+            \State $t\sim \text{Uniform}(\{1,...,T\})$
+            \State $\epsilonv \sim \mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
+            \State $\xv_t \gets \sqrt{\bar{\alpha_t}}\xv_0 + \sqrt{1 - \bar\alpha_t} \epsilonv$ \Comment{forward diffusion process}
+            \State Take optimizer step on $L_1$ loss, 
+             $\nabla_\theta \| \epsilonv - \boldsymbol{\epsilon}_\theta (\xv_t, t) \|_1$
+            \Until converged
+        \end{algorithmic}
+    \end{algorithm}
+    \end{minipage}
+    \end{center}
+    \vspace{1em}
+
+
+    \textbf{Sampling:} The sampling algorithm is described in Alg.~\ref{alg:hw2_sample}. The real implementation considers a minibatch of samples, and use \lstinline{extract} function to extract coefficients for batched operation. You need to implement function \lstinline{sample}, \lstinline{p_sample}, and \lstinline{p_sample_loop} in the \lstinline{Diffusion} class that defines the reverse diffusion process to generate images.
+
+    \begin{center}
+    \begin{minipage}{.8\linewidth}
+    \begin{algorithm}[H]
+    \caption{Sampling}\label{alg:hw2_sample}
+        \begin{algorithmic}[1]
+            \State $\xv_T \sim \mathcal{N}(0,I)$
+            \For {$t=T,...,1$}
+                \State $\zv \sim \mathcal{N}(\boldsymbol{0},\boldsymbol{I}) \text{ if } t>1 \text{, else } \zv=0$
+                \State $\epsilonv_t \gets \boldsymbol{\epsilon}_\theta(\xv_t,t)$ \Comment{predicted noise}
+                \State $\hat \xv_0 \gets \frac{1}{\sqrt{\bar{\alpha}_t}} \left( \xv_t - \sqrt{1 - \bar{\alpha}_t} \epsilonv_t \right)$ \Comment{estimated $\hat \xv_0$}
+                \State $\hat \xv_0 \gets \textit{clamp}(\hat \xv_0, -1, 1)$ \Comment{rectify $\hat \xv_0$}
+                \State $\tilde{\muv}_t \gets {\frac{\sqrt\alpha_t(1 - \bar\alpha_{t-1})}{1 - \bar \alpha_t}} \xv_t + {\frac{\sqrt{\bar\alpha_{t-1}}(1-\alpha_t)}{1 - \bar\alpha_t}} \hat \xv_0$ \Comment{posterior mean of $x_{t-1}$}
+                \State $\sigma^2_t \gets \frac{1 - \bar \alpha_{t-1}}{1 - \bar \alpha_t} (1-\alpha_t)$ \Comment{posterior variance of $x_{t-1}$}
+                \State $\xv_{t-1} \gets \tilde{\muv}_t+\sigma_t \zv$ \Comment{reverse diffusion process}
+            \EndFor
+            \Return $\xv_0$
+        \end{algorithmic}
+    \end{algorithm}
+    \end{minipage}
+    \end{center}
+    \vspace{1em}
+    
+    \textbf{Evaluation:} 
+    To gauge the improvement in generative prowess throughout the training process, calculate the Fréchet Inception Distance (FID) between the training dataset and the generated samples from the current model. FID serves as a crucial metric in assessing the quality of generated data, providing a quantitative measure that goes beyond traditional visual inspection.
+
+    FID is a widely adopted metric in the realm of generative models, offering a robust evaluation of the dissimilarity between the true data distribution and the generated distribution. By incorporating both the mean and covariance of feature representations extracted from a pre-trained neural network, FID captures nuanced differences and similarities, offering valuable insights into the fidelity of generated samples.
+    
+    We use \lstinline{clean-fid} package to easily compute the FID score between
+    resized training images and generated images.
+    
+\clearpage
+\uplevel{\subsection*{Diffusion Empirical Questions}}
+
+% Add the following 2 sentences to the Introduction
+\textbf{Clarification}: The code to generate the following figures are \textbf{already provided}, you can get figures in wandb once you complete the diffusion part.
+
+\begin{parts}
+
+\part[4] \textbf{Training:} Plot the training loss of your Diffusion model above over 1,000 training steps with the recommended parameters in the above command line. Your model should be generating blurry cats at this point. Additional recommended flags: \lstinline{--train_steps 1000}.
+
+[Expected runtime on Colab T4: 5-10 minutes]
+\begin{answer_box}[title=Training Loss,height=7cm, width=15cm]
+\end{answer_box}
+
+\part[4] \textbf{Training:} 
+During training time, the starter code uses the `compute\_fid' function from `clean-fid' to compute the FID value between training samples and generated samples. Get the FID value every 100 training steps and plot it over 1,000 training steps with the recommended parameters in the above command line. Additional recommended flags: \lstinline{--save_and_sample_every 100 --train_steps 1000 --fid}.
+
+[Expected runtime on Colab T4: 15-60 minutes]
+\begin{answer_box}[title=FID,height=7cm, width=15cm]
+\end{answer_box}
+\clearpage
+
+
+\part[4] \textbf{Visualization:}
+Use the trained model after 1,000 steps to illustrate the forward diffusion process on the initial batch of the training dataset at key time intervals: 0\%, 25\%, 50\%, 75\%, and 99\% of the total timesteps. The resulting figure should resemble the provided sample, though the images will vary due to inherent randomness.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\linewidth]{fig/forward_sample.png}
+        \caption{Sample Figure of the Forward Diffusion Process.}
+        \label{fig:forward_viz}
+    \end{figure}
+
+\begin{answer_box}[title=Forward Process,height=9cm, width=15cm]
+\end{answer_box}
+
+\part[4] \textbf{Visualization:} Next, input the noise images generated from the preceding forward process (i.e., the image from the last timestep in the forward process) to the diffusion model. Utilize these images to generate visualizations of the backward diffusion process at key intervals: 0\%, 25\%, 50\%, 75\%, and 99\% of the total timesteps. The resulting figure should resemble the provided sample, though the images will vary due to inherent randomness.
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\linewidth]{fig/backward_sample.png}
+        \caption{Sample Figure of the Backward Diffusion Process.}
+        \label{fig:backward_viz}
+    \end{figure}
+
+\begin{answer_box}[title=Backward Process,height=9cm, width=15cm]
+\end{answer_box}
+
+\part[5] \textbf{Visualization:} Finally, train the model for a full 10,000 iterations and show the images generated in the last sample batch. The images should be a substantial improvement over training with fewer iterations. Additional recommended flags: \lstinline{--save_and_sample_every 1000 --train_steps 10000 --fid False}.
+
+[Expected runtime on Colab T4: 1-3 hours]
+
+\begin{answer_box}[title=Backward Process,height=9cm, width=15cm]
+\end{answer_box}
+\end{parts}
+\clearpage
+
+\sectionquestion{Code Upload}
+
+\begin{parts}
+
+\part[0] Did you upload your code to the appropriate programming slot on Gradescope? \\
+\emph{Hint:} The correct answer is `yes'.
+
+    \begin{checkboxes}
+     \choice Yes 
+     \choice No
+    \end{checkboxes}
+
+For this homework, you should upload all the code files that contain your new and/or changed code. Files of type \lstinline{.py} and \lstinline{.ipynb} are both fine.
+
+\end{parts}
+
+\newpage
+\sectionquestion{Collaboration Questions}
+
+\begin{parts}
+
+\uplevel{After you have completed all other components of this assignment, report your answers to these questions regarding the collaboration policy. Details of the policy can be found in the syllabus.}
+
+    \part[1] Did you collaborate with anyone on this assignment? If so, list their name or Andrew ID and which problems you worked together on.
+
+        \begin{answer_box}[title=,height=3cm, width=15cm]
+        \end{answer_box}
+
+    
+    \part[1] Did you find or come across code that implements any part of this assignment? If so, include full details.
+        \begin{answer_box}[title=,height=3cm, width=15cm]
+        \end{answer_box}
+\end{parts}
+\end{questions}
+
+
+\end{document}

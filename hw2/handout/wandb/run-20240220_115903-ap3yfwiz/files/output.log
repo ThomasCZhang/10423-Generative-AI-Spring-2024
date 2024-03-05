@@ -1,0 +1,33 @@
+
+dataset length: 5153, dataset class: cat
+steps:   0%|                                                                            | 0/1 [00:07<?, ?it/s]
+Traceback (most recent call last):
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\main.py", line 104, in <module>
+    trainer.train()
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\trainer.py", line 172, in train
+    data_1 = next(self.dl)
+             ^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\hw2\handout\trainer.py", line 19, in cycle
+    for data in dl:
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 433, in __iter__
+    self._iterator = self._get_iterator()
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 386, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\PythonWS\10423_Spring2024\venv\Lib\site-packages\torch\utils\data\dataloader.py", line 1039, in __init__
+    w.start()
+  File "C:\Users\tzhan\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\context.py", line 336, in _Popen
+    return Popen(process_obj)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tzhan\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\popen_spawn_win32.py", line 94, in __init__
+    reduction.dump(process_obj, to_child)
+  File "C:\Users\tzhan\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+AttributeError: Can't pickle local object 'Dataset.__init__.<locals>.<lambda>'

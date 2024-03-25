@@ -16,7 +16,7 @@ max_iters = 50
 learning_rate = 5e-4
 decay_lr = False
 
-device = "cuda"
+device = "mps"
 compile = False
 compute_grad_memory = True
 

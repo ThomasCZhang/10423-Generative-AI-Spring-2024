@@ -1,0 +1,8 @@
+memory-efficient-attention-pytorch
+accelerate
+matplotlib
+pandas
+seaborn
+scipy
+wandb
+gimmemotifs

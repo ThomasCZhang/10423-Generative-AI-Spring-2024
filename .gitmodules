@@ -1,0 +1,6 @@
+[submodule "Project/DNA-Diffusion"]
+	path = Project/DNA-Diffusion
+	url = https://github.com/pinellolab/DNA-Diffusion
+[submodule "Project/Project/DNA-Diffusion"]
+	path = Project/Project/DNA-Diffusion
+	url = https://github.com/pinellolab/DNA-Diffusion
